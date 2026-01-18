@@ -3,6 +3,11 @@
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 # Database configuration
 DEFAULT_DB_PATH = Path(__file__).parent.parent / "data" / "octopod.db"
 DB_PATH = Path(os.environ.get("OCTOPOD_DB_PATH", DEFAULT_DB_PATH))

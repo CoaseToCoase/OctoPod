@@ -1,5 +1,7 @@
 """CLI entry point for OctoPod."""
 
+from datetime import datetime
+
 import typer
 from rich.console import Console
 from rich.table import Table
@@ -18,6 +20,7 @@ from .channels import fetch_and_store_videos
 from .transcripts import fetch_and_store_transcripts
 from .analyzer import analyze_and_store_all
 from .summarizer import generate_weekly_summary, get_analysis_stats
+from .fpl import get_previous_gameweek_deadline, get_current_gameweek
 
 app = typer.Typer(
     name="octopod",
@@ -35,14 +38,28 @@ def ensure_db():
 
 
 @app.command()
-def fetch():
+def fetch(
+    since: datetime = typer.Option(None, "--since", "-s", help="Only fetch videos published after this date (YYYY-MM-DD)"),
+    current_gw: bool = typer.Option(False, "--current-gw", "-g", help="Only fetch videos since the previous gameweek deadline")
+):
     """Fetch latest videos from all channels."""
     ensure_db()
 
-    with console.status("[bold green]Fetching videos from channels..."):
-        results = fetch_and_store_videos()
+    # Determine the since date
+    filter_date = since
+    if current_gw:
+        with console.status("[bold green]Fetching gameweek data from FPL API..."):
+            filter_date = get_previous_gameweek_deadline()
+            gw = get_current_gameweek()
+        if filter_date:
+            console.print(f"[cyan]Filtering videos since GW{gw['id'] - 1 if gw else '?'} deadline: {filter_date.strftime('%Y-%m-%d %H:%M')} UTC[/cyan]")
+        else:
+            console.print("[yellow]Could not determine previous gameweek deadline, fetching all videos.[/yellow]")
 
-    table = Table(title="Videos Fetched")
+    with console.status("[bold green]Fetching videos from channels..."):
+        results = fetch_and_store_videos(since=filter_date)
+
+    table = Table(title="Videos Fetched" + (f" (since {filter_date.strftime('%Y-%m-%d')})" if filter_date else ""))
     table.add_column("Channel", style="cyan")
     table.add_column("Videos Found", justify="right", style="green")
 
@@ -142,16 +159,38 @@ def summary(
 
 @app.command()
 def run(
-    gameweek: int = typer.Option(..., "--gameweek", "-g", help="Gameweek number"),
-    days: int = typer.Option(7, "--days", "-d", help="Number of days to look back")
+    gameweek: int = typer.Option(None, "--gameweek", "-gw", help="Gameweek number (auto-detected if not provided)"),
+    days: int = typer.Option(7, "--days", "-d", help="Number of days to look back for summary"),
+    since: datetime = typer.Option(None, "--since", "-s", help="Only fetch videos published after this date (YYYY-MM-DD)"),
+    current_gw: bool = typer.Option(True, "--current-gw/--all", help="Only fetch videos since previous gameweek deadline (default: true)")
 ):
     """Run the full pipeline: fetch, transcripts, analyze, and summarize."""
     ensure_db()
 
+    # Determine the since date and gameweek
+    filter_date = since
+    detected_gw = None
+
+    if current_gw and since is None:
+        with console.status("[bold green]Fetching gameweek data from FPL API..."):
+            filter_date = get_previous_gameweek_deadline()
+            detected_gw = get_current_gameweek()
+        if filter_date and detected_gw:
+            console.print(f"[cyan]Current gameweek: GW{detected_gw['id']}[/cyan]")
+            console.print(f"[cyan]Filtering videos since GW{detected_gw['id'] - 1} deadline: {filter_date.strftime('%Y-%m-%d %H:%M')} UTC[/cyan]")
+
+    # Use detected gameweek if not provided
+    if gameweek is None:
+        if detected_gw:
+            gameweek = detected_gw["id"]
+        else:
+            console.print("[red]Could not detect gameweek. Please provide --gameweek option.[/red]")
+            raise typer.Exit(1)
+
     # Fetch videos
     console.print("\n[bold cyan]Step 1/4: Fetching videos...[/bold cyan]")
     with console.status("[bold green]Fetching videos from channels..."):
-        fetch_results = fetch_and_store_videos()
+        fetch_results = fetch_and_store_videos(since=filter_date)
 
     total_fetched = sum(fetch_results.values())
     console.print(f"[green]Fetched {total_fetched} videos from {len(fetch_results)} channels.[/green]")

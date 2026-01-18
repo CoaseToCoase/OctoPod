@@ -3,7 +3,7 @@
 import ssl
 import urllib.request
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 
 import feedparser
 from dateutil import parser as date_parser
@@ -94,8 +94,13 @@ def fetch_all_channels() -> dict[str, list[VideoEntry]]:
     return all_videos
 
 
-def fetch_and_store_videos() -> dict[str, int]:
-    """Fetch videos from all channels and store them in the database."""
+def fetch_and_store_videos(since: datetime | None = None) -> dict[str, int]:
+    """Fetch videos from all channels and store them in the database.
+
+    Args:
+        since: Only include videos published after this datetime.
+               If None, includes all videos from the RSS feed.
+    """
     channels = get_all_channels()
     results: dict[str, int] = {}
 
@@ -104,6 +109,16 @@ def fetch_and_store_videos() -> dict[str, int]:
             channel["youtube_channel_id"],
             channel["id"]
         )
+
+        # Filter by date if specified
+        if since is not None:
+            # Ensure since is timezone-aware for comparison
+            if since.tzinfo is None:
+                since = since.replace(tzinfo=timezone.utc)
+            videos = [
+                v for v in videos
+                if v.published_at is not None and v.published_at >= since
+            ]
 
         for video in videos:
             upsert_video(
