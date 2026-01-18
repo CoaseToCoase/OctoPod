@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip3 install:*)",
+      "Bash(octopod --help:*)",
+      "Bash(octopod init:*)",
+      "Bash(python3:*)",
+      "Bash(octopod analyze:*)",
+      "Bash(octopod summary:*)",
+      "Bash(sqlite3:*)"
+    ]
+  }
+}
