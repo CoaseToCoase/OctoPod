@@ -1,4 +1,5 @@
 name: Daily Podcast Analysis
+# Runs daily at 6 AM UTC or on manual trigger
 
 on:
   schedule:
