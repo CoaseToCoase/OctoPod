@@ -4,6 +4,11 @@
 name: FPL Draft
 description: Fantasy Premier League Draft podcast analysis
 
+# Schedule configuration
+# type: fpl_gameweek | rolling_days | weekly | daily
+schedule:
+  type: fpl_gameweek
+
 channels:
   - id: draft_fc
     name: Draft FC

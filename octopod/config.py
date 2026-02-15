@@ -117,6 +117,19 @@ def get_gcs_config() -> dict[str, str]:
     return config.get("gcs", {"bucket": "", "path_prefix": ""})
 
 
+def get_schedule_config() -> dict[str, Any]:
+    """Get schedule configuration from config.
+
+    Returns config like:
+        {"type": "fpl_gameweek"}
+        {"type": "rolling_days", "days": 7}
+        {"type": "weekly", "start_day": "monday"}
+        {"type": "daily"}
+    """
+    config = load_config()
+    return config.get("schedule", {"type": "rolling_days", "days": 7})
+
+
 def get_channel_rss_url(channel_id: str) -> str:
     """Get the RSS feed URL for a YouTube channel."""
     return YOUTUBE_RSS_TEMPLATE.format(channel_id=channel_id)

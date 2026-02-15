@@ -8,11 +8,11 @@ from pathlib import Path
 from .config import get_gcs_config, get_profile_data_dir
 
 
-def upload_summary_to_gcs(gameweek: int, summary: str, video_ids: list[str]) -> str | None:
-    """Upload a gameweek summary to Google Cloud Storage.
+def upload_summary_to_gcs(period: str, summary: str, video_ids: list[str]) -> str | None:
+    """Upload a period summary to Google Cloud Storage.
 
     Args:
-        gameweek: The gameweek number
+        period: The period identifier (e.g., "gw26", "2024-w05")
         summary: The summary markdown text
         video_ids: List of video IDs included in the summary
 
@@ -21,7 +21,7 @@ def upload_summary_to_gcs(gameweek: int, summary: str, video_ids: list[str]) -> 
     """
     gcs_config = get_gcs_config()
     bucket_name = gcs_config.get("bucket", "")
-    path_prefix = gcs_config.get("path_prefix", "octopod/summaries")
+    path_prefix = gcs_config.get("path_prefix", "octopod")
 
     if not bucket_name:
         return None
@@ -47,14 +47,14 @@ def upload_summary_to_gcs(gameweek: int, summary: str, video_ids: list[str]) -> 
 
         # Create the summary data
         summary_data = {
-            "gameweek": gameweek,
+            "period": period,
             "created_at": datetime.now().isoformat(),
             "summary": summary,
             "videos_included": video_ids,
         }
 
         # Upload JSON version
-        json_path = f"{path_prefix}/gw{gameweek}.json"
+        json_path = f"{path_prefix}/summaries/{period}.json"
         json_blob = bucket.blob(json_path)
         json_blob.upload_from_string(
             json.dumps(summary_data, indent=2),
@@ -62,8 +62,8 @@ def upload_summary_to_gcs(gameweek: int, summary: str, video_ids: list[str]) -> 
         )
 
         # Upload markdown version
-        md_path = f"{path_prefix}/gw{gameweek}.md"
-        md_content = f"# Gameweek {gameweek} Summary\n\n{summary}"
+        md_path = f"{path_prefix}/summaries/{period}.md"
+        md_content = f"# {period.upper()} Summary\n\n{summary}"
         md_blob = bucket.blob(md_path)
         md_blob.upload_from_string(md_content, content_type="text/markdown")
 

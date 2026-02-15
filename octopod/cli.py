@@ -9,7 +9,7 @@ from rich.table import Table
 from rich.panel import Panel
 from rich.markdown import Markdown
 
-from .config import set_profile, get_profile, list_profiles
+from .config import set_profile, get_profile, list_profiles, get_schedule_config
 from .data import (
     init_db,
     get_all_channels,
@@ -20,8 +20,8 @@ from .data import (
 from .channels import fetch_and_store_videos
 from .transcripts import fetch_and_store_transcripts
 from .analyzer import analyze_and_store_all
-from .summarizer import generate_weekly_summary, get_analysis_stats
-from .fpl import get_previous_gameweek_deadline, get_current_gameweek
+from .summarizer import generate_summary, get_analysis_stats
+from .schedule import get_schedule_range, get_period_identifier
 
 app = typer.Typer(
     name="octopod",
@@ -57,26 +57,28 @@ def ensure_db():
 @app.command()
 def fetch(
     since: datetime = typer.Option(None, "--since", "-s", help="Only fetch videos published after this date (YYYY-MM-DD)"),
-    current_gw: bool = typer.Option(False, "--current-gw", "-g", help="Only fetch videos since the previous gameweek deadline")
+    use_schedule: bool = typer.Option(False, "--schedule", "-S", help="Use profile's schedule config to determine date range")
 ):
     """Fetch latest videos from all channels."""
     ensure_db()
 
     # Determine the since date
     filter_date = since
-    if current_gw:
-        with console.status("[bold green]Fetching gameweek data from FPL API..."):
-            filter_date = get_previous_gameweek_deadline()
-            gw = get_current_gameweek()
+    period_label = None
+
+    if use_schedule and since is None:
+        schedule_config = get_schedule_config()
+        with console.status("[bold green]Determining date range from schedule..."):
+            filter_date, period_label = get_schedule_range(schedule_config)
         if filter_date:
-            console.print(f"[cyan]Filtering videos since GW{gw['id'] - 1 if gw else '?'} deadline: {filter_date.strftime('%Y-%m-%d %H:%M')} UTC[/cyan]")
+            console.print(f"[cyan]Filtering videos for {period_label}: since {filter_date.strftime('%Y-%m-%d %H:%M')} UTC[/cyan]")
         else:
-            console.print("[yellow]Could not determine previous gameweek deadline, fetching all videos.[/yellow]")
+            console.print("[yellow]Could not determine schedule date range, fetching all videos.[/yellow]")
 
     with console.status("[bold green]Fetching videos from channels..."):
         results = fetch_and_store_videos(since=filter_date)
 
-    table = Table(title="Videos Fetched" + (f" (since {filter_date.strftime('%Y-%m-%d')})" if filter_date else ""))
+    table = Table(title="Videos Fetched" + (f" ({period_label})" if period_label else (f" (since {filter_date.strftime('%Y-%m-%d')})" if filter_date else "")))
     table.add_column("Channel", style="cyan")
     table.add_column("Videos Found", justify="right", style="green")
 
@@ -145,37 +147,36 @@ def analyze():
 
 @app.command()
 def summary(
-    gameweek: int = typer.Option(None, "--gameweek", "-g", help="Gameweek number (auto-detected if not provided)")
+    period: str = typer.Option(None, "--period", "-P", help="Period identifier (auto-detected from schedule if not provided)")
 ):
-    """Generate a gameweek summary from analyses since the previous GW deadline."""
+    """Generate a summary from analyses for the current period."""
     ensure_db()
 
-    # Auto-detect gameweek
-    if gameweek is None:
-        gw = get_current_gameweek()
-        if gw:
-            gameweek = gw["id"]
-        else:
-            console.print("[red]Could not detect gameweek. Please provide --gameweek option.[/red]")
-            return
+    schedule_config = get_schedule_config()
 
-    stats = get_analysis_stats()
+    # Auto-detect period
+    if period is None:
+        period = get_period_identifier(schedule_config)
+
+    # Get date range from schedule
+    since, period_label = get_schedule_range(schedule_config)
+    stats = get_analysis_stats(since=since)
 
     if stats["total_videos"] == 0:
-        console.print("[yellow]No analyzed videos found since previous gameweek deadline.[/yellow]")
-        console.print("[dim]Run 'octopod fetch', 'octopod transcripts', and 'octopod analyze' first.[/dim]")
+        console.print(f"[yellow]No analyzed videos found for {period_label}.[/yellow]")
+        console.print("[dim]Run 'octopod fetch --schedule', 'octopod transcripts', and 'octopod analyze' first.[/dim]")
         return
 
-    console.print(f"[cyan]Generating GW{gameweek} summary from {stats['total_videos']} videos across {len(stats['channels'])} channels...[/cyan]")
+    console.print(f"[cyan]Generating {period} summary from {stats['total_videos']} videos across {len(stats['channels'])} channels...[/cyan]")
 
     with console.status("[bold green]Generating summary with Claude..."):
-        summary_text = generate_weekly_summary(gameweek=gameweek)
+        summary_text = generate_summary(period=period, since=since)
 
     if summary_text:
         console.print()
         console.print(Panel(
             Markdown(summary_text),
-            title=f"[bold]Gameweek {gameweek} Summary[/bold]",
+            title=f"[bold]{period.upper()} Summary[/bold]",
             border_style="green"
         ))
     else:
@@ -184,33 +185,31 @@ def summary(
 
 @app.command()
 def run(
-    gameweek: int = typer.Option(None, "--gameweek", "-gw", help="Gameweek number (auto-detected if not provided)"),
+    period: str = typer.Option(None, "--period", "-P", help="Period identifier (auto-detected from schedule if not provided)"),
     since: datetime = typer.Option(None, "--since", "-s", help="Only fetch videos published after this date (YYYY-MM-DD)"),
-    current_gw: bool = typer.Option(True, "--current-gw/--all", help="Only fetch videos since previous gameweek deadline (default: true)")
+    use_schedule: bool = typer.Option(True, "--schedule/--all", help="Use profile's schedule config (default: true)")
 ):
     """Run the full pipeline: fetch, transcripts, analyze, and summarize."""
     ensure_db()
     console.print(f"[bold]Profile: {get_profile()}[/bold]\n")
 
-    # Determine the since date and gameweek
+    schedule_config = get_schedule_config()
+
+    # Determine the since date and period
     filter_date = since
-    detected_gw = None
+    period_label = None
 
-    if current_gw and since is None:
-        with console.status("[bold green]Fetching gameweek data from FPL API..."):
-            filter_date = get_previous_gameweek_deadline()
-            detected_gw = get_current_gameweek()
-        if filter_date and detected_gw:
-            console.print(f"[cyan]Current gameweek: GW{detected_gw['id']}[/cyan]")
-            console.print(f"[cyan]Filtering videos since GW{detected_gw['id'] - 1} deadline: {filter_date.strftime('%Y-%m-%d %H:%M')} UTC[/cyan]")
+    if use_schedule and since is None:
+        with console.status("[bold green]Determining date range from schedule..."):
+            filter_date, period_label = get_schedule_range(schedule_config)
+        if filter_date:
+            console.print(f"[cyan]Schedule: {schedule_config.get('type', 'rolling_days')}[/cyan]")
+            console.print(f"[cyan]Period: {period_label}[/cyan]")
+            console.print(f"[cyan]Filtering videos since: {filter_date.strftime('%Y-%m-%d %H:%M')} UTC[/cyan]")
 
-    # Use detected gameweek if not provided
-    if gameweek is None:
-        if detected_gw:
-            gameweek = detected_gw["id"]
-        else:
-            console.print("[red]Could not detect gameweek. Please provide --gameweek option.[/red]")
-            raise typer.Exit(1)
+    # Use detected period if not provided
+    if period is None:
+        period = get_period_identifier(schedule_config)
 
     # Fetch videos
     console.print("\n[bold cyan]Step 1/4: Fetching videos...[/bold cyan]")
@@ -248,20 +247,20 @@ def run(
 
     # Generate summary
     console.print("\n[bold cyan]Step 4/4: Generating summary...[/bold cyan]")
-    stats = get_analysis_stats()
+    stats = get_analysis_stats(since=filter_date)
 
     if stats["total_videos"] == 0:
-        console.print("[yellow]No analyzed videos found since previous gameweek deadline.[/yellow]")
+        console.print(f"[yellow]No analyzed videos found for {period_label or period}.[/yellow]")
         return
 
     with console.status("[bold green]Generating summary with Claude..."):
-        summary_text = generate_weekly_summary(gameweek=gameweek)
+        summary_text = generate_summary(period=period, since=filter_date)
 
     if summary_text:
         console.print()
         console.print(Panel(
             Markdown(summary_text),
-            title=f"[bold]Gameweek {gameweek} Summary[/bold]",
+            title=f"[bold]{period.upper()} Summary[/bold]",
             border_style="green"
         ))
     else:

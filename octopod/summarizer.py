@@ -1,35 +1,41 @@
-"""Weekly summary generation for OctoPod."""
+"""Summary generation for OctoPod."""
 
 import json
 from datetime import datetime
 
 import anthropic
 
-from .config import ANTHROPIC_API_KEY, ANTHROPIC_MODEL, get_summary_prompt
-from .data import get_recent_analyses, get_gameweek_analyses, save_weekly_summary
-from .fpl import get_previous_gameweek_deadline, get_current_gameweek_deadline
+from .config import ANTHROPIC_API_KEY, ANTHROPIC_MODEL, get_summary_prompt, get_schedule_config
+from .data import get_recent_analyses, get_gameweek_analyses, save_summary
+from .schedule import get_schedule_range, get_period_identifier
 from .gcs import upload_summary_to_gcs, is_gcs_configured
 
 
-def generate_weekly_summary(gameweek: int, since: datetime | None = None) -> str | None:
-    """Generate a weekly summary from analyses since the previous gameweek deadline.
+def generate_summary(period: str | None = None, since: datetime | None = None) -> str | None:
+    """Generate a summary from analyses for the specified period.
 
     Args:
-        gameweek: The current gameweek number
-        since: Start date for analyses (defaults to previous GW deadline)
+        period: Period identifier (e.g., "gw26", "2024-w05"). Auto-detected if not provided.
+        since: Start date for analyses. Uses schedule config if not provided.
     """
     if not ANTHROPIC_API_KEY:
         raise ValueError("ANTHROPIC_API_KEY environment variable not set")
 
-    # Use gameweek deadline if not specified
-    if since is None:
-        since = get_previous_gameweek_deadline()
+    schedule_config = get_schedule_config()
 
-    # Get analyses for this gameweek period
+    # Use schedule config if since not specified
+    if since is None:
+        since, _ = get_schedule_range(schedule_config)
+
+    # Auto-detect period if not provided
+    if period is None:
+        period = get_period_identifier(schedule_config)
+
+    # Get analyses for this period
     if since:
         analyses = get_gameweek_analyses(since=since)
     else:
-        # Fallback to 7 days if we can't get deadline
+        # Fallback to 7 days
         analyses = get_recent_analyses(days=7)
 
     if not analyses:
@@ -46,9 +52,9 @@ def generate_weekly_summary(gameweek: int, since: datetime | None = None) -> str
             "source": analysis["channel_name"],
             "video_title": analysis["title"],
             "published": str(analysis["published_at"]),
-            "player_mentions": analysis["player_mentions"],
-            "recommendations": analysis["recommendations"],
-            "injury_news": analysis["injury_news"],
+            "player_mentions": analysis.get("player_mentions", []),
+            "recommendations": analysis.get("recommendations", []),
+            "injury_news": analysis.get("injury_news", []),
         }
         analysis_entries.append(entry)
 
@@ -56,11 +62,14 @@ def generate_weekly_summary(gameweek: int, since: datetime | None = None) -> str
 
     # Get prompt from config
     prompt_template = get_summary_prompt()
+
+    # Support both {gameweek} and {period} placeholders for backwards compatibility
     prompt = prompt_template.format(
         num_videos=len(analyses),
         num_channels=len(channels_seen),
         analysis_data=analysis_data,
-        gameweek=gameweek
+        gameweek=period,  # backwards compatibility
+        period=period
     )
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
@@ -79,20 +88,25 @@ def generate_weekly_summary(gameweek: int, since: datetime | None = None) -> str
     video_ids = [a["video_id"] for a in analyses]
 
     # Save the summary locally
-    save_weekly_summary(gameweek, summary, video_ids)
+    save_summary(period, summary, video_ids)
 
     # Upload to GCS if configured
     if is_gcs_configured():
-        upload_summary_to_gcs(gameweek, summary, video_ids)
+        upload_summary_to_gcs(period, summary, video_ids)
 
     return summary
 
 
 def get_analysis_stats(since: datetime | None = None) -> dict:
-    """Get statistics about analyses since the previous gameweek deadline."""
-    # Use gameweek deadline if not specified
+    """Get statistics about analyses for the specified period.
+
+    Args:
+        since: Start date for analyses. Uses schedule config if not provided.
+    """
+    # Use schedule config if not specified
     if since is None:
-        since = get_previous_gameweek_deadline()
+        schedule_config = get_schedule_config()
+        since, _ = get_schedule_range(schedule_config)
 
     if since:
         analyses = get_gameweek_analyses(since=since)
@@ -113,8 +127,8 @@ def get_analysis_stats(since: datetime | None = None) -> dict:
 
     for analysis in analyses:
         channels.add(analysis["channel_name"])
-        total_mentions += len(analysis["player_mentions"])
-        total_recommendations += len(analysis["recommendations"])
+        total_mentions += len(analysis.get("player_mentions", []))
+        total_recommendations += len(analysis.get("recommendations", []))
 
     return {
         "total_videos": len(analyses),

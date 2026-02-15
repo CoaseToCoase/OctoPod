@@ -277,18 +277,18 @@ def get_gameweek_analyses(since: datetime, until: datetime | None = None) -> lis
     return results
 
 
-def save_weekly_summary(
-    gameweek: int,
+def save_summary(
+    period: str,
     summary: str,
     video_ids: list[str]
 ) -> None:
-    """Save a weekly summary."""
+    """Save a period summary."""
     summaries_dir = _get_summaries_dir()
     summaries_dir.mkdir(parents=True, exist_ok=True)
-    summary_file = summaries_dir / f"gw{gameweek}.json"
+    summary_file = summaries_dir / f"{period}.json"
 
     summary_data = {
-        "gameweek": gameweek,
+        "period": period,
         "created_at": _datetime_to_str(datetime.now()),
         "summary": summary,
         "videos_included": video_ids,
@@ -297,14 +297,25 @@ def save_weekly_summary(
     _save_json(summary_file, summary_data)
 
 
-def get_weekly_summary(gameweek: int) -> dict[str, Any] | None:
-    """Get a weekly summary by gameweek number."""
-    summary_file = _get_summaries_dir() / f"gw{gameweek}.json"
+def get_summary(period: str) -> dict[str, Any] | None:
+    """Get a summary by period identifier."""
+    summary_file = _get_summaries_dir() / f"{period}.json"
 
     if not summary_file.exists():
         return None
 
     return _load_json(summary_file)
+
+
+# Backwards compatibility aliases
+def save_weekly_summary(gameweek: int, summary: str, video_ids: list[str]) -> None:
+    """Deprecated: Use save_summary instead."""
+    save_summary(f"gw{gameweek}", summary, video_ids)
+
+
+def get_weekly_summary(gameweek: int) -> dict[str, Any] | None:
+    """Deprecated: Use get_summary instead."""
+    return get_summary(f"gw{gameweek}")
 
 
 def get_all_videos(limit: int = 50) -> list[dict[str, Any]]:
