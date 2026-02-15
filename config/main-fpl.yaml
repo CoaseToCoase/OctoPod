@@ -27,6 +27,21 @@ channels:
   - id: fpl_mate
     name: FPL Mate
     youtube_channel_id: UCweDAlFm2LnVcOqaFU4_AGA
+  - id: fpl_focal
+    name: FPL Focal
+    youtube_channel_id: UC72QokPHXQ9r98ROfNZmaDw
+  - id: fpl_harry
+    name: FPL Harry
+    youtube_channel_id: UCcPWnCj5AKC19HaySZjb25g
+  - id: fpl_raptor
+    name: FPL Raptor
+    youtube_channel_id: UC54QLWzsMifTRjNQ02z5pCw
+  - id: ff_hub
+    name: Fantasy Football Hub
+    youtube_channel_id: UCcqEr3DfrRwtoF2a1yW8qgQ
+  - id: solio_analytics
+    name: Solio Analytics
+    youtube_channel_id: UC0LJwjL2pK4VVPnhN28FeMw
 
 analysis_prompt: |
   You are an FPL Draft analyst extracting insights from mainstream FPL content.
