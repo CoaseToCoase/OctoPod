@@ -1,5 +1,8 @@
-# OctoPod Configuration
-# Edit this file to customize channels, prompts, and storage settings
+# OctoPod Profile: FPL Draft
+# Analyzes Fantasy Premier League Draft podcasts
+
+name: FPL Draft
+description: Fantasy Premier League Draft podcast analysis
 
 channels:
   - id: draft_fc
@@ -108,4 +111,4 @@ summary_prompt: |
 
 gcs:
   bucket: octosuitedatahub
-  path_prefix: octopod/summaries
+  path_prefix: octopod/draft-fpl

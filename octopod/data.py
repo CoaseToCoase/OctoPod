@@ -5,19 +5,29 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-from .config import DATA_DIR, get_channels
+from .config import get_profile_data_dir, get_channels
 
 
-# File paths
-VIDEOS_FILE = DATA_DIR / "videos.json"
-ANALYSES_FILE = DATA_DIR / "analyses.json"
-SUMMARIES_DIR = DATA_DIR / "summaries"
+def _get_videos_file() -> Path:
+    """Get the videos.json path for the current profile."""
+    return get_profile_data_dir() / "videos.json"
+
+
+def _get_analyses_file() -> Path:
+    """Get the analyses.json path for the current profile."""
+    return get_profile_data_dir() / "analyses.json"
+
+
+def _get_summaries_dir() -> Path:
+    """Get the summaries directory path for the current profile."""
+    return get_profile_data_dir() / "summaries"
 
 
 def _ensure_data_dir() -> None:
-    """Ensure the data directory structure exists."""
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    SUMMARIES_DIR.mkdir(parents=True, exist_ok=True)
+    """Ensure the data directory structure exists for the current profile."""
+    profile_dir = get_profile_data_dir()
+    profile_dir.mkdir(parents=True, exist_ok=True)
+    _get_summaries_dir().mkdir(parents=True, exist_ok=True)
 
 
 def _load_json(path: Path) -> dict[str, Any]:
@@ -53,13 +63,16 @@ def init_db() -> None:
     """Initialize the data files (creates directories and empty files if needed)."""
     _ensure_data_dir()
 
+    videos_file = _get_videos_file()
+    analyses_file = _get_analyses_file()
+
     # Initialize videos.json if it doesn't exist
-    if not VIDEOS_FILE.exists():
-        _save_json(VIDEOS_FILE, {})
+    if not videos_file.exists():
+        _save_json(videos_file, {})
 
     # Initialize analyses.json if it doesn't exist
-    if not ANALYSES_FILE.exists():
-        _save_json(ANALYSES_FILE, {})
+    if not analyses_file.exists():
+        _save_json(analyses_file, {})
 
 
 def get_all_channels() -> list[dict[str, Any]]:
@@ -90,7 +103,8 @@ def upsert_video(
     published_at: datetime | None = None
 ) -> None:
     """Insert or update a video record."""
-    videos = _load_json(VIDEOS_FILE)
+    videos_file = _get_videos_file()
+    videos = _load_json(videos_file)
 
     videos[video_id] = {
         "id": video_id,
@@ -101,12 +115,12 @@ def upsert_video(
         "transcript_fetched_at": videos.get(video_id, {}).get("transcript_fetched_at"),
     }
 
-    _save_json(VIDEOS_FILE, videos)
+    _save_json(videos_file, videos)
 
 
 def get_videos_without_transcripts() -> list[dict[str, Any]]:
     """Get videos that don't have transcripts yet."""
-    videos = _load_json(VIDEOS_FILE)
+    videos = _load_json(_get_videos_file())
     channels = {ch["id"]: ch["name"] for ch in get_channels()}
 
     result = []
@@ -129,18 +143,19 @@ def get_videos_without_transcripts() -> list[dict[str, Any]]:
 
 def update_video_transcript(video_id: str, transcript: str) -> None:
     """Update a video's transcript."""
-    videos = _load_json(VIDEOS_FILE)
+    videos_file = _get_videos_file()
+    videos = _load_json(videos_file)
 
     if video_id in videos:
         videos[video_id]["transcript"] = transcript
         videos[video_id]["transcript_fetched_at"] = _datetime_to_str(datetime.now())
-        _save_json(VIDEOS_FILE, videos)
+        _save_json(videos_file, videos)
 
 
 def get_videos_without_analysis() -> list[dict[str, Any]]:
     """Get videos with transcripts that haven't been analyzed yet."""
-    videos = _load_json(VIDEOS_FILE)
-    analyses = _load_json(ANALYSES_FILE)
+    videos = _load_json(_get_videos_file())
+    analyses = _load_json(_get_analyses_file())
     channels = {ch["id"]: ch["name"] for ch in get_channels()}
 
     result = []
@@ -170,7 +185,8 @@ def save_analysis(
     raw_analysis: str
 ) -> None:
     """Save analysis results for a video."""
-    analyses = _load_json(ANALYSES_FILE)
+    analyses_file = _get_analyses_file()
+    analyses = _load_json(analyses_file)
 
     analyses[video_id] = {
         "video_id": video_id,
@@ -181,12 +197,12 @@ def save_analysis(
         "raw_analysis": raw_analysis,
     }
 
-    _save_json(ANALYSES_FILE, analyses)
+    _save_json(analyses_file, analyses)
 
 
 def get_analysis_for_video(video_id: str) -> dict[str, Any] | None:
     """Get analysis results for a specific video."""
-    analyses = _load_json(ANALYSES_FILE)
+    analyses = _load_json(_get_analyses_file())
     return analyses.get(video_id)
 
 
@@ -194,8 +210,8 @@ def get_recent_analyses(days: int = 7) -> list[dict[str, Any]]:
     """Get analyses from the past N days."""
     from datetime import timezone
 
-    videos = _load_json(VIDEOS_FILE)
-    analyses = _load_json(ANALYSES_FILE)
+    videos = _load_json(_get_videos_file())
+    analyses = _load_json(_get_analyses_file())
     channels = {ch["id"]: ch["name"] for ch in get_channels()}
 
     cutoff = datetime.now(timezone.utc) - timedelta(days=days)
@@ -226,8 +242,8 @@ def get_gameweek_analyses(since: datetime, until: datetime | None = None) -> lis
     """Get analyses for videos published between gameweek deadlines."""
     from datetime import timezone
 
-    videos = _load_json(VIDEOS_FILE)
-    analyses = _load_json(ANALYSES_FILE)
+    videos = _load_json(_get_videos_file())
+    analyses = _load_json(_get_analyses_file())
     channels = {ch["id"]: ch["name"] for ch in get_channels()}
 
     # Ensure timezone aware
@@ -267,7 +283,9 @@ def save_weekly_summary(
     video_ids: list[str]
 ) -> None:
     """Save a weekly summary."""
-    summary_file = SUMMARIES_DIR / f"gw{gameweek}.json"
+    summaries_dir = _get_summaries_dir()
+    summaries_dir.mkdir(parents=True, exist_ok=True)
+    summary_file = summaries_dir / f"gw{gameweek}.json"
 
     summary_data = {
         "gameweek": gameweek,
@@ -281,7 +299,7 @@ def save_weekly_summary(
 
 def get_weekly_summary(gameweek: int) -> dict[str, Any] | None:
     """Get a weekly summary by gameweek number."""
-    summary_file = SUMMARIES_DIR / f"gw{gameweek}.json"
+    summary_file = _get_summaries_dir() / f"gw{gameweek}.json"
 
     if not summary_file.exists():
         return None
@@ -291,8 +309,8 @@ def get_weekly_summary(gameweek: int) -> dict[str, Any] | None:
 
 def get_all_videos(limit: int = 50) -> list[dict[str, Any]]:
     """Get all videos ordered by publish date."""
-    videos = _load_json(VIDEOS_FILE)
-    analyses = _load_json(ANALYSES_FILE)
+    videos = _load_json(_get_videos_file())
+    analyses = _load_json(_get_analyses_file())
     channels = {ch["id"]: ch["name"] for ch in get_channels()}
 
     result = []

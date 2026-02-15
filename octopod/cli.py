@@ -1,6 +1,7 @@
 """CLI entry point for OctoPod."""
 
 from datetime import datetime
+from typing import Optional
 
 import typer
 from rich.console import Console
@@ -8,6 +9,7 @@ from rich.table import Table
 from rich.panel import Panel
 from rich.markdown import Markdown
 
+from .config import set_profile, get_profile, list_profiles
 from .data import (
     init_db,
     get_all_channels,
@@ -23,12 +25,28 @@ from .fpl import get_previous_gameweek_deadline, get_current_gameweek
 
 app = typer.Typer(
     name="octopod",
-    help="FPL Draft Podcast Analyzer - Download and analyze YouTube transcripts for player insights"
+    help="Podcast Analyzer - Download and analyze YouTube transcripts"
 )
 channels_app = typer.Typer(help="Manage podcast channels")
 app.add_typer(channels_app, name="channels")
 
 console = Console()
+
+
+@app.callback()
+def main(
+    profile: Optional[str] = typer.Option(
+        None, "--profile", "-p",
+        help="Profile to use (e.g., draft-fpl, politics). Uses default if not specified."
+    )
+):
+    """OctoPod - Multi-profile podcast analyzer."""
+    if profile:
+        try:
+            set_profile(profile)
+        except FileNotFoundError as e:
+            console.print(f"[red]Error: {e}[/red]")
+            raise typer.Exit(1)
 
 
 def ensure_db():
@@ -172,6 +190,7 @@ def run(
 ):
     """Run the full pipeline: fetch, transcripts, analyze, and summarize."""
     ensure_db()
+    console.print(f"[bold]Profile: {get_profile()}[/bold]\n")
 
     # Determine the since date and gameweek
     filter_date = since
@@ -326,10 +345,33 @@ def add_channel_cmd(
 
 @app.command()
 def init():
-    """Initialize the data files."""
+    """Initialize the data files for the current profile."""
     init_db()
-    console.print("[green]Data files initialized successfully.[/green]")
-    console.print("[dim]Data location: data/videos.json, data/analyses.json, data/summaries/[/dim]")
+    profile = get_profile()
+    console.print(f"[green]Data files initialized successfully for profile: {profile}[/green]")
+    console.print(f"[dim]Data location: data/{profile}/videos.json, data/{profile}/analyses.json, data/{profile}/summaries/[/dim]")
+
+
+@app.command()
+def profiles():
+    """List all available profiles."""
+    available = list_profiles()
+    current = get_profile()
+
+    if not available:
+        console.print("[yellow]No profiles found. Create a YAML file in config/ directory.[/yellow]")
+        return
+
+    table = Table(title="Available Profiles")
+    table.add_column("Profile", style="cyan")
+    table.add_column("Active", justify="center")
+
+    for p in sorted(available):
+        is_active = "[green]✓[/green]" if p == current else ""
+        table.add_row(p, is_active)
+
+    console.print(table)
+    console.print("\n[dim]Use --profile <name> to switch profiles[/dim]")
 
 
 if __name__ == "__main__":

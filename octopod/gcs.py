@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-from .config import get_gcs_config, DATA_DIR
+from .config import get_gcs_config, get_profile_data_dir
 
 
 def upload_summary_to_gcs(gameweek: int, summary: str, video_ids: list[str]) -> str | None:
@@ -101,26 +101,28 @@ def _get_gcs_client():
 
 
 def sync_data_from_gcs() -> bool:
-    """Download data files from GCS to local."""
+    """Download data files from GCS to local for the current profile."""
     if not is_gcs_configured():
         return False
 
     try:
         gcs_config = get_gcs_config()
         bucket_name = gcs_config.get("bucket", "")
-        path_prefix = gcs_config.get("path_prefix", "octopod/summaries")
-        data_prefix = path_prefix.rsplit("/", 1)[0] + "/data"
+        path_prefix = gcs_config.get("path_prefix", "octopod")
+        data_prefix = f"{path_prefix}/data"
 
         client = _get_gcs_client()
         if not client:
             return False
 
         bucket = client.bucket(bucket_name)
+        profile_data_dir = get_profile_data_dir()
+        profile_data_dir.mkdir(parents=True, exist_ok=True)
 
         # Download videos.json and analyses.json
         for filename in ["videos.json", "analyses.json"]:
             blob = bucket.blob(f"{data_prefix}/{filename}")
-            local_path = DATA_DIR / filename
+            local_path = profile_data_dir / filename
             if blob.exists():
                 blob.download_to_filename(str(local_path))
 
@@ -131,25 +133,26 @@ def sync_data_from_gcs() -> bool:
 
 
 def sync_data_to_gcs() -> bool:
-    """Upload data files from local to GCS."""
+    """Upload data files from local to GCS for the current profile."""
     if not is_gcs_configured():
         return False
 
     try:
         gcs_config = get_gcs_config()
         bucket_name = gcs_config.get("bucket", "")
-        path_prefix = gcs_config.get("path_prefix", "octopod/summaries")
-        data_prefix = path_prefix.rsplit("/", 1)[0] + "/data"
+        path_prefix = gcs_config.get("path_prefix", "octopod")
+        data_prefix = f"{path_prefix}/data"
 
         client = _get_gcs_client()
         if not client:
             return False
 
         bucket = client.bucket(bucket_name)
+        profile_data_dir = get_profile_data_dir()
 
         # Upload videos.json and analyses.json
         for filename in ["videos.json", "analyses.json"]:
-            local_path = DATA_DIR / filename
+            local_path = profile_data_dir / filename
             if local_path.exists():
                 blob = bucket.blob(f"{data_prefix}/{filename}")
                 blob.upload_from_filename(str(local_path))
