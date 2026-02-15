@@ -107,5 +107,5 @@ summary_prompt: |
   Create a comprehensive Gameweek {gameweek} summary:
 
 gcs:
-  bucket: your-bucket-name
+  bucket: octosuitedatahub
   path_prefix: octopod/summaries
