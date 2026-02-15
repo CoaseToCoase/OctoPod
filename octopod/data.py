@@ -192,11 +192,13 @@ def get_analysis_for_video(video_id: str) -> dict[str, Any] | None:
 
 def get_recent_analyses(days: int = 7) -> list[dict[str, Any]]:
     """Get analyses from the past N days."""
+    from datetime import timezone
+
     videos = _load_json(VIDEOS_FILE)
     analyses = _load_json(ANALYSES_FILE)
     channels = {ch["id"]: ch["name"] for ch in get_channels()}
 
-    cutoff = datetime.now() - timedelta(days=days)
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
     results = []
 
     for video_id, analysis in analyses.items():

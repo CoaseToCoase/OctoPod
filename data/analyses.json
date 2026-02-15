@@ -1,1 +1,2242 @@
-{}
+{
+  "u5j0ixnwoiU": {
+    "video_id": "u5j0ixnwoiU",
+    "analyzed_at": "2026-02-15T07:35:34.813207",
+    "player_mentions": [
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "context": "Most transferred in player with over 95,000 transfers. Scored another penalty goal in gameweek 26. Takes all penalties when on the pitch.",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Joao Pedro",
+        "team": "Chelsea",
+        "context": "Second most transferred in. In fantastic form with 7 shots in the box in GW26 (highest in any PL match he's played). 48 points from last 5 matches is the best run of any player.",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Antoine Semenyo",
+        "team": "",
+        "context": "Third most transferred in. 14 point haul in gameweek 26 shows why he's popular in FPL.",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Enzo Fernandez",
+        "team": "Chelsea",
+        "context": "Top of most transferred out list. Been disappointing in last couple of weeks. On penalties when Palmer isn't on pitch but Palmer has taken all recent penalties.",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "context": "Second most transferred out with over 41,000 sales despite still having to play again in double gameweek 26. Arsenal will blank in gameweek 31.",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Harry Wilson",
+        "team": "",
+        "context": "Third most transferred out. Was popular a few weeks ago but has risen to 6 million in price and failed to return in last three gameweeks.",
+        "sentiment": "negative"
+      }
+    ],
+    "recommendations": [],
+    "injury_news": [],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Most transferred in player with over 95,000 transfers. Scored another penalty goal in gameweek 26. Takes all penalties when on the pitch.\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Joao Pedro\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Second most transferred in. In fantastic form with 7 shots in the box in GW26 (highest in any PL match he's played). 48 points from last 5 matches is the best run of any player.\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Antoine Semenyo\",\n            \"team\": \"\",\n            \"context\": \"Third most transferred in. 14 point haul in gameweek 26 shows why he's popular in FPL.\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Enzo Fernandez\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Top of most transferred out list. Been disappointing in last couple of weeks. On penalties when Palmer isn't on pitch but Palmer has taken all recent penalties.\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Second most transferred out with over 41,000 sales despite still having to play again in double gameweek 26. Arsenal will blank in gameweek 31.\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Harry Wilson\",\n            \"team\": \"\",\n            \"context\": \"Third most transferred out. Was popular a few weeks ago but has risen to 6 million in price and failed to return in last three gameweeks.\",\n            \"sentiment\": \"negative\"\n        }\n    ],\n    \"recommendations\": [],\n    \"injury_news\": [],\n    \"differentials\": [],\n    \"captain_picks\": []\n}"
+  },
+  "_nzlD98zFmk": {
+    "video_id": "_nzlD98zFmk",
+    "analyzed_at": "2026-02-15T07:35:45.113150",
+    "player_mentions": [
+      {
+        "player": "Raya",
+        "team": "Arsenal",
+        "context": "Listed in current team selection",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Richards",
+        "team": "Crystal Palace",
+        "context": "Listed in current team selection and mentioned as a defender option",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Anderson",
+        "team": "Fulham",
+        "context": "Has a pretty good run from next week",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "context": "Just plays every week",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Rice",
+        "team": "Arsenal",
+        "context": "Listed in current team selection",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "context": "Listed in current team selection",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Echitike",
+        "team": "Newcastle",
+        "context": "Happy with current attacking trio including him",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Haaland",
+        "team": "Manchester City",
+        "context": "Happy with current attacking trio including him",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Thiago",
+        "team": "Brentford",
+        "context": "Happy with current attacking trio including him",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Tarkowski",
+        "team": "Everton",
+        "context": "Mentioned as potential transfer out to free up funds",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Collins",
+        "team": "Brentford",
+        "context": "Mentioned as potential transfer target",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Wirtz",
+        "team": "Bayer Leverkusen",
+        "context": "Considering as transfer target, undecided if definitely wants him",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Rogers",
+        "team": "Aston Villa",
+        "context": "Mentioned as alternative to Wirtz",
+        "sentiment": "neutral"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Tarkowski",
+        "team": "Everton",
+        "action": "sell",
+        "reason": "To Collins frees up money for rise to Wirtz"
+      },
+      {
+        "player": "Collins",
+        "team": "Brentford",
+        "action": "buy",
+        "reason": "Frees up money for rise to Wirtz as part of transfer plan"
+      }
+    ],
+    "injury_news": [],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Raya\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Listed in current team selection\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Richards\",\n            \"team\": \"Crystal Palace\",\n            \"context\": \"Listed in current team selection and mentioned as a defender option\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Anderson\",\n            \"team\": \"Fulham\",\n            \"context\": \"Has a pretty good run from next week\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Just plays every week\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Rice\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Listed in current team selection\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Listed in current team selection\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Echitike\",\n            \"team\": \"Newcastle\",\n            \"context\": \"Happy with current attacking trio including him\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Haaland\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Happy with current attacking trio including him\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Thiago\",\n            \"team\": \"Brentford\",\n            \"context\": \"Happy with current attacking trio including him\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Tarkowski\",\n            \"team\": \"Everton\",\n            \"context\": \"Mentioned as potential transfer out to free up funds\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Collins\",\n            \"team\": \"Brentford\",\n            \"context\": \"Mentioned as potential transfer target\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Wirtz\",\n            \"team\": \"Bayer Leverkusen\",\n            \"context\": \"Considering as transfer target, undecided if definitely wants him\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Rogers\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Mentioned as alternative to Wirtz\",\n            \"sentiment\": \"neutral\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Tarkowski\",\n            \"team\": \"Everton\",\n            \"action\": \"sell\",\n            \"reason\": \"To Collins frees up money for rise to Wirtz\"\n        },\n        {\n            \"player\": \"Collins\",\n            \"team\": \"Brentford\",\n            \"action\": \"buy\",\n            \"reason\": \"Frees up money for rise to Wirtz as part of transfer plan\"\n        }\n    ],\n    \"injury_news\": [],\n    \"differentials\": [],\n    \"captain_picks\": []\n}"
+  },
+  "LXTXQfgxUtw": {
+    "video_id": "LXTXQfgxUtw",
+    "analyzed_at": "2026-02-15T07:36:28.429481",
+    "player_mentions": [
+      {
+        "player": "Micky Van de Ven",
+        "team": "Tottenham",
+        "context": "Having to go into manager's office twice to apologize for ignoring him and ranting, which is not characteristic behavior for him",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Kulusevski",
+        "team": "Tottenham",
+        "context": "Was due back at Christmas but it's now mid-February and still not back from injury",
+        "sentiment": "negative"
+      },
+      {
+        "player": "James Madison",
+        "team": "Tottenham",
+        "context": "Got injured in preseason and still out",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Solanke",
+        "team": "Tottenham",
+        "context": "One of only four fit attacking assets, thankfully back from injury",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Maddison",
+        "team": "Tottenham",
+        "context": "Still out from injury",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Kudus",
+        "team": "Tottenham",
+        "context": "Out until at least March international break if no setbacks",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Brennan Johnson",
+        "team": "Tottenham",
+        "context": "Went off injured and out for rest of season, 9-12 months recovery reported",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Conor Gallagher",
+        "team": "Tottenham",
+        "context": "Came in during January transfer window, questioning why he signed for Spurs when could have gone to Aston Villa",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Haaland",
+        "team": "Manchester City",
+        "context": "Had assist and goal, went off at halftime with potential fitness concerns",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Semenyo",
+        "team": "Manchester City",
+        "context": "Been brilliant since signing, selfish player focused on golden boot, described as outstanding",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Gvardiol",
+        "team": "Manchester City",
+        "context": "Mentioned as performing well, part of successful triple",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "context": "Triple captained by Sam, got booked, currently on 7 points in double gameweek",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Timber",
+        "team": "Arsenal",
+        "context": "Part of double Arsenal defense, mentioned as priority sale due to blank gameweek 31",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "context": "Described as wasted spot, not seeing massive hauls, priority transfer out",
+        "sentiment": "negative"
+      },
+      {
+        "player": "O'Reilly",
+        "team": "Brighton",
+        "context": "Still playing in midfield despite Nori returning, even scored this week for 12 points",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "context": "Won three penalties recently, seems over fitness issues, captainable for Burnley fixture but tough fixtures after",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Joao Pedro",
+        "team": "Brighton",
+        "context": "Won Palmer three penalties with ridiculous fouls, heavily owned player causing pain when not owned",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Enzo Fernandez",
+        "team": "Chelsea",
+        "context": "Frustrating as xG numbers still good but no points in last two matches, has to stay for Burnley game",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Thiago",
+        "team": "Brentford",
+        "context": "Another pen machine who's been playing well, good fixtures coming up",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Evanilson",
+        "team": "Bournemouth",
+        "context": "Been super frustrating FPL asset despite being a good player, fixtures about to turn",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Hill",
+        "team": "Bournemouth",
+        "context": "Been a superstar, non-stop talked about everywhere as good option",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Mark Guehi",
+        "team": "Crystal Palace",
+        "context": "Good pick for home fixture, only got 7 points despite being absolutely unbelievably good",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Morgan Rogers",
+        "team": "Aston Villa",
+        "context": "Drives Sam insane, great underlying numbers but 18th of midfielders for points, top for chances created and shots but frustrating returns",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Florian Wirtz",
+        "team": "Liverpool",
+        "context": "Regrets selling him, was fantastic and returning differential points, wants to get back to him due to Liverpool's excellent fixtures",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "context": "Had good returns when captained in recent weeks",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Keane",
+        "team": "Everton",
+        "context": "Disappointed, came on in 93rd minute as referee blew whistle, potential 3-game suspension due to Branthwaite red card",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Rayan Ait-Nouri",
+        "team": "Wolves",
+        "context": "Looks really good, mentioned as potential target after Enzo",
+        "sentiment": "positive"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Hill",
+        "team": "Bournemouth",
+        "action": "buy",
+        "reason": "Been a superstar and good alternative to Keane"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "action": "buy",
+        "reason": "Good for Burnley fixture as captain option, over fitness issues"
+      },
+      {
+        "player": "Thiago",
+        "team": "Brentford",
+        "action": "buy",
+        "reason": "Pen machine with good fixtures, more sensible long-term move than Palmer"
+      },
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "action": "sell",
+        "reason": "Described as wasted spot, not seeing massive hauls, priority transfer out"
+      },
+      {
+        "player": "Enzo Fernandez",
+        "team": "Chelsea",
+        "action": "hold",
+        "reason": "Has to stay for Burnley game despite being frustrating"
+      },
+      {
+        "player": "Florian Wirtz",
+        "team": "Liverpool",
+        "action": "buy",
+        "reason": "Liverpool have excellent fixtures and he was fantastic when previously owned"
+      },
+      {
+        "player": "Keane",
+        "team": "Everton",
+        "action": "sell",
+        "reason": "Disappointing returns and potential suspension issues"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Kulusevski",
+        "team": "Tottenham",
+        "status": "injured",
+        "details": "Was due back at Christmas but it's now mid-February and still not back"
+      },
+      {
+        "player": "James Madison",
+        "team": "Tottenham",
+        "status": "injured",
+        "details": "Got injured in preseason and still out"
+      },
+      {
+        "player": "Brennan Johnson",
+        "team": "Tottenham",
+        "status": "injured",
+        "details": "Out for rest of season, 9-12 months recovery reported"
+      },
+      {
+        "player": "Kudus",
+        "team": "Tottenham",
+        "status": "injured",
+        "details": "Out until at least March international break if no setbacks"
+      },
+      {
+        "player": "Haaland",
+        "team": "Manchester City",
+        "status": "doubtful",
+        "details": "Went off at halftime, potential fitness concerns but could be rest due to comfortable game"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "status": "fit",
+        "details": "Seems over fitness issues now and fully back to himself"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Micky Van de Ven\",\n            \"team\": \"Tottenham\",\n            \"context\": \"Having to go into manager's office twice to apologize for ignoring him and ranting, which is not characteristic behavior for him\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Kulusevski\",\n            \"team\": \"Tottenham\",\n            \"context\": \"Was due back at Christmas but it's now mid-February and still not back from injury\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"James Madison\",\n            \"team\": \"Tottenham\",\n            \"context\": \"Got injured in preseason and still out\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Solanke\",\n            \"team\": \"Tottenham\",\n            \"context\": \"One of only four fit attacking assets, thankfully back from injury\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Maddison\",\n            \"team\": \"Tottenham\",\n            \"context\": \"Still out from injury\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Kudus\",\n            \"team\": \"Tottenham\",\n            \"context\": \"Out until at least March international break if no setbacks\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Brennan Johnson\",\n            \"team\": \"Tottenham\",\n            \"context\": \"Went off injured and out for rest of season, 9-12 months recovery reported\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Conor Gallagher\",\n            \"team\": \"Tottenham\",\n            \"context\": \"Came in during January transfer window, questioning why he signed for Spurs when could have gone to Aston Villa\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Haaland\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Had assist and goal, went off at halftime with potential fitness concerns\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Semenyo\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Been brilliant since signing, selfish player focused on golden boot, described as outstanding\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Gvardiol\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Mentioned as performing well, part of successful triple\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Triple captained by Sam, got booked, currently on 7 points in double gameweek\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Timber\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Part of double Arsenal defense, mentioned as priority sale due to blank gameweek 31\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Described as wasted spot, not seeing massive hauls, priority transfer out\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"O'Reilly\",\n            \"team\": \"Brighton\",\n            \"context\": \"Still playing in midfield despite Nori returning, even scored this week for 12 points\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Won three penalties recently, seems over fitness issues, captainable for Burnley fixture but tough fixtures after\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Joao Pedro\",\n            \"team\": \"Brighton\",\n            \"context\": \"Won Palmer three penalties with ridiculous fouls, heavily owned player causing pain when not owned\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Enzo Fernandez\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Frustrating as xG numbers still good but no points in last two matches, has to stay for Burnley game\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Thiago\",\n            \"team\": \"Brentford\",\n            \"context\": \"Another pen machine who's been playing well, good fixtures coming up\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Evanilson\",\n            \"team\": \"Bournemouth\",\n            \"context\": \"Been super frustrating FPL asset despite being a good player, fixtures about to turn\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Hill\",\n            \"team\": \"Bournemouth\",\n            \"context\": \"Been a superstar, non-stop talked about everywhere as good option\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Mark Guehi\",\n            \"team\": \"Crystal Palace\",\n            \"context\": \"Good pick for home fixture, only got 7 points despite being absolutely unbelievably good\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Morgan Rogers\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Drives Sam insane, great underlying numbers but 18th of midfielders for points, top for chances created and shots but frustrating returns\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Florian Wirtz\",\n            \"team\": \"Liverpool\",\n            \"context\": \"Regrets selling him, was fantastic and returning differential points, wants to get back to him due to Liverpool's excellent fixtures\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Had good returns when captained in recent weeks\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Keane\",\n            \"team\": \"Everton\",\n            \"context\": \"Disappointed, came on in 93rd minute as referee blew whistle, potential 3-game suspension due to Branthwaite red card\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Rayan Ait-Nouri\",\n            \"team\": \"Wolves\",\n            \"context\": \"Looks really good, mentioned as potential target after Enzo\",\n            \"sentiment\": \"positive\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Hill\",\n            \"team\": \"Bournemouth\",\n            \"action\": \"buy\",\n            \"reason\": \"Been a superstar and good alternative to Keane\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"action\": \"buy\",\n            \"reason\": \"Good for Burnley fixture as captain option, over fitness issues\"\n        },\n        {\n            \"player\": \"Thiago\",\n            \"team\": \"Brentford\",\n            \"action\": \"buy\",\n            \"reason\": \"Pen machine with good fixtures, more sensible long-term move than Palmer\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"action\": \"sell\",\n            \"reason\": \"Described as wasted spot, not seeing massive hauls, priority transfer out\"\n        },\n        {\n            \"player\": \"Enzo Fernandez\",\n            \"team\": \"Chelsea\",\n            \"action\": \"hold\",\n            \"reason\": \"Has to stay for Burnley game despite being frustrating\"\n        },\n        {\n            \"player\": \"Florian Wirtz\",\n            \"team\": \"Liverpool\",\n            \"action\": \"buy\",\n            \"reason\": \"Liverpool have excellent fixtures and he was fantastic when previously owned\"\n        },\n        {\n            \"player\": \"Keane\",\n            \"team\": \"Everton\",\n            \"action\": \"sell\",\n            \"reason\": \"Disappointing returns and potential suspension issues\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Kulusevski\",\n            \"team\": \"Tottenham\",\n            \"status\": \"injured\",\n            \"details\": \"Was due back at Christmas but it's now mid-February and still not back\"\n        },\n        {\n            \"player\": \"James Madison\",\n            \"team\": \"Tottenham\",\n            \"status\": \"injured\",\n            \"details\": \"Got injured in preseason and still out\"\n        },\n        {\n            \"player\": \"Brennan Johnson\",\n            \"team\": \"Tottenham\",\n            \"status\": \"injured\",\n            \"details\": \"Out for rest of season, 9-12 months recovery reported\"\n        },\n        {\n            \"player\": \"Kudus\",\n            \"team\": \"Tottenham\",\n            \"status\": \"injured\",\n            \"details\": \"Out until at least March international break if no setbacks\"\n        },\n        {\n            \"player\": \"Haaland\",\n            \"team\": \"Manchester City\",\n            \"status\": \"doubtful\",\n            \"details\": \"Went off at halftime, potential fitness concerns but could be rest due to comfortable game\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"status\": \"fit\",\n            \"details\": \"Seems over fitness issues now and fully back to himself\"\n        }\n    ],\n    \"differentials\": [\n        {\n            \"player\": \"Semenyo\",\n            \"team\": \"Manchester City\",\n            \"reason\": \"Outstanding since signing, selfish player focused on goals, differential captain option over Haaland\"\n        },\n        {\n            \"player\": \"Florian Wirtz\",\n            \"team\": \"Liverpool\",\n            \"reason\": \"Was returning differential points when owned, Liverpool have best fixtures\"\n        }\n    ],\n    \"captain_picks\": [\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Triple captained for double gameweek despite risky choice\"\n        },\n        {\n            \"player\": \"Semenyo\",\n            \"team\": \"Manchester City\",\n            \"reason\": \"More trusted than Haaland currently, selfish player focused on goals, home game against Newcastle\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"reason\": \"Captainable for Burnley fixture if brought in\"\n        }\n    ]\n}"
+  },
+  "ehluFQai27E": {
+    "video_id": "ehluFQai27E",
+    "analyzed_at": "2026-02-15T07:37:02.138478",
+    "player_mentions": [
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "context": "Described as 'pen merchant' but acknowledged as the best player on the pitch by country during the week, might have worked through injury, has good fixture vs Burnley",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Joao Pedro",
+        "team": "Chelsea",
+        "context": "Won three penalties in recent games, had more shots vs Tuesday night than ever before in Premier League, becoming clear choice over Liam Delap",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Enzo Fernandez",
+        "team": "Chelsea",
+        "context": "Takes penalties when Palmer isn't playing, but Palmer seems to be staying fit now, numbers and xG still good but frustrating",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Dominic Calvert-Lewin",
+        "team": "Everton",
+        "context": "Scored recently, one owner was considering selling but he returned with 7 points",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Morgan Rogers",
+        "team": "Aston Villa",
+        "context": "Top for goal threat amongst midfielders with 20 attempts in last 6 games but only 18th for points, very frustrating to own despite good fixtures",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Erling Haaland",
+        "team": "Manchester City",
+        "context": "Came off at halftime with a niggle but expected to be fine after 9 days rest",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "context": "Mentioned as triple captain choice for tonight's game",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "context": "Expected to do nothing but might be better if Saka is back, mentioned as potential captain choice",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "James Hill",
+        "team": "Burnley",
+        "context": "3.9m defender who got 9 points, gone up to 4.0m, many people thanking for the recommendation",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Antoine Semenyo",
+        "team": "Bournemouth",
+        "context": "Mentioned positively alongside other City players who returned",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Justin Kluivert",
+        "team": "Bournemouth",
+        "context": "Mentioned as Bournemouth option with nice fixtures",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Ryan Christie",
+        "team": "Bournemouth",
+        "context": "Preferred over Somerville and Dango, good fixtures for Bournemouth, feels important and likely to play every week",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Jarrod Somerville",
+        "team": "West Ham",
+        "context": "West Ham asset worth considering due to their good form, has been good for a while",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Jarrod Bowen",
+        "team": "West Ham",
+        "context": "Good pick if you have money to splash, now playing in position he wants",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Mohamed Salah",
+        "team": "Liverpool",
+        "context": "Some planning Palmer to Salah moves, has penalties, but Verts preferred over him",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Cody Gakpo",
+        "team": "Liverpool",
+        "context": "Mentioned as getting beautiful assist to Salah, lovely player who gets bonus points",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Yoane Wissa",
+        "team": "Brentford",
+        "context": "Mentioned alongside Thiago as potential Brentford double up option with good fixtures",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Bryan Mbeumo",
+        "team": "Brentford",
+        "context": "Mentioned as Brentford option but concerns about doubling up on Brentford attack",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Elliot Anderson",
+        "team": "Nottingham Forest",
+        "context": "Has been consistently good, averaging 5 points per game, concern about whether he'll keep getting returns under new manager",
+        "sentiment": "positive"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Joao Pedro",
+        "team": "Chelsea",
+        "action": "buy",
+        "reason": "Becoming clear choice over Delap, winning penalties, had record shots in recent game, highly owned so hurts when he returns"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "action": "buy",
+        "reason": "Good fixture vs Burnley at home, best player on pitch recently, seems to have worked through injury"
+      },
+      {
+        "player": "James Hill",
+        "team": "Burnley",
+        "action": "buy",
+        "reason": "Cheap at 3.9m (now 4.0m), getting consistent returns, good value defender"
+      },
+      {
+        "player": "Ryan Christie",
+        "team": "Bournemouth",
+        "action": "buy",
+        "reason": "Bournemouth have excellent fixtures, feels important and likely to play every week, preferred over other mid-price midfielders"
+      },
+      {
+        "player": "Cody Gakpo",
+        "team": "Liverpool",
+        "action": "buy",
+        "reason": "Liverpool fixtures are very good, gets bonus points when he returns, preferred over Salah"
+      },
+      {
+        "player": "Morgan Rogers",
+        "team": "Aston Villa",
+        "action": "hold",
+        "reason": "Despite frustration, fixtures are too good to sell, second on fixture ticker through GW31"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Erling Haaland",
+        "team": "Manchester City",
+        "status": "doubtful",
+        "details": "Came off at halftime with a niggle but expected to be fine after 9 days rest, perfect opportunity for rest"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Described as 'pen merchant' but acknowledged as the best player on the pitch by country during the week, might have worked through injury, has good fixture vs Burnley\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Joao Pedro\",\n            \"team\": \"Chelsea\", \n            \"context\": \"Won three penalties in recent games, had more shots vs Tuesday night than ever before in Premier League, becoming clear choice over Liam Delap\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Enzo Fernandez\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Takes penalties when Palmer isn't playing, but Palmer seems to be staying fit now, numbers and xG still good but frustrating\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Dominic Calvert-Lewin\",\n            \"team\": \"Everton\",\n            \"context\": \"Scored recently, one owner was considering selling but he returned with 7 points\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Morgan Rogers\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Top for goal threat amongst midfielders with 20 attempts in last 6 games but only 18th for points, very frustrating to own despite good fixtures\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Came off at halftime with a niggle but expected to be fine after 9 days rest\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Mentioned as triple captain choice for tonight's game\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\", \n            \"context\": \"Expected to do nothing but might be better if Saka is back, mentioned as potential captain choice\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"James Hill\",\n            \"team\": \"Burnley\",\n            \"context\": \"3.9m defender who got 9 points, gone up to 4.0m, many people thanking for the recommendation\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Antoine Semenyo\",\n            \"team\": \"Bournemouth\",\n            \"context\": \"Mentioned positively alongside other City players who returned\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Justin Kluivert\",\n            \"team\": \"Bournemouth\",\n            \"context\": \"Mentioned as Bournemouth option with nice fixtures\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Ryan Christie\",\n            \"team\": \"Bournemouth\", \n            \"context\": \"Preferred over Somerville and Dango, good fixtures for Bournemouth, feels important and likely to play every week\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Jarrod Somerville\",\n            \"team\": \"West Ham\",\n            \"context\": \"West Ham asset worth considering due to their good form, has been good for a while\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Jarrod Bowen\",\n            \"team\": \"West Ham\",\n            \"context\": \"Good pick if you have money to splash, now playing in position he wants\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Mohamed Salah\",\n            \"team\": \"Liverpool\",\n            \"context\": \"Some planning Palmer to Salah moves, has penalties, but Verts preferred over him\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Cody Gakpo\",\n            \"team\": \"Liverpool\",\n            \"context\": \"Mentioned as getting beautiful assist to Salah, lovely player who gets bonus points\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Yoane Wissa\",\n            \"team\": \"Brentford\",\n            \"context\": \"Mentioned alongside Thiago as potential Brentford double up option with good fixtures\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Bryan Mbeumo\",\n            \"team\": \"Brentford\", \n            \"context\": \"Mentioned as Brentford option but concerns about doubling up on Brentford attack\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Elliot Anderson\",\n            \"team\": \"Nottingham Forest\",\n            \"context\": \"Has been consistently good, averaging 5 points per game, concern about whether he'll keep getting returns under new manager\",\n            \"sentiment\": \"positive\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Joao Pedro\",\n            \"team\": \"Chelsea\",\n            \"action\": \"buy\",\n            \"reason\": \"Becoming clear choice over Delap, winning penalties, had record shots in recent game, highly owned so hurts when he returns\"\n        },\n        {\n            \"player\": \"Cole Palmer\", \n            \"team\": \"Chelsea\",\n            \"action\": \"buy\",\n            \"reason\": \"Good fixture vs Burnley at home, best player on pitch recently, seems to have worked through injury\"\n        },\n        {\n            \"player\": \"James Hill\",\n            \"team\": \"Burnley\", \n            \"action\": \"buy\",\n            \"reason\": \"Cheap at 3.9m (now 4.0m), getting consistent returns, good value defender\"\n        },\n        {\n            \"player\": \"Ryan Christie\",\n            \"team\": \"Bournemouth\",\n            \"action\": \"buy\", \n            \"reason\": \"Bournemouth have excellent fixtures, feels important and likely to play every week, preferred over other mid-price midfielders\"\n        },\n        {\n            \"player\": \"Cody Gakpo\",\n            \"team\": \"Liverpool\",\n            \"action\": \"buy\",\n            \"reason\": \"Liverpool fixtures are very good, gets bonus points when he returns, preferred over Salah\"\n        },\n        {\n            \"player\": \"Morgan Rogers\",\n            \"team\": \"Aston Villa\", \n            \"action\": \"hold\",\n            \"reason\": \"Despite frustration, fixtures are too good to sell, second on fixture ticker through GW31\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"status\": \"doubtful\",\n            \"details\": \"Came off at halftime with a niggle but expected to be fine after 9 days rest, perfect opportunity for rest\"\n        }\n    ],\n    \"differentials\": [\n        {\n            \"player\": \"James Hill\",\n            \"team\": \"Burnley\",\n            \"reason\": \"Only 3.9m defender who's been getting consistent returns, cheap way into defense\"\n        },\n        {\n            \"player\": \"Jarrod Somerville\", \n            \"team\": \"West Ham\",\n            \"reason\": \"West Ham are the form team in the league, good fixtures, under-the-radar compared to Bowen\"\n        }\n    ],\n    \"captain_picks\": [\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\", \n            \"reason\": \"Triple captain choice for tonight's game, mentioned as good captaincy option\"\n        }\n    ]\n}"
+  },
+  "fljYqSN4tQ8": {
+    "video_id": "fljYqSN4tQ8",
+    "analyzed_at": "2026-02-15T07:37:21.895376",
+    "player_mentions": [
+      {
+        "player": "Palmer",
+        "team": "Chelsea",
+        "context": "Mentioned as captain choice against Burnley, on penalties, 15 shots in last six gameweeks from five starts, five goals and assists in last six",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Sanchez",
+        "team": "Chelsea",
+        "context": "Goalkeeper option at home to Burnley, cheaper than Chalaba but still good for clean sheet potential",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Pedro",
+        "team": "Chelsea",
+        "context": "Incredible four goals and five assists in his last six, excellent link up play with Palmer, penalty taker",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Enzo Fernandez",
+        "team": "Chelsea",
+        "context": "On penalties when Palmer is off pitch, two goals and assist in last six from 15 chances and 12 shots, computer predicts more points than Pedro",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "context": "Against Everton, five assists and a goal in last six, 27 chances and 12 shots - most attacking potential of any player in the 11",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Haaland",
+        "team": "Manchester City",
+        "context": "Against Newcastle, four attacking returns over last four starts with 15 shots, not up to usual standards but still performing",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Morgan Rogers",
+        "team": "Aston Villa",
+        "context": "Against Leeds at home, 16 shots and 10 chances created in last six with goal and assist, great value at 7.6, talisman for Villa",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Sar",
+        "team": "Crystal Palace",
+        "context": "Two goals in last three starts against Wolves, emerged as key attacker for Palace, should be on penalties",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Thiago",
+        "team": "Brentford",
+        "context": "Against Brighton at home, three goals from 11 shots over last five starts, scored against Brighton already this season",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Munoz",
+        "team": "Crystal Palace",
+        "context": "Strong underlying stats since injury return, six chances created over last three starts, clean sheet potential against Wolves",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "context": "Away to Tottenham in North London Derby, no goals or assists in last six but had four shots, multiple routes to points with clean sheets",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Miley",
+        "team": "Sunderland",
+        "context": "Cut price star at home to Fulham, four assists in last six matches, averaging defcon every other match",
+        "sentiment": "positive"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Palmer",
+        "team": "Chelsea",
+        "action": "buy",
+        "reason": "Home fixture against Burnley, on penalties, 15 shots in last six gameweeks, five goals and assists"
+      },
+      {
+        "player": "Pedro",
+        "team": "Chelsea",
+        "action": "buy",
+        "reason": "Incredible four goals and five assists in last six, excellent link up with Palmer"
+      },
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "action": "hold",
+        "reason": "Can't be dropped despite blank, five assists and goal in last six with most attacking potential"
+      },
+      {
+        "player": "Enzo Fernandez",
+        "team": "Chelsea",
+        "action": "buy",
+        "reason": "Good value option against Burnley, on penalties when Palmer off pitch, computer predicts high points"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Munoz",
+        "team": "Crystal Palace",
+        "status": "returning",
+        "details": "Strong underlying stats since coming back from injury"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Palmer\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Mentioned as captain choice against Burnley, on penalties, 15 shots in last six gameweeks from five starts, five goals and assists in last six\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Sanchez\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Goalkeeper option at home to Burnley, cheaper than Chalaba but still good for clean sheet potential\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Pedro\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Incredible four goals and five assists in his last six, excellent link up play with Palmer, penalty taker\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Enzo Fernandez\",\n            \"team\": \"Chelsea\",\n            \"context\": \"On penalties when Palmer is off pitch, two goals and assist in last six from 15 chances and 12 shots, computer predicts more points than Pedro\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Against Everton, five assists and a goal in last six, 27 chances and 12 shots - most attacking potential of any player in the 11\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Haaland\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Against Newcastle, four attacking returns over last four starts with 15 shots, not up to usual standards but still performing\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Morgan Rogers\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Against Leeds at home, 16 shots and 10 chances created in last six with goal and assist, great value at 7.6, talisman for Villa\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Sar\",\n            \"team\": \"Crystal Palace\",\n            \"context\": \"Two goals in last three starts against Wolves, emerged as key attacker for Palace, should be on penalties\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Thiago\",\n            \"team\": \"Brentford\",\n            \"context\": \"Against Brighton at home, three goals from 11 shots over last five starts, scored against Brighton already this season\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Munoz\",\n            \"team\": \"Crystal Palace\",\n            \"context\": \"Strong underlying stats since injury return, six chances created over last three starts, clean sheet potential against Wolves\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Away to Tottenham in North London Derby, no goals or assists in last six but had four shots, multiple routes to points with clean sheets\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Miley\",\n            \"team\": \"Sunderland\",\n            \"context\": \"Cut price star at home to Fulham, four assists in last six matches, averaging defcon every other match\",\n            \"sentiment\": \"positive\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Palmer\",\n            \"team\": \"Chelsea\",\n            \"action\": \"buy\",\n            \"reason\": \"Home fixture against Burnley, on penalties, 15 shots in last six gameweeks, five goals and assists\"\n        },\n        {\n            \"player\": \"Pedro\",\n            \"team\": \"Chelsea\",\n            \"action\": \"buy\",\n            \"reason\": \"Incredible four goals and five assists in last six, excellent link up with Palmer\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"action\": \"hold\",\n            \"reason\": \"Can't be dropped despite blank, five assists and goal in last six with most attacking potential\"\n        },\n        {\n            \"player\": \"Enzo Fernandez\",\n            \"team\": \"Chelsea\",\n            \"action\": \"buy\",\n            \"reason\": \"Good value option against Burnley, on penalties when Palmer off pitch, computer predicts high points\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Munoz\",\n            \"team\": \"Crystal Palace\",\n            \"status\": \"returning\",\n            \"details\": \"Strong underlying stats since coming back from injury\"\n        }\n    ],\n    \"differentials\": [\n        {\n            \"player\": \"Thiago\",\n            \"team\": \"Brentford\",\n            \"reason\": \"Against Brighton who have no clean sheets in last six, scored against them already this season\"\n        },\n        {\n            \"player\": \"Sar\",\n            \"team\": \"Crystal Palace\",\n            \"reason\": \"Two goals in last three starts, emerged as key Palace attacker, should be on penalties\"\n        },\n        {\n            \"player\": \"Miley\",\n            \"team\": \"Sunderland\",\n            \"reason\": \"Cut price star with four assists in last six matches, multiple routes to points\"\n        }\n    ],\n    \"captain_picks\": [\n        {\n            \"player\": \"Palmer\",\n            \"team\": \"Chelsea\",\n            \"reason\": \"Home to Burnley, on penalties, getting game time, 15 shots in last six gameweeks\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"reason\": \"Could also be captain option, most attacking potential with 27 chances and 12 shots in last six\"\n        }\n    ]\n}"
+  },
+  "-ebK4ajgjus": {
+    "video_id": "-ebK4ajgjus",
+    "analyzed_at": "2026-02-15T07:37:56.901189",
+    "player_mentions": [
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "context": "Palmer hauled again, looked good against Leeds with lots of space, scored three penalties in two weeks, has Burnley this week then fixtures get difficult",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Joao Pedro",
+        "team": "Brighton",
+        "context": "Did the business after being bought, had seven shots for first time ever, scored against Chelsea, possibly could have had more",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Enzo Fernandez",
+        "team": "Chelsea",
+        "context": "Was fairly quiet but posted good numbers with 0.81 xGI, created big chance for Joao Pedro, can go games where he's not close enough to the box",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "context": "Triple captained by both hosts, facing Brentford in double gameweek, they expect Brentford to score",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Erling Haaland",
+        "team": "Manchester City",
+        "context": "Got 16 points against Fulham last time, ownership around 110%, good captaincy option especially with Newcastle's tough fixtures",
+        "sentiment": "positive"
+      },
+      {
+        "player": "James Hill",
+        "team": "Bournemouth",
+        "context": "3.9m defender who got first price rise to 4.0m, got nine points with assist and bonus, described as 'new Sessegnon', top cheap defender option",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Rayan Ait-Nouri",
+        "team": "Wolverhampton",
+        "context": "Taken league by storm, returned in all three appearances, scored against Villa and last night, 0.55 per 90, strong fixtures, only 5.5m",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Harry Wilson",
+        "team": "Fulham",
+        "context": "Will be back after City game, fixtures get good again, described as streaky player, competition for cheap mid spots",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Bryan Mbeumo",
+        "team": "Brentford",
+        "context": "Came away with last minute assist and bonus point for six points, probably wouldn't buy now but will keep for current fixtures",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Diogo Jota",
+        "team": "Liverpool",
+        "context": "Brighton at home fixture mentioned, preferred over Joao Pedro by one host for upcoming fixtures",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Darwin Nunez",
+        "team": "Liverpool",
+        "context": "Got nine points, big chance magnet, described as absolute big chance magnet, keeping for Forest West Ham Wolves Spurs Brighton run",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "context": "Planning to sell him, better options elsewhere, fixtures after double not great, will have to go before blank anyway",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Yoane Wissa",
+        "team": "Brentford",
+        "context": "Mentioned as potential option, has got Burnley in the blank gameweek, described as streaky",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Morgan Rogers",
+        "team": "Aston Villa",
+        "context": "Being bought despite low xG of 0.21 last week, ended on 11 points, has decent fixtures",
+        "sentiment": "neutral"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "James Hill",
+        "team": "Bournemouth",
+        "action": "buy",
+        "reason": "Top cheap defender option with strong fixtures, got price rise after good returns"
+      },
+      {
+        "player": "Rayan Ait-Nouri",
+        "team": "Wolverhampton",
+        "action": "buy",
+        "reason": "Only 5.5m, returned in all three appearances, strong fixtures, taken league by storm"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "action": "avoid",
+        "reason": "If you haven't bought now, you haven't bought it - fixtures get difficult after Burnley"
+      },
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "action": "sell",
+        "reason": "Better midfield options available, will have to go before blank anyway, predicting his returns is hard"
+      },
+      {
+        "player": "Joao Pedro",
+        "team": "Brighton",
+        "action": "buy",
+        "reason": "In banging form, no player got more points in last five gameweeks, looked on it since new manager came in"
+      },
+      {
+        "player": "Diogo Jota",
+        "team": "Liverpool",
+        "action": "buy",
+        "reason": "Preferred over Joao Pedro for upcoming fixtures, has Brighton at home"
+      },
+      {
+        "player": "Enzo Fernandez",
+        "team": "Chelsea",
+        "action": "sell",
+        "reason": "Most sold midfielder before Burnley at home, can be frustrating when Palmer is in team"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Bruno Guimaraes",
+        "team": "Newcastle",
+        "status": "injured",
+        "details": "Looks like he's pulled his hamstring"
+      },
+      {
+        "player": "Lewis Miley",
+        "team": "Newcastle",
+        "status": "injured",
+        "details": "Had a setback, was not in the squad"
+      },
+      {
+        "player": "Joe Linton",
+        "team": "Newcastle",
+        "status": "injured",
+        "details": "Also injured"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Palmer hauled again, looked good against Leeds with lots of space, scored three penalties in two weeks, has Burnley this week then fixtures get difficult\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Joao Pedro\",\n            \"team\": \"Brighton\",\n            \"context\": \"Did the business after being bought, had seven shots for first time ever, scored against Chelsea, possibly could have had more\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Enzo Fernandez\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Was fairly quiet but posted good numbers with 0.81 xGI, created big chance for Joao Pedro, can go games where he's not close enough to the box\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Triple captained by both hosts, facing Brentford in double gameweek, they expect Brentford to score\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Got 16 points against Fulham last time, ownership around 110%, good captaincy option especially with Newcastle's tough fixtures\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"James Hill\",\n            \"team\": \"Bournemouth\",\n            \"context\": \"3.9m defender who got first price rise to 4.0m, got nine points with assist and bonus, described as 'new Sessegnon', top cheap defender option\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Rayan Ait-Nouri\",\n            \"team\": \"Wolverhampton\",\n            \"context\": \"Taken league by storm, returned in all three appearances, scored against Villa and last night, 0.55 per 90, strong fixtures, only 5.5m\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Harry Wilson\",\n            \"team\": \"Fulham\",\n            \"context\": \"Will be back after City game, fixtures get good again, described as streaky player, competition for cheap mid spots\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Bryan Mbeumo\",\n            \"team\": \"Brentford\",\n            \"context\": \"Came away with last minute assist and bonus point for six points, probably wouldn't buy now but will keep for current fixtures\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Diogo Jota\",\n            \"team\": \"Liverpool\",\n            \"context\": \"Brighton at home fixture mentioned, preferred over Joao Pedro by one host for upcoming fixtures\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Darwin Nunez\",\n            \"team\": \"Liverpool\",\n            \"context\": \"Got nine points, big chance magnet, described as absolute big chance magnet, keeping for Forest West Ham Wolves Spurs Brighton run\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Planning to sell him, better options elsewhere, fixtures after double not great, will have to go before blank anyway\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Yoane Wissa\",\n            \"team\": \"Brentford\",\n            \"context\": \"Mentioned as potential option, has got Burnley in the blank gameweek, described as streaky\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Morgan Rogers\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Being bought despite low xG of 0.21 last week, ended on 11 points, has decent fixtures\",\n            \"sentiment\": \"neutral\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"James Hill\",\n            \"team\": \"Bournemouth\", \n            \"action\": \"buy\",\n            \"reason\": \"Top cheap defender option with strong fixtures, got price rise after good returns\"\n        },\n        {\n            \"player\": \"Rayan Ait-Nouri\",\n            \"team\": \"Wolverhampton\",\n            \"action\": \"buy\", \n            \"reason\": \"Only 5.5m, returned in all three appearances, strong fixtures, taken league by storm\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"action\": \"avoid\",\n            \"reason\": \"If you haven't bought now, you haven't bought it - fixtures get difficult after Burnley\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"action\": \"sell\",\n            \"reason\": \"Better midfield options available, will have to go before blank anyway, predicting his returns is hard\"\n        },\n        {\n            \"player\": \"Joao Pedro\",\n            \"team\": \"Brighton\",\n            \"action\": \"buy\",\n            \"reason\": \"In banging form, no player got more points in last five gameweeks, looked on it since new manager came in\"\n        },\n        {\n            \"player\": \"Diogo Jota\",\n            \"team\": \"Liverpool\",\n            \"action\": \"buy\",\n            \"reason\": \"Preferred over Joao Pedro for upcoming fixtures, has Brighton at home\"\n        },\n        {\n            \"player\": \"Enzo Fernandez\",\n            \"team\": \"Chelsea\",\n            \"action\": \"sell\",\n            \"reason\": \"Most sold midfielder before Burnley at home, can be frustrating when Palmer is in team\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Bruno Guimaraes\", \n            \"team\": \"Newcastle\",\n            \"status\": \"injured\",\n            \"details\": \"Looks like he's pulled his hamstring\"\n        },\n        {\n            \"player\": \"Lewis Miley\",\n            \"team\": \"Newcastle\", \n            \"status\": \"injured\",\n            \"details\": \"Had a setback, was not in the squad\"\n        },\n        {\n            \"player\": \"Joe Linton\",\n            \"team\": \"Newcastle\",\n            \"status\": \"injured\", \n            \"details\": \"Also injured\"\n        }\n    ],\n    \"differentials\": [\n        {\n            \"player\": \"Rayan Ait-Nouri\",\n            \"team\": \"Wolverhampton\",\n            \"reason\": \"Only 5.5m midfielder with strong fixtures and recent returns, under the radar\"\n        },\n        {\n            \"player\": \"James Hill\", \n            \"team\": \"Bournemouth\",\n            \"reason\": \"Cheap 4.0m defender with attacking returns and good fixtures\"\n        }\n    ],\n    \"captain_picks\": [\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"reason\": \"Newcastle have tough fixtures with Champions League and Bruno Guimaraes injury, should be back to being number one captain pick\"\n        },\n        {\n            \"player\": \"Joao Pedro\", \n            \"team\": \"Brighton\",\n            \"context\": \"Tempting captain option for Burnley at home but Chelsea can share goals around\"\n        }\n    ]\n}"
+  },
+  "ioDw0Kes2ng": {
+    "video_id": "ioDw0Kes2ng",
+    "analyzed_at": "2026-02-15T07:38:28.322490",
+    "player_mentions": [
+      {
+        "player": "Wilson",
+        "team": "Newcastle",
+        "context": "Actually a player he's looking at potentially buying, has a game against Burnley in gameweek 31, probably one of the best picks for blank gameweek 31",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Zubimendi",
+        "team": "Arsenal",
+        "context": "Doesn't fill him with inspiration, thinks availability has been his best ability this season, not inspired by the pick",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "context": "Number one Arsenal pick, primary goal scorer out of defenders, most nailed on for minutes, does well for bonus points, doesn't get yellow cards",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Rice",
+        "team": "Arsenal",
+        "context": "Number two Arsenal pick, playing a little deeper at the moment so probably not as much attacking threat in open play but still on set pieces",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Timber",
+        "team": "Arsenal",
+        "context": "Third best Arsenal pick, has slightly better underlying numbers and better open play positioning than Gabriel but not a particularly good finisher",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Raya",
+        "team": "Arsenal",
+        "context": "Fourth best Arsenal pick, helps when one of your Arsenal players is Raya",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Saliba",
+        "team": "Arsenal",
+        "context": "Fifth best Arsenal pick",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Havertz",
+        "team": "Arsenal",
+        "context": "Sixth best Arsenal pick, rotation risk is concerning, has taken one penalty for Arsenal before but circumstances don't lend to repeatability",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Mateta",
+        "team": "Crystal Palace",
+        "context": "Will not have surgery but is out for weeks at least",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Strand Larsen",
+        "team": "Wolves",
+        "context": "Some people are looking at him due to Mateta being out, but it's a shame he hasn't really shown much for Palace so far, tough buy",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Hill",
+        "team": "Bournemouth",
+        "context": "One of the cheap defenders he recommends at 3.9, has incredible defcon numbers better than Sessegnon, playing very well at the moment",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Richards",
+        "team": "Crystal Palace",
+        "context": "One of the cheap defenders he recommends at 4.4, prefers him over Lacroix",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Miley",
+        "team": "Newcastle",
+        "context": "Obvious move if replacing Szoboszlai",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Anderson",
+        "team": "Fulham",
+        "context": "Mr. Reliable at this point, would go for him if trying to free up money, losing some set piece share now that Jimenez Hall is back",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Saka",
+        "team": "Arsenal",
+        "context": "No update on fitness, Arsenal press conference is after FPL deadline so won't get update, if he returns sooner than expected Odegaard could be in big trouble",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Odegaard",
+        "team": "Arsenal",
+        "context": "The big problem is if Saka returns sooner than expected, could be in big trouble for minutes, just don't know about his minutes",
+        "sentiment": "negative"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Wilson",
+        "team": "Newcastle",
+        "action": "hold",
+        "reason": "Don't think you need to replace Wilson, actually a player looking at potentially buying, one of the best picks for blank gameweek 31"
+      },
+      {
+        "player": "Zubimendi",
+        "team": "Arsenal",
+        "action": "avoid",
+        "reason": "Doesn't fill with inspiration, very low priority, seventh best Arsenal pick at best"
+      },
+      {
+        "player": "Szoboszlai",
+        "team": "Liverpool",
+        "action": "sell",
+        "reason": "Obvious move is probably Miley if replacing Szoboszlai"
+      },
+      {
+        "player": "Hill",
+        "team": "Bournemouth",
+        "action": "buy",
+        "reason": "One of the cheap defenders recommended, incredible defcon numbers"
+      },
+      {
+        "player": "Richards",
+        "team": "Crystal Palace",
+        "action": "buy",
+        "reason": "One of the cheap defenders recommended, prefers him over Lacroix"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Mateta",
+        "team": "Crystal Palace",
+        "status": "injured",
+        "details": "Will not have surgery but is out for weeks at least"
+      },
+      {
+        "player": "Jaka",
+        "team": "West Ham",
+        "status": "injured",
+        "details": "Still out"
+      },
+      {
+        "player": "Stones",
+        "team": "Manchester City",
+        "status": "returning",
+        "details": "Is back, was training last week"
+      },
+      {
+        "player": "Gvardiol",
+        "team": "Manchester City",
+        "status": "fit",
+        "details": "Available following his little issue last week"
+      },
+      {
+        "player": "Saka",
+        "team": "Arsenal",
+        "status": "doubtful",
+        "details": "No update on fitness, Arsenal press conference is after FPL deadline"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Wilson\",\n            \"team\": \"Newcastle\",\n            \"context\": \"Actually a player he's looking at potentially buying, has a game against Burnley in gameweek 31, probably one of the best picks for blank gameweek 31\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Zubimendi\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Doesn't fill him with inspiration, thinks availability has been his best ability this season, not inspired by the pick\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Number one Arsenal pick, primary goal scorer out of defenders, most nailed on for minutes, does well for bonus points, doesn't get yellow cards\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Rice\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Number two Arsenal pick, playing a little deeper at the moment so probably not as much attacking threat in open play but still on set pieces\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Timber\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Third best Arsenal pick, has slightly better underlying numbers and better open play positioning than Gabriel but not a particularly good finisher\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Raya\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Fourth best Arsenal pick, helps when one of your Arsenal players is Raya\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Saliba\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Fifth best Arsenal pick\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Havertz\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Sixth best Arsenal pick, rotation risk is concerning, has taken one penalty for Arsenal before but circumstances don't lend to repeatability\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Mateta\",\n            \"team\": \"Crystal Palace\",\n            \"context\": \"Will not have surgery but is out for weeks at least\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Strand Larsen\",\n            \"team\": \"Wolves\",\n            \"context\": \"Some people are looking at him due to Mateta being out, but it's a shame he hasn't really shown much for Palace so far, tough buy\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Hill\",\n            \"team\": \"Bournemouth\",\n            \"context\": \"One of the cheap defenders he recommends at 3.9, has incredible defcon numbers better than Sessegnon, playing very well at the moment\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Richards\",\n            \"team\": \"Crystal Palace\",\n            \"context\": \"One of the cheap defenders he recommends at 4.4, prefers him over Lacroix\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Miley\",\n            \"team\": \"Newcastle\",\n            \"context\": \"Obvious move if replacing Szoboszlai\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Anderson\",\n            \"team\": \"Fulham\",\n            \"context\": \"Mr. Reliable at this point, would go for him if trying to free up money, losing some set piece share now that Jimenez Hall is back\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Saka\",\n            \"team\": \"Arsenal\",\n            \"context\": \"No update on fitness, Arsenal press conference is after FPL deadline so won't get update, if he returns sooner than expected Odegaard could be in big trouble\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Odegaard\",\n            \"team\": \"Arsenal\",\n            \"context\": \"The big problem is if Saka returns sooner than expected, could be in big trouble for minutes, just don't know about his minutes\",\n            \"sentiment\": \"negative\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Wilson\",\n            \"team\": \"Newcastle\",\n            \"action\": \"hold\",\n            \"reason\": \"Don't think you need to replace Wilson, actually a player looking at potentially buying, one of the best picks for blank gameweek 31\"\n        },\n        {\n            \"player\": \"Zubimendi\",\n            \"team\": \"Arsenal\",\n            \"action\": \"avoid\",\n            \"reason\": \"Doesn't fill with inspiration, very low priority, seventh best Arsenal pick at best\"\n        },\n        {\n            \"player\": \"Szoboszlai\",\n            \"team\": \"Liverpool\",\n            \"action\": \"sell\",\n            \"reason\": \"Obvious move is probably Miley if replacing Szoboszlai\"\n        },\n        {\n            \"player\": \"Hill\",\n            \"team\": \"Bournemouth\",\n            \"action\": \"buy\",\n            \"reason\": \"One of the cheap defenders recommended, incredible defcon numbers\"\n        },\n        {\n            \"player\": \"Richards\",\n            \"team\": \"Crystal Palace\",\n            \"action\": \"buy\",\n            \"reason\": \"One of the cheap defenders recommended, prefers him over Lacroix\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Mateta\",\n            \"team\": \"Crystal Palace\",\n            \"status\": \"injured\",\n            \"details\": \"Will not have surgery but is out for weeks at least\"\n        },\n        {\n            \"player\": \"Jaka\",\n            \"team\": \"West Ham\",\n            \"status\": \"injured\",\n            \"details\": \"Still out\"\n        },\n        {\n            \"player\": \"Stones\",\n            \"team\": \"Manchester City\",\n            \"status\": \"returning\",\n            \"details\": \"Is back, was training last week\"\n        },\n        {\n            \"player\": \"Gvardiol\",\n            \"team\": \"Manchester City\",\n            \"status\": \"fit\",\n            \"details\": \"Available following his little issue last week\"\n        },\n        {\n            \"player\": \"Saka\",\n            \"team\": \"Arsenal\",\n            \"status\": \"doubtful\",\n            \"details\": \"No update on fitness, Arsenal press conference is after FPL deadline\"\n        }\n    ],\n    \"differentials\": [\n        {\n            \"player\": \"Hill\",\n            \"team\": \"Bournemouth\",\n            \"reason\": \"Cheap defender at 3.9 with incredible defcon numbers, playing very well\"\n        },\n        {\n            \"player\": \"Wilson\",\n            \"team\": \"Newcastle\",\n            \"reason\": \"One of the best picks for blank gameweek 31 against Burnley\"\n        }\n    ],\n    \"captain_picks\": [\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Triple captain recommendation - primary goal scorer out of defenders, most nailed on for minutes, does well for bonus points, higher ceiling and floor than Rice\"\n        }\n    ]\n}"
+  },
+  "TwqV0p1Ztiw": {
+    "video_id": "TwqV0p1Ztiw",
+    "analyzed_at": "2026-02-15T07:38:49.721278",
+    "player_mentions": [
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "context": "Available after getting an hour at weekend, his 60-minute substitution was not injury related, just managing minutes",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Reece James",
+        "team": "Chelsea",
+        "context": "Recovered from knock but now ill, still some doubt about involvement",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Tossin",
+        "team": "Chelsea",
+        "context": "Back in training and could be involved, hasn't been out for long",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Lavia",
+        "team": "Chelsea",
+        "context": "Back in training but not going to be involved",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Michael Keane",
+        "team": "Everton",
+        "context": "Owner thinking of getting rid as he might not start, Branthwaite might get the nod instead",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Branthwaite",
+        "team": "Everton",
+        "context": "Was rested previous game due to minute management after long injury, should be available for Tuesday",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Anthony Gordon",
+        "team": "Newcastle",
+        "context": "Hoping for big improvement, quite close to coming back possibly for tonight",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Miley",
+        "team": "Newcastle",
+        "context": "Got dead leg that's lingered longer than thought, quite close to coming back possibly",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "context": "Was limping after last game but spotted in traveling party, no mention of concerns by manager",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Mateta",
+        "team": "Crystal Palace",
+        "context": "Doesn't need surgery which is good news, but will be out for indeterminate period of 2-3-4 weeks",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Stones",
+        "team": "Manchester City",
+        "context": "Back fit after long absence, has trained and available, not quite match fit but maybe in squad",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Akanji",
+        "team": "Manchester City",
+        "context": "Fine after taking blow to face against Liverpool, not concussed and available",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Hwang",
+        "team": "Wolves",
+        "context": "Not going to be part of double gameweek, will miss number of weeks with calf injury",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Ibrahima Konate",
+        "team": "Liverpool",
+        "context": "Serving one match ban for denial of goal scoring opportunity",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Joe Gomez",
+        "team": "Liverpool",
+        "context": "Had yet to train with teammates, probably too soon to start even if trains today",
+        "sentiment": "negative"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Michael Keane",
+        "team": "Everton",
+        "action": "sell",
+        "reason": "Owner thinks he won't start as Branthwaite might get the nod, possibly matter of time before he's dropped"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Reece James",
+        "team": "Chelsea",
+        "status": "doubtful",
+        "details": "Recovered from knock but now ill, doubt about involvement"
+      },
+      {
+        "player": "Tossin",
+        "team": "Chelsea",
+        "status": "returning",
+        "details": "Back in training, could be involved"
+      },
+      {
+        "player": "Anthony Gordon",
+        "team": "Newcastle",
+        "status": "returning",
+        "details": "Hoping for big improvement, quite close to coming back possibly for tonight"
+      },
+      {
+        "player": "Miley",
+        "team": "Newcastle",
+        "status": "returning",
+        "details": "Dead leg lingered longer than thought, quite close to coming back"
+      },
+      {
+        "player": "Mateta",
+        "team": "Crystal Palace",
+        "status": "injured",
+        "details": "Doesn't need surgery but out for indeterminate period of 2-3-4 weeks"
+      },
+      {
+        "player": "Stones",
+        "team": "Manchester City",
+        "status": "returning",
+        "details": "Back fit after long absence, has trained, not quite match fit but maybe in squad"
+      },
+      {
+        "player": "Hwang",
+        "team": "Wolves",
+        "status": "injured",
+        "details": "Calf injury sustained at weekend, will miss number of weeks including double gameweek"
+      },
+      {
+        "player": "Ibrahima Konate",
+        "team": "Liverpool",
+        "status": "fit",
+        "details": "Serving one match ban for denial of goal scoring opportunity"
+      },
+      {
+        "player": "Joe Gomez",
+        "team": "Liverpool",
+        "status": "doubtful",
+        "details": "Had yet to train with teammates, probably too soon to start"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Available after getting an hour at weekend, his 60-minute substitution was not injury related, just managing minutes\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Reece James\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Recovered from knock but now ill, still some doubt about involvement\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Tossin\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Back in training and could be involved, hasn't been out for long\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Lavia\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Back in training but not going to be involved\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Michael Keane\",\n            \"team\": \"Everton\",\n            \"context\": \"Owner thinking of getting rid as he might not start, Branthwaite might get the nod instead\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Branthwaite\",\n            \"team\": \"Everton\",\n            \"context\": \"Was rested previous game due to minute management after long injury, should be available for Tuesday\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Anthony Gordon\",\n            \"team\": \"Newcastle\",\n            \"context\": \"Hoping for big improvement, quite close to coming back possibly for tonight\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Miley\",\n            \"team\": \"Newcastle\",\n            \"context\": \"Got dead leg that's lingered longer than thought, quite close to coming back possibly\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Was limping after last game but spotted in traveling party, no mention of concerns by manager\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Mateta\",\n            \"team\": \"Crystal Palace\",\n            \"context\": \"Doesn't need surgery which is good news, but will be out for indeterminate period of 2-3-4 weeks\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Stones\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Back fit after long absence, has trained and available, not quite match fit but maybe in squad\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Akanji\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Fine after taking blow to face against Liverpool, not concussed and available\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Hwang\",\n            \"team\": \"Wolves\",\n            \"context\": \"Not going to be part of double gameweek, will miss number of weeks with calf injury\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Ibrahima Konate\",\n            \"team\": \"Liverpool\",\n            \"context\": \"Serving one match ban for denial of goal scoring opportunity\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Joe Gomez\",\n            \"team\": \"Liverpool\",\n            \"context\": \"Had yet to train with teammates, probably too soon to start even if trains today\",\n            \"sentiment\": \"negative\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Michael Keane\",\n            \"team\": \"Everton\",\n            \"action\": \"sell\",\n            \"reason\": \"Owner thinks he won't start as Branthwaite might get the nod, possibly matter of time before he's dropped\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Reece James\",\n            \"team\": \"Chelsea\",\n            \"status\": \"doubtful\",\n            \"details\": \"Recovered from knock but now ill, doubt about involvement\"\n        },\n        {\n            \"player\": \"Tossin\",\n            \"team\": \"Chelsea\",\n            \"status\": \"returning\",\n            \"details\": \"Back in training, could be involved\"\n        },\n        {\n            \"player\": \"Anthony Gordon\",\n            \"team\": \"Newcastle\",\n            \"status\": \"returning\",\n            \"details\": \"Hoping for big improvement, quite close to coming back possibly for tonight\"\n        },\n        {\n            \"player\": \"Miley\",\n            \"team\": \"Newcastle\",\n            \"status\": \"returning\",\n            \"details\": \"Dead leg lingered longer than thought, quite close to coming back\"\n        },\n        {\n            \"player\": \"Mateta\",\n            \"team\": \"Crystal Palace\",\n            \"status\": \"injured\",\n            \"details\": \"Doesn't need surgery but out for indeterminate period of 2-3-4 weeks\"\n        },\n        {\n            \"player\": \"Stones\",\n            \"team\": \"Manchester City\",\n            \"status\": \"returning\",\n            \"details\": \"Back fit after long absence, has trained, not quite match fit but maybe in squad\"\n        },\n        {\n            \"player\": \"Hwang\",\n            \"team\": \"Wolves\",\n            \"status\": \"injured\",\n            \"details\": \"Calf injury sustained at weekend, will miss number of weeks including double gameweek\"\n        },\n        {\n            \"player\": \"Ibrahima Konate\",\n            \"team\": \"Liverpool\",\n            \"status\": \"fit\",\n            \"details\": \"Serving one match ban for denial of goal scoring opportunity\"\n        },\n        {\n            \"player\": \"Joe Gomez\",\n            \"team\": \"Liverpool\",\n            \"status\": \"doubtful\",\n            \"details\": \"Had yet to train with teammates, probably too soon to start\"\n        }\n    ],\n    \"differentials\": [],\n    \"captain_picks\": []\n}"
+  },
+  "j06gnWaMxTs": {
+    "video_id": "j06gnWaMxTs",
+    "analyzed_at": "2026-02-15T07:38:52.294936",
+    "player_mentions": [
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "context": "Scored 20 points and is very attractive this week, expected 95% of people to target him",
+        "sentiment": "positive"
+      }
+    ],
+    "recommendations": [],
+    "injury_news": [],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Scored 20 points and is very attractive this week, expected 95% of people to target him\",\n            \"sentiment\": \"positive\"\n        }\n    ],\n    \"recommendations\": [],\n    \"injury_news\": [],\n    \"differentials\": [],\n    \"captain_picks\": []\n}"
+  },
+  "yQYtSjnoflw": {
+    "video_id": "yQYtSjnoflw",
+    "analyzed_at": "2026-02-15T07:39:18.661449",
+    "player_mentions": [
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "context": "Has the double gameweek and is mentioned as captain choice, described as 'one of the top scorers in the game'",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Dalot",
+        "team": "Manchester United",
+        "context": "Had a great performance with 12 points, described as 'legend' and hardly owned by anyone",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "context": "Successful captaincy choice with 20 points, both hosts had him as captain",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Haaland",
+        "team": "Manchester City",
+        "context": "Got 11 points, mentioned as player to keep alongside Isak and Thiago in 343 formation",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Raya",
+        "team": "Arsenal",
+        "context": "Recommended as goalkeeper replacement for Sels, will help in blank gameweek 31",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Strand Larsen",
+        "team": "Wolverhampton",
+        "context": "Potential transfer target, showed promising signs against Brighton with decent chance at the end",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Bowen",
+        "team": "West Ham",
+        "context": "Blanked again, described as 'sitting there rotting away', potential sell candidate",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Rice",
+        "team": "Arsenal",
+        "context": "Has double gameweek, very creative recently with 13 corners and 13 chances created, due assists",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Thiago Silva",
+        "team": "Chelsea",
+        "context": "Got a goal which was described as 'rank killer when you don't own him', part of preferred 343 setup",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Isak",
+        "team": "Newcastle",
+        "context": "Still getting chances even against City, probably should have scored from header, part of preferred 343",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Sels",
+        "team": "Wolverhampton",
+        "context": "Has been ruled out and will be sold this week",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Morgan Rogers",
+        "team": "Aston Villa",
+        "context": "Very good record against Brighton with 27 points in last three games, overperforms xG stats",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Salah",
+        "team": "Liverpool",
+        "context": "Quietly been good recently, missed two big chances, could be solid differential but hard to fit with Haaland",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Pascal Gross",
+        "team": "Brighton",
+        "context": "Described as 'ray of German sunshine', created 10 chances and taken 19 corners despite Brighton being awful",
+        "sentiment": "positive"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Raya",
+        "team": "Arsenal",
+        "action": "buy",
+        "reason": "Has double gameweek and will help in blank gameweek 31 as can be parked on bench"
+      },
+      {
+        "player": "Strand Larsen",
+        "team": "Wolverhampton",
+        "action": "buy",
+        "reason": "Showed promising signs, has massive haul potential as Palace are structured to feed him"
+      },
+      {
+        "player": "Bowen",
+        "team": "West Ham",
+        "action": "sell",
+        "reason": "Hasn't done enough recently, was lucky with goal at Chelsea, need to free up funds"
+      },
+      {
+        "player": "Sels",
+        "team": "Wolverhampton",
+        "action": "sell",
+        "reason": "Has been ruled out"
+      },
+      {
+        "player": "Richards",
+        "team": "Crystal Palace",
+        "action": "buy",
+        "reason": "Better value than Lacroix at 7m, Palace have excellent fixtures including Burnley and Wolves at home"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Sels",
+        "team": "Wolverhampton",
+        "status": "injured",
+        "details": "Has been ruled out and will be sold this week"
+      },
+      {
+        "player": "Isak",
+        "team": "Newcastle",
+        "status": "fit",
+        "details": "Still getting chances and should have scored from header against City"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Has the double gameweek and is mentioned as captain choice, described as 'one of the top scorers in the game'\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Dalot\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Had a great performance with 12 points, described as 'legend' and hardly owned by anyone\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Successful captaincy choice with 20 points, both hosts had him as captain\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Haaland\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Got 11 points, mentioned as player to keep alongside Isak and Thiago in 343 formation\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Raya\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Recommended as goalkeeper replacement for Sels, will help in blank gameweek 31\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Strand Larsen\",\n            \"team\": \"Wolverhampton\",\n            \"context\": \"Potential transfer target, showed promising signs against Brighton with decent chance at the end\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Bowen\",\n            \"team\": \"West Ham\",\n            \"context\": \"Blanked again, described as 'sitting there rotting away', potential sell candidate\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Rice\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Has double gameweek, very creative recently with 13 corners and 13 chances created, due assists\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Thiago Silva\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Got a goal which was described as 'rank killer when you don't own him', part of preferred 343 setup\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Isak\",\n            \"team\": \"Newcastle\",\n            \"context\": \"Still getting chances even against City, probably should have scored from header, part of preferred 343\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Sels\",\n            \"team\": \"Wolverhampton\",\n            \"context\": \"Has been ruled out and will be sold this week\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Morgan Rogers\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Very good record against Brighton with 27 points in last three games, overperforms xG stats\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Salah\",\n            \"team\": \"Liverpool\",\n            \"context\": \"Quietly been good recently, missed two big chances, could be solid differential but hard to fit with Haaland\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Pascal Gross\",\n            \"team\": \"Brighton\",\n            \"context\": \"Described as 'ray of German sunshine', created 10 chances and taken 19 corners despite Brighton being awful\",\n            \"sentiment\": \"positive\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Raya\",\n            \"team\": \"Arsenal\",\n            \"action\": \"buy\",\n            \"reason\": \"Has double gameweek and will help in blank gameweek 31 as can be parked on bench\"\n        },\n        {\n            \"player\": \"Strand Larsen\",\n            \"team\": \"Wolverhampton\",\n            \"action\": \"buy\", \n            \"reason\": \"Showed promising signs, has massive haul potential as Palace are structured to feed him\"\n        },\n        {\n            \"player\": \"Bowen\",\n            \"team\": \"West Ham\",\n            \"action\": \"sell\",\n            \"reason\": \"Hasn't done enough recently, was lucky with goal at Chelsea, need to free up funds\"\n        },\n        {\n            \"player\": \"Sels\",\n            \"team\": \"Wolverhampton\", \n            \"action\": \"sell\",\n            \"reason\": \"Has been ruled out\"\n        },\n        {\n            \"player\": \"Richards\",\n            \"team\": \"Crystal Palace\",\n            \"action\": \"buy\",\n            \"reason\": \"Better value than Lacroix at 7m, Palace have excellent fixtures including Burnley and Wolves at home\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Sels\",\n            \"team\": \"Wolverhampton\",\n            \"status\": \"injured\",\n            \"details\": \"Has been ruled out and will be sold this week\"\n        },\n        {\n            \"player\": \"Isak\",\n            \"team\": \"Newcastle\", \n            \"status\": \"fit\",\n            \"details\": \"Still getting chances and should have scored from header against City\"\n        }\n    ],\n    \"differentials\": [\n        {\n            \"player\": \"Dalot\",\n            \"team\": \"Manchester United\",\n            \"reason\": \"Hardly owned by anyone but returned 12 points, described as legend\"\n        },\n        {\n            \"player\": \"Salah\",\n            \"team\": \"Liverpool\",\n            \"reason\": \"Could be really solid differential with good fixtures coming up, quietly been good recently\"\n        },\n        {\n            \"player\": \"Mosca\",\n            \"team\": \"Wolverhampton\",\n            \"reason\": \"No defender has taken more shots than Mosca over last seven gameweeks, has goal threat for 4.3m\"\n        }\n    ],\n    \"captain_picks\": [\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\", \n            \"reason\": \"Has double gameweek, one of the top scorers in the game, being considered for triple captain\"\n        },\n        {\n            \"player\": \"Rice\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Has double gameweek, very creative recently, can get defcons and might get lucky with a goal from corners\"\n        }\n    ]\n}"
+  },
+  "9wawzNdD4s4": {
+    "video_id": "9wawzNdD4s4",
+    "analyzed_at": "2026-02-15T07:39:45.189032",
+    "player_mentions": [
+      {
+        "player": "Yurian Timber",
+        "team": "Arsenal",
+        "context": "Most transferred in Arsenal player this gameweek, heavily owned at 63% among experts, recommended as third Arsenal player for triple up",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "context": "Four new transfers in, 73% ownership among experts, alternative captain option for those without Gabrielle",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Gabrielle",
+        "team": "Arsenal",
+        "context": "100% captaincy rate among owners, 97 experts captain him, 37 triple captain him, flying high in template",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Daniel Munoz",
+        "team": "Crystal Palace",
+        "context": "5.8 million defender, 13 experts transferring in, plays Burnley and Wolves next two games with really nice fixtures",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Isa",
+        "team": "Crystal Palace",
+        "context": "6.3 million midfielder, 11 transfers in, expected to be on penalties, scoring in back-to-back games",
+        "sentiment": "positive"
+      },
+      {
+        "player": "James Hill",
+        "team": "Bournemouth",
+        "context": "3.9 million cheat code, ownership growing to 17%, five new transfers in this week",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Zubemendi",
+        "team": "Arsenal",
+        "context": "Not convinced as FPL pick, defensive midfielder who scored recent worldy goals but unrealistic to continue, only 11% of experts would pick him as differential",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Jokarez",
+        "team": "Arsenal",
+        "context": "39% of experts say he's best Arsenal differential if forced to pick one, most popular differential option",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "context": "77% of experts say not worth upgrading to him, 23% say only worth it as free transfer, nobody suggests taking hits",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Dorgu",
+        "team": "Lecce",
+        "context": "Six transfers out, experts previously held him on bench but now selling due to better defender options available",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Chiao",
+        "team": "Unknown",
+        "context": "Six transfers out, being sold by experts along with other defenders",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Enzo Fernandez",
+        "team": "Chelsea",
+        "context": "Three transfers out, small decrease in ownership among experts",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Lewis Miley",
+        "team": "Newcastle",
+        "context": "Has injury concerns, few transfers out for him",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Saliba",
+        "team": "Arsenal",
+        "context": "28% of experts say he's second best Arsenal differential, potential for Arsenal defense triple up",
+        "sentiment": "neutral"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Yurian Timber",
+        "team": "Arsenal",
+        "action": "buy",
+        "reason": "Priority move to get third Arsenal player for double gameweek, heavily owned by experts at 63%"
+      },
+      {
+        "player": "Daniel Munoz",
+        "team": "Crystal Palace",
+        "action": "buy",
+        "reason": "Good expensive defender option with nice fixtures against Burnley and Wolves"
+      },
+      {
+        "player": "James Hill",
+        "team": "Bournemouth",
+        "action": "buy",
+        "reason": "Cheaper option at 3.9 million, described as cheat code with growing expert ownership"
+      },
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "action": "buy",
+        "reason": "First priority for midfield if you haven't got third Arsenal player already"
+      },
+      {
+        "player": "Isa",
+        "team": "Crystal Palace",
+        "action": "buy",
+        "reason": "Good midfielder option at 6.3 million with nice fixtures and penalty potential"
+      },
+      {
+        "player": "Dorgu",
+        "team": "Lecce",
+        "action": "sell",
+        "reason": "Better defender options available now, experts moving away from him"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "action": "avoid",
+        "reason": "77% of experts say not worth the upgrade, don't take hits to get him"
+      },
+      {
+        "player": "Zubemendi",
+        "team": "Arsenal",
+        "action": "avoid",
+        "reason": "Defensive midfielder unlikely to continue scoring worldy goals, sacrifices better Arsenal options"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Lewis Miley",
+        "team": "Newcastle",
+        "status": "injured",
+        "details": "Has injury concerns causing experts to transfer him out"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Yurian Timber\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Most transferred in Arsenal player this gameweek, heavily owned at 63% among experts, recommended as third Arsenal player for triple up\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Four new transfers in, 73% ownership among experts, alternative captain option for those without Gabrielle\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Gabrielle\",\n            \"team\": \"Arsenal\",\n            \"context\": \"100% captaincy rate among owners, 97 experts captain him, 37 triple captain him, flying high in template\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Daniel Munoz\",\n            \"team\": \"Crystal Palace\",\n            \"context\": \"5.8 million defender, 13 experts transferring in, plays Burnley and Wolves next two games with really nice fixtures\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Isa\",\n            \"team\": \"Crystal Palace\",\n            \"context\": \"6.3 million midfielder, 11 transfers in, expected to be on penalties, scoring in back-to-back games\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"James Hill\",\n            \"team\": \"Bournemouth\",\n            \"context\": \"3.9 million cheat code, ownership growing to 17%, five new transfers in this week\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Zubemendi\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Not convinced as FPL pick, defensive midfielder who scored recent worldy goals but unrealistic to continue, only 11% of experts would pick him as differential\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Jokarez\",\n            \"team\": \"Arsenal\",\n            \"context\": \"39% of experts say he's best Arsenal differential if forced to pick one, most popular differential option\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"context\": \"77% of experts say not worth upgrading to him, 23% say only worth it as free transfer, nobody suggests taking hits\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Dorgu\",\n            \"team\": \"Lecce\",\n            \"context\": \"Six transfers out, experts previously held him on bench but now selling due to better defender options available\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Chiao\",\n            \"team\": \"Unknown\",\n            \"context\": \"Six transfers out, being sold by experts along with other defenders\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Enzo Fernandez\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Three transfers out, small decrease in ownership among experts\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Lewis Miley\",\n            \"team\": \"Newcastle\",\n            \"context\": \"Has injury concerns, few transfers out for him\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Saliba\",\n            \"team\": \"Arsenal\",\n            \"context\": \"28% of experts say he's second best Arsenal differential, potential for Arsenal defense triple up\",\n            \"sentiment\": \"neutral\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Yurian Timber\",\n            \"team\": \"Arsenal\",\n            \"action\": \"buy\",\n            \"reason\": \"Priority move to get third Arsenal player for double gameweek, heavily owned by experts at 63%\"\n        },\n        {\n            \"player\": \"Daniel Munoz\",\n            \"team\": \"Crystal Palace\",\n            \"action\": \"buy\",\n            \"reason\": \"Good expensive defender option with nice fixtures against Burnley and Wolves\"\n        },\n        {\n            \"player\": \"James Hill\",\n            \"team\": \"Bournemouth\",\n            \"action\": \"buy\",\n            \"reason\": \"Cheaper option at 3.9 million, described as cheat code with growing expert ownership\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"action\": \"buy\",\n            \"reason\": \"First priority for midfield if you haven't got third Arsenal player already\"\n        },\n        {\n            \"player\": \"Isa\",\n            \"team\": \"Crystal Palace\",\n            \"action\": \"buy\",\n            \"reason\": \"Good midfielder option at 6.3 million with nice fixtures and penalty potential\"\n        },\n        {\n            \"player\": \"Dorgu\",\n            \"team\": \"Lecce\",\n            \"action\": \"sell\",\n            \"reason\": \"Better defender options available now, experts moving away from him\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"action\": \"avoid\",\n            \"reason\": \"77% of experts say not worth the upgrade, don't take hits to get him\"\n        },\n        {\n            \"player\": \"Zubemendi\",\n            \"team\": \"Arsenal\",\n            \"action\": \"avoid\",\n            \"reason\": \"Defensive midfielder unlikely to continue scoring worldy goals, sacrifices better Arsenal options\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Lewis Miley\",\n            \"team\": \"Newcastle\",\n            \"status\": \"injured\",\n            \"details\": \"Has injury concerns causing experts to transfer him out\"\n        }\n    ],\n    \"differentials\": [\n        {\n            \"player\": \"Daniel Munoz\",\n            \"team\": \"Crystal Palace\",\n            \"reason\": \"Barely owned last gameweek but 13 experts bringing him in for good fixtures\"\n        },\n        {\n            \"player\": \"Jokarez\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"39% of experts say he's best Arsenal differential option if forced to pick one\"\n        },\n        {\n            \"player\": \"Saliba\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Second choice Arsenal differential at 28%, potential for Arsenal defense triple up\"\n        },\n        {\n            \"player\": \"Joel Gomez\",\n            \"team\": \"Wolves\",\n            \"reason\": \"Differential midfielder for Wolves, some experts looking for eight-pointer in gameweek 26\"\n        }\n    ],\n    \"captain_picks\": [\n        {\n            \"player\": \"Gabrielle\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"100% captaincy rate among his 97 owners, 37 experts triple captaining him, complete expert consensus\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Alternative captain option for the 3% who don't own Gabrielle, only other captain choice mentioned\"\n        }\n    ]\n}"
+  },
+  "tHYBLKu4kqw": {
+    "video_id": "tHYBLKu4kqw",
+    "analyzed_at": "2026-02-15T07:40:12.521367",
+    "player_mentions": [
+      {
+        "player": "Gabrielle",
+        "team": "Arsenal",
+        "context": "Averaging 7.4 points per start, second highest in the league. Being discussed as captain and triple captain option for Arsenal's double gameweek against Brenford and Wolves",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "context": "Got a hat-trick and 20 points this gameweek. Still not fully fit but feeling freer under new management. Only 13% owned",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "context": "Got 20 points as captain choice this week. Popular captaincy pick",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Erling Haaland",
+        "team": "Manchester City",
+        "context": "Got 11 points, his highest score in about 10 gameweeks. Has good fixtures coming up including Fulham, Newcastle, Forest, West Ham",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "context": "Transfer target for Arsenal triple-up. Got 5 points this week. Plays all the time and gets defcon and assists",
+        "sentiment": "positive"
+      },
+      {
+        "player": "James Hill",
+        "team": "Bournemouth",
+        "context": "3.9 hero who delivered 7 points with an incredible assist. Has passing ability and assist potential",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Morgan Rogers",
+        "team": "Aston Villa",
+        "context": "Got 10 points this week. Previously hated but now loved again",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Yves Bissouma",
+        "team": "Tottenham",
+        "context": "Mentioned as top of XGI table for last six gameweeks, only player above 5 XGI",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Timber",
+        "team": "Arsenal",
+        "context": "Has more than twice Gabriel's XG (5.5 vs 2.6). Picks up great spots in the box. Risk of Ben White rotation",
+        "sentiment": "positive"
+      },
+      {
+        "player": "David Raya",
+        "team": "Arsenal",
+        "context": "100% nailed to play both games in double gameweek. Easy pick for guaranteed minutes",
+        "sentiment": "positive"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "action": "buy",
+        "reason": "Not risky anymore, has decent minutes, great fixtures coming up against Leeds and Burnley, but difficult to get to due to transfer requirements"
+      },
+      {
+        "player": "Erling Haaland",
+        "team": "Manchester City",
+        "action": "hold",
+        "reason": "Anyone selling him with fixtures like Fulham, Newcastle, Forest, West Ham coming up is making a very brave move"
+      },
+      {
+        "player": "Crystal Palace defenders",
+        "team": "Crystal Palace",
+        "action": "buy",
+        "reason": "Have Burnley and Wolves fixtures coming up - two worst teams in the league, but will blank in gameweek 31"
+      },
+      {
+        "player": "Thiago",
+        "team": "Brentford",
+        "context": "After this week has lovely fixtures: Brighton, Burnley, Bournemouth, Wolves, Leeds. Many people looking to target him",
+        "action": "buy",
+        "reason": "Great upcoming fixture run after Arsenal game"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "status": "returning",
+        "details": "Still not fully fit yet but says once fully fit will do bits moving forward. No longer rumors about needing surgery"
+      },
+      {
+        "player": "Marcus Tavernier",
+        "team": "Bournemouth",
+        "status": "returning",
+        "details": "Talk that he'll be back for gameweek 27 or 28"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Gabrielle\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Averaging 7.4 points per start, second highest in the league. Being discussed as captain and triple captain option for Arsenal's double gameweek against Brenford and Wolves\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Got a hat-trick and 20 points this gameweek. Still not fully fit but feeling freer under new management. Only 13% owned\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Got 20 points as captain choice this week. Popular captaincy pick\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Got 11 points, his highest score in about 10 gameweeks. Has good fixtures coming up including Fulham, Newcastle, Forest, West Ham\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Transfer target for Arsenal triple-up. Got 5 points this week. Plays all the time and gets defcon and assists\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"James Hill\",\n            \"team\": \"Bournemouth\",\n            \"context\": \"3.9 hero who delivered 7 points with an incredible assist. Has passing ability and assist potential\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Morgan Rogers\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Got 10 points this week. Previously hated but now loved again\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Yves Bissouma\",\n            \"team\": \"Tottenham\",\n            \"context\": \"Mentioned as top of XGI table for last six gameweeks, only player above 5 XGI\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Timber\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Has more than twice Gabriel's XG (5.5 vs 2.6). Picks up great spots in the box. Risk of Ben White rotation\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"David Raya\",\n            \"team\": \"Arsenal\",\n            \"context\": \"100% nailed to play both games in double gameweek. Easy pick for guaranteed minutes\",\n            \"sentiment\": \"positive\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"action\": \"buy\",\n            \"reason\": \"Not risky anymore, has decent minutes, great fixtures coming up against Leeds and Burnley, but difficult to get to due to transfer requirements\"\n        },\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"action\": \"hold\",\n            \"reason\": \"Anyone selling him with fixtures like Fulham, Newcastle, Forest, West Ham coming up is making a very brave move\"\n        },\n        {\n            \"player\": \"Crystal Palace defenders\",\n            \"team\": \"Crystal Palace\",\n            \"action\": \"buy\",\n            \"reason\": \"Have Burnley and Wolves fixtures coming up - two worst teams in the league, but will blank in gameweek 31\"\n        },\n        {\n            \"player\": \"Thiago\",\n            \"team\": \"Brentford\",\n            \"context\": \"After this week has lovely fixtures: Brighton, Burnley, Bournemouth, Wolves, Leeds. Many people looking to target him\",\n            \"action\": \"buy\",\n            \"reason\": \"Great upcoming fixture run after Arsenal game\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"status\": \"returning\",\n            \"details\": \"Still not fully fit yet but says once fully fit will do bits moving forward. No longer rumors about needing surgery\"\n        },\n        {\n            \"player\": \"Marcus Tavernier\",\n            \"team\": \"Bournemouth\",\n            \"status\": \"returning\",\n            \"details\": \"Talk that he'll be back for gameweek 27 or 28\"\n        }\n    ],\n    \"differentials\": [\n        {\n            \"player\": \"James Hill\",\n            \"team\": \"Bournemouth\",\n            \"reason\": \"3.9 million defender with assist potential and defcon ability\"\n        },\n        {\n            \"player\": \"Kai Havertz\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Arsenal with Havertz are a completely different beast, can play in midfield three, versatile positioning\"\n        },\n        {\n            \"player\": \"Michael Olise\",\n            \"team\": \"Crystal Palace\",\n            \"reason\": \"Unbelievable differential for Palace's good fixtures against Burnley and Wolves\"\n        }\n    ],\n    \"captain_picks\": [\n        {\n            \"player\": \"Gabrielle\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Averaging 7.4 points per start, Arsenal have 41% clean sheet chance vs Brenford and 56% vs Wolves, multiple avenues to points including goals, assists, defcon, and bonus points\"\n        }\n    ]\n}"
+  },
+  "1lenvsetxpU": {
+    "video_id": "1lenvsetxpU",
+    "analyzed_at": "2026-02-15T07:40:36.589076",
+    "player_mentions": [
+      {
+        "player": "James Hill",
+        "team": "Bournemouth",
+        "context": "Back-to-back seven-pointers this week with a clean sheet and assist, second best defensive contributor among defenders over a six gameweek period",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "context": "7.44 points per start this season, has double gameweek against Brentford and Wolves, projected 0.89 clean sheets",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "context": "Captain worked out well, 6.41 points per start, set and forget captain in non-double gameweeks",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Erling Haaland",
+        "team": "Manchester City",
+        "context": "7.54 points per start this season, came through with assist and penalty goal, still on penalties",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Darwin Nunez",
+        "team": "Liverpool",
+        "context": "How he didn't return against Man City I have no idea, underlying numbers continuing to be really good, 6 points per start, 1.0 expected goal involvements per start",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "context": "Clean sheet in gameweek 25, playing deeper role, on set pieces and free kicks, 0.4 expected goal involvements per start",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Enzo Fernandez",
+        "team": "Chelsea",
+        "context": "Really good underlying numbers, 0.7 expected goal involvements per start, still looks really strong despite lack of attacking returns",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Chris Richards",
+        "team": "Crystal Palace",
+        "context": "One of the greatest defensive contributors in the league, has two very best fixtures for clean sheets in next two gameweeks (Burnley at home, Wolves at home)",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Malik Chow",
+        "team": "Brentford",
+        "context": "Continual disappointment over the last three gameweeks, probably needs to go",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Morgan Gibbs-White",
+        "team": "Nottingham Forest",
+        "context": "Potentially picked up a little knock, was seen limping out of stadium, but has trained today and should be fine",
+        "sentiment": "neutral"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Chris Richards",
+        "team": "Crystal Palace",
+        "action": "buy",
+        "reason": "Has two very best fixtures for clean sheets in next two gameweeks (Burnley at home, Wolves at home), one of greatest defensive contributors in league"
+      },
+      {
+        "player": "Malik Chow",
+        "team": "Brentford",
+        "action": "sell",
+        "reason": "Continual disappointment over last three gameweeks, probably going to drop in price soon"
+      },
+      {
+        "player": "Erling Haaland",
+        "team": "Manchester City",
+        "action": "hold",
+        "reason": "Not a sell because there's not really any better options right now, still on penalties and fixtures still look good"
+      },
+      {
+        "player": "Darwin Nunez",
+        "team": "Liverpool",
+        "action": "hold",
+        "reason": "Still really happy with him in terms of performances, getting chances to score, looking really hot with fantastic numbers"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Morgan Gibbs-White",
+        "team": "Nottingham Forest",
+        "status": "fit",
+        "details": "Was seen limping out of stadium after gameweek 25 but has trained today and should be fine to play this week"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"James Hill\",\n            \"team\": \"Bournemouth\",\n            \"context\": \"Back-to-back seven-pointers this week with a clean sheet and assist, second best defensive contributor among defenders over a six gameweek period\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\", \n            \"context\": \"7.44 points per start this season, has double gameweek against Brentford and Wolves, projected 0.89 clean sheets\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Captain worked out well, 6.41 points per start, set and forget captain in non-double gameweeks\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"context\": \"7.54 points per start this season, came through with assist and penalty goal, still on penalties\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Darwin Nunez\",\n            \"team\": \"Liverpool\",\n            \"context\": \"How he didn't return against Man City I have no idea, underlying numbers continuing to be really good, 6 points per start, 1.0 expected goal involvements per start\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Clean sheet in gameweek 25, playing deeper role, on set pieces and free kicks, 0.4 expected goal involvements per start\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Enzo Fernandez\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Really good underlying numbers, 0.7 expected goal involvements per start, still looks really strong despite lack of attacking returns\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Chris Richards\",\n            \"team\": \"Crystal Palace\",\n            \"context\": \"One of the greatest defensive contributors in the league, has two very best fixtures for clean sheets in next two gameweeks (Burnley at home, Wolves at home)\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Malik Chow\",\n            \"team\": \"Brentford\",\n            \"context\": \"Continual disappointment over the last three gameweeks, probably needs to go\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Morgan Gibbs-White\",\n            \"team\": \"Nottingham Forest\",\n            \"context\": \"Potentially picked up a little knock, was seen limping out of stadium, but has trained today and should be fine\",\n            \"sentiment\": \"neutral\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Chris Richards\",\n            \"team\": \"Crystal Palace\", \n            \"action\": \"buy\",\n            \"reason\": \"Has two very best fixtures for clean sheets in next two gameweeks (Burnley at home, Wolves at home), one of greatest defensive contributors in league\"\n        },\n        {\n            \"player\": \"Malik Chow\",\n            \"team\": \"Brentford\",\n            \"action\": \"sell\", \n            \"reason\": \"Continual disappointment over last three gameweeks, probably going to drop in price soon\"\n        },\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"action\": \"hold\",\n            \"reason\": \"Not a sell because there's not really any better options right now, still on penalties and fixtures still look good\"\n        },\n        {\n            \"player\": \"Darwin Nunez\",\n            \"team\": \"Liverpool\",\n            \"action\": \"hold\",\n            \"reason\": \"Still really happy with him in terms of performances, getting chances to score, looking really hot with fantastic numbers\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Morgan Gibbs-White\",\n            \"team\": \"Nottingham Forest\",\n            \"status\": \"fit\",\n            \"details\": \"Was seen limping out of stadium after gameweek 25 but has trained today and should be fine to play this week\"\n        }\n    ],\n    \"differentials\": [\n        {\n            \"player\": \"Chris Richards\",\n            \"team\": \"Crystal Palace\",\n            \"reason\": \"Under 1% owned at start of season, one of greatest defensive contributors in league with excellent upcoming fixtures\"\n        },\n        {\n            \"player\": \"James Hill\", \n            \"team\": \"Bournemouth\",\n            \"reason\": \"Nobody had heard of him a couple of weeks ago, second best defensive contributor among defenders over six gameweek period\"\n        }\n    ],\n    \"captain_picks\": [\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"action\": \"triple captain\",\n            \"reason\": \"Has double gameweek against Brentford and Wolves, 7.44 points per start, projected 0.89 clean sheets, potential for 20+ points if everything goes to plan\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\", \n            \"team\": \"Manchester United\",\n            \"action\": \"captain\",\n            \"reason\": \"Set and forget captain in non-double gameweeks, looking really strong every week with so many ways of getting points\"\n        }\n    ]\n}"
+  },
+  "Tf_o8wr539o": {
+    "video_id": "Tf_o8wr539o",
+    "analyzed_at": "2026-02-15T07:41:14.716780",
+    "player_mentions": [
+      {
+        "player": "Erling Haaland",
+        "team": "Manchester City",
+        "context": "Had a double digit score, got a late goal and assist, Mark famously going without him this season",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "context": "Delivered last week, emerged under Michael Carrick, reliable captain option",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "context": "Scored 20 points with hat-trick, came off after 61 minutes, carrying an injury, good captain option",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "context": "Best Arsenal asset, huge threat from set pieces, defcon and clean sheet potential, best triple captain option",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "context": "Got defcon and clean sheet, heavily involved in Arsenal play, differential captain choice, takes set pieces",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Brandon Baumann",
+        "team": "Borussia Monchengladbach",
+        "context": "Was seen limping but should be fine, used to limp after every match like Sergio Aguero",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Enzo Fernandez",
+        "team": "Chelsea",
+        "context": "Good fixture run ending soon, on penalties when Palmer not there, great asset but fixtures drop off",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Emiliano Martinez",
+        "team": "Aston Villa",
+        "context": "Got a six-pointer without clean sheet, got late bonus point",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Jurrien Timber",
+        "team": "Arsenal",
+        "context": "Part of double Arsenal defense, very attacking for a defender but scarier for captaincy",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Yoane Wissa",
+        "team": "Brentford",
+        "context": "Scored, got yellow card, almost full house of returns",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Jarrod Bowen",
+        "team": "West Ham",
+        "context": "Was the only player who blanked in Mark's team",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Jose Sa",
+        "team": "Wolves",
+        "context": "Bench boost option, not expecting much but could provide save points",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Matheus Cunha",
+        "team": "Wolves",
+        "context": "Bench boost option, been looking really good, taking corners",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Harry Maguire",
+        "team": "Manchester United",
+        "context": "Doing well for defcon, goal threat, good for bench boost",
+        "sentiment": "positive"
+      },
+      {
+        "player": "James Hill",
+        "team": "Bournemouth",
+        "context": "Been really good for defcon, popular transfer target with great fixtures",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Morgan Rogers",
+        "team": "Aston Villa",
+        "context": "Scored 10 points, reliable option but stats don't capture his ability well",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Darwin Nunez",
+        "team": "Liverpool",
+        "context": "Top for minutes per expected goal involvement, should start, Liverpool's best center forward",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Ivan Toney",
+        "team": "Brentford",
+        "context": "Has six goals, good fixtures coming up, penalty taker, could be season keeper",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Ollie Watkins",
+        "team": "Aston Villa",
+        "context": "Good option but concern about Tammy Abraham potentially starting games",
+        "sentiment": "neutral"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "action": "buy",
+        "reason": "Best triple captain option for double gameweek, Arsenal's best defensive asset with set piece threat"
+      },
+      {
+        "player": "James Hill",
+        "team": "Bournemouth",
+        "action": "buy",
+        "reason": "Great fixtures coming up, Bournemouth top of fixture ticker, good for defcon"
+      },
+      {
+        "player": "Enzo Fernandez",
+        "team": "Chelsea",
+        "action": "sell",
+        "reason": "Good fixture run ending soon, fixtures drop off a cliff from gameweek 28"
+      },
+      {
+        "player": "Ivan Toney",
+        "team": "Brentford",
+        "action": "hold",
+        "reason": "Never bench penalty takers, could be season keeper despite facing Arsenal defense"
+      },
+      {
+        "player": "Michael Keane",
+        "team": "Everton",
+        "action": "sell",
+        "reason": "Indications that Branthwaite will replace him or come in"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "status": "carrying injury",
+        "details": "Carrying an injury but came off after 61 minutes which hopefully means another start"
+      },
+      {
+        "player": "Brandon Baumann",
+        "team": "Borussia Monchengladbach",
+        "status": "doubtful",
+        "details": "Was seen limping but should be fine, similar to how Sergio Aguero used to limp after matches"
+      },
+      {
+        "player": "Bukayo Saka",
+        "team": "Arsenal",
+        "status": "returning",
+        "details": "Unlikely to make the double gameweek but could be back next week"
+      },
+      {
+        "player": "Michael Keane",
+        "team": "Everton",
+        "status": "doubtful",
+        "details": "Indications that Branthwaite will replace him or at least come in"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Had a double digit score, got a late goal and assist, Mark famously going without him this season\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Delivered last week, emerged under Michael Carrick, reliable captain option\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Scored 20 points with hat-trick, came off after 61 minutes, carrying an injury, good captain option\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Best Arsenal asset, huge threat from set pieces, defcon and clean sheet potential, best triple captain option\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Got defcon and clean sheet, heavily involved in Arsenal play, differential captain choice, takes set pieces\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Brandon Baumann\",\n            \"team\": \"Borussia Monchengladbach\",\n            \"context\": \"Was seen limping but should be fine, used to limp after every match like Sergio Aguero\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Enzo Fernandez\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Good fixture run ending soon, on penalties when Palmer not there, great asset but fixtures drop off\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Emiliano Martinez\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Got a six-pointer without clean sheet, got late bonus point\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Jurrien Timber\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Part of double Arsenal defense, very attacking for a defender but scarier for captaincy\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Yoane Wissa\",\n            \"team\": \"Brentford\",\n            \"context\": \"Scored, got yellow card, almost full house of returns\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Jarrod Bowen\",\n            \"team\": \"West Ham\",\n            \"context\": \"Was the only player who blanked in Mark's team\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Jose Sa\",\n            \"team\": \"Wolves\",\n            \"context\": \"Bench boost option, not expecting much but could provide save points\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Matheus Cunha\",\n            \"team\": \"Wolves\",\n            \"context\": \"Bench boost option, been looking really good, taking corners\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Harry Maguire\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Doing well for defcon, goal threat, good for bench boost\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"James Hill\",\n            \"team\": \"Bournemouth\",\n            \"context\": \"Been really good for defcon, popular transfer target with great fixtures\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Morgan Rogers\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Scored 10 points, reliable option but stats don't capture his ability well\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Darwin Nunez\",\n            \"team\": \"Liverpool\",\n            \"context\": \"Top for minutes per expected goal involvement, should start, Liverpool's best center forward\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Ivan Toney\",\n            \"team\": \"Brentford\",\n            \"context\": \"Has six goals, good fixtures coming up, penalty taker, could be season keeper\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Ollie Watkins\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Good option but concern about Tammy Abraham potentially starting games\",\n            \"sentiment\": \"neutral\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"action\": \"buy\",\n            \"reason\": \"Best triple captain option for double gameweek, Arsenal's best defensive asset with set piece threat\"\n        },\n        {\n            \"player\": \"James Hill\",\n            \"team\": \"Bournemouth\",\n            \"action\": \"buy\",\n            \"reason\": \"Great fixtures coming up, Bournemouth top of fixture ticker, good for defcon\"\n        },\n        {\n            \"player\": \"Enzo Fernandez\",\n            \"team\": \"Chelsea\",\n            \"action\": \"sell\",\n            \"reason\": \"Good fixture run ending soon, fixtures drop off a cliff from gameweek 28\"\n        },\n        {\n            \"player\": \"Ivan Toney\",\n            \"team\": \"Brentford\",\n            \"action\": \"hold\",\n            \"reason\": \"Never bench penalty takers, could be season keeper despite facing Arsenal defense\"\n        },\n        {\n            \"player\": \"Michael Keane\",\n            \"team\": \"Everton\",\n            \"action\": \"sell\",\n            \"reason\": \"Indications that Branthwaite will replace him or come in\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"status\": \"carrying injury\",\n            \"details\": \"Carrying an injury but came off after 61 minutes which hopefully means another start\"\n        },\n        {\n            \"player\": \"Brandon Baumann\",\n            \"team\": \"Borussia Monchengladbach\",\n            \"status\": \"doubtful\",\n            \"details\": \"Was seen limping but should be fine, similar to how Sergio Aguero used to limp after matches\"\n        },\n        {\n            \"player\": \"Bukayo Saka\",\n            \"team\": \"Arsenal\",\n            \"status\": \"returning\",\n            \"details\": \"Unlikely to make the double gameweek but could be back next week\"\n        },\n        {\n            \"player\": \"Michael Keane\",\n            \"team\": \"Everton\",\n            \"status\": \"doubtful\",\n            \"details\": \"Indications that Branthwaite will replace him or at least come in\"\n        }\n    ],\n    \"differentials\": [\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Differential captain choice over Gabriel, heavily involved in Arsenal play, takes set pieces\"\n        },\n        {\n            \"player\": \"Yves Bissouma\",\n            \"team\": \"Tottenham\",\n            \"reason\": \"Only 5.2 million with five goals and an assist, 22 shots so far, could score twice in double gameweek\"\n        },\n        {\n            \"player\": \"Leandro Trossard\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Five goals and five assists, 35 shots, in hardly any teams for triple captaincy differential\"\n        },\n        {\n            \"player\": \"Kai Havertz\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Eight goals, 37 shots, scores against easier opposition\"\n        },\n        {\n            \"player\": \"Bryan Mbeumo\",\n            \"team\": \"Brentford\",\n            \"reason\": \"Top for minutes per expected goal involvement, minimal ownership under 1%, great upcoming fixtures\"\n        }\n    ],\n    \"captain_picks\": [\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Best triple captain option for double gameweek, Arsenal's defensive stats are in league of their own, huge set piece threat\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Differential captain choice, heavily involved in Arsenal play, takes set pieces, can get defensive contributions\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"reason\": \"Good captain option for gameweek 27 at home to Burnley after hat-trick performance\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"reason\": \"Reliable captain option, has emerged under Michael Carrick, good fixtures coming up\"\n        },\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"reason\": \"Good captain option for gameweek 27 against Newcastle and gameweek 29 home to Nottingham Forest\"\n        }\n    ]\n}"
+  },
+  "ExCJDdgLy3w": {
+    "video_id": "ExCJDdgLy3w",
+    "analyzed_at": "2026-02-15T07:41:18.726114",
+    "player_mentions": [
+      {
+        "player": "Bravasi",
+        "team": "Unknown",
+        "context": "Mentioned as potentially keeping a clean sheet in difficult fixtures and likely to score 8-10 points if they do",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Anderson",
+        "team": "Unknown",
+        "context": "Mentioned as potentially keeping a clean sheet in difficult fixtures and likely to score 8-10 points if they do",
+        "sentiment": "positive"
+      }
+    ],
+    "recommendations": [],
+    "injury_news": [],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Bravasi\",\n            \"team\": \"Unknown\",\n            \"context\": \"Mentioned as potentially keeping a clean sheet in difficult fixtures and likely to score 8-10 points if they do\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Anderson\",\n            \"team\": \"Unknown\",\n            \"context\": \"Mentioned as potentially keeping a clean sheet in difficult fixtures and likely to score 8-10 points if they do\",\n            \"sentiment\": \"positive\"\n        }\n    ],\n    \"recommendations\": [],\n    \"injury_news\": [],\n    \"differentials\": [],\n    \"captain_picks\": [\n        {\n            \"player\": \"Bravasi\",\n            \"team\": \"Unknown\",\n            \"reason\": \"Could keep clean sheets in difficult fixtures and likely to score 8-10 points, making them good triple captain options\"\n        },\n        {\n            \"player\": \"Anderson\",\n            \"team\": \"Unknown\",\n            \"reason\": \"Could keep clean sheets in difficult fixtures and likely to score 8-10 points, making them good triple captain options\"\n        }\n    ]\n}"
+  },
+  "oVbycFYI5aQ": {
+    "video_id": "oVbycFYI5aQ",
+    "analyzed_at": "2026-02-15T07:41:26.253811",
+    "player_mentions": [
+      {
+        "player": "Haaland",
+        "team": "Manchester City",
+        "context": "One of three players that top the charts for FPL points per game this season. Will almost certainly have a double gameweek, likely in gameweek 33 or 36",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "context": "One of three players that top the charts for FPL points per game this season. Has a double gameweek in GW26 facing Brentford and Wolves away",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "context": "One of three players that top the charts for FPL points per game this season. Could get a double gameweek 33 if Brentford reach FA Cup semi-finals",
+        "sentiment": "neutral"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "action": "avoid",
+        "reason": "Can pretty much rule out Bruno as a triple captain because his potential double gameweek is unlikely and gameweek 33 would be better for bench boost or free hit"
+      }
+    ],
+    "injury_news": [],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Haaland\",\n            \"team\": \"Manchester City\",\n            \"context\": \"One of three players that top the charts for FPL points per game this season. Will almost certainly have a double gameweek, likely in gameweek 33 or 36\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"context\": \"One of three players that top the charts for FPL points per game this season. Has a double gameweek in GW26 facing Brentford and Wolves away\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"context\": \"One of three players that top the charts for FPL points per game this season. Could get a double gameweek 33 if Brentford reach FA Cup semi-finals\",\n            \"sentiment\": \"neutral\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"action\": \"avoid\",\n            \"reason\": \"Can pretty much rule out Bruno as a triple captain because his potential double gameweek is unlikely and gameweek 33 would be better for bench boost or free hit\"\n        }\n    ],\n    \"injury_news\": [],\n    \"differentials\": [],\n    \"captain_picks\": [\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Playing it safe with triple captain Gabriel this week in gameweek 26 due to guaranteed double gameweek against Brentford and Wolves\"\n        },\n        {\n            \"player\": \"Haaland\",\n            \"team\": \"Manchester City\",\n            \"reason\": \"Alternative triple captain option for gameweek 36 which arguably looks better on paper, but carries risks regarding fitness, availability, and whether he'll start both games\"\n        }\n    ]\n}"
+  },
+  "oqJG-g_i8nU": {
+    "video_id": "oqJG-g_i8nU",
+    "analyzed_at": "2026-02-15T07:41:35.754062",
+    "player_mentions": [
+      {
+        "player": "Hugo Ekitike",
+        "team": "Not specified",
+        "context": "Listed as top scorer for gameweek 24 alongside Casemiro",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Casemiro",
+        "team": "Manchester United",
+        "context": "Listed as top scorer for gameweek 24 alongside Hugo Ekitike",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Florian Wirtz",
+        "team": "Not specified",
+        "context": "Made up the top five performers for gameweek 24",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Demarai Gray",
+        "team": "Not specified",
+        "context": "Made up the top five performers for gameweek 24",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Hwang Hee-chan",
+        "team": "Not specified",
+        "context": "Made up the top five performers for gameweek 24",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Mitrovic",
+        "team": "Not specified",
+        "context": "Was traded out by Burke in gameweek 6 for Alderete, which resulted in a +16 point swing (best trade of the season)",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Alderete",
+        "team": "Not specified",
+        "context": "Was traded in by Burke in gameweek 6 replacing Mitrovic, which resulted in a +16 point swing (best trade of the season)",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Murillo",
+        "team": "Not specified",
+        "context": "Was traded out by Liam in gameweek 12 for Van Hecke, costing him 15 points (worst trade of the season)",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Van Hecke",
+        "team": "Not specified",
+        "context": "Was traded in by Liam in gameweek 12 replacing Murillo, costing him 15 points (worst trade of the season)",
+        "sentiment": "negative"
+      }
+    ],
+    "recommendations": [],
+    "injury_news": [],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Hugo Ekitike\",\n            \"team\": \"Not specified\",\n            \"context\": \"Listed as top scorer for gameweek 24 alongside Casemiro\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Casemiro\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Listed as top scorer for gameweek 24 alongside Hugo Ekitike\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Florian Wirtz\",\n            \"team\": \"Not specified\",\n            \"context\": \"Made up the top five performers for gameweek 24\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Demarai Gray\",\n            \"team\": \"Not specified\",\n            \"context\": \"Made up the top five performers for gameweek 24\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Hwang Hee-chan\",\n            \"team\": \"Not specified\",\n            \"context\": \"Made up the top five performers for gameweek 24\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Mitrovic\",\n            \"team\": \"Not specified\",\n            \"context\": \"Was traded out by Burke in gameweek 6 for Alderete, which resulted in a +16 point swing (best trade of the season)\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Alderete\",\n            \"team\": \"Not specified\",\n            \"context\": \"Was traded in by Burke in gameweek 6 replacing Mitrovic, which resulted in a +16 point swing (best trade of the season)\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Murillo\",\n            \"team\": \"Not specified\",\n            \"context\": \"Was traded out by Liam in gameweek 12 for Van Hecke, costing him 15 points (worst trade of the season)\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Van Hecke\",\n            \"team\": \"Not specified\",\n            \"context\": \"Was traded in by Liam in gameweek 12 replacing Murillo, costing him 15 points (worst trade of the season)\",\n            \"sentiment\": \"negative\"\n        }\n    ],\n    \"recommendations\": [],\n    \"injury_news\": [],\n    \"differentials\": [],\n    \"captain_picks\": []\n}"
+  },
+  "6BjAEirgDT0": {
+    "video_id": "6BjAEirgDT0",
+    "analyzed_at": "2026-02-15T07:43:18.584233",
+    "player_mentions": [
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "context": "Discussing him as triple captain option, mentioned he's picking up bonus points and defcons, has goal threat, playing in two amazing away fixtures which could increase defcon appeal",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "context": "Hit defcon this gameweek, mentioned as solid option who chips in 4-5 points each time with defcons and gets assists. Hit defcon 6 out of 7 away games",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Morgan Rogers",
+        "team": "Aston Villa",
+        "context": "Was captained and delivered with a goal, 11 points including defcon. Described as great asset and differential captaincy choice",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "context": "Popular captain choice who delivered well this gameweek, described as 'bit of a must' now under new management. United look a different team",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Rasmus Hojlund",
+        "team": "Manchester United",
+        "context": "Described as good option now that United assets are back in the mix under new management",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Erling Haaland",
+        "team": "Manchester City",
+        "context": "Still yet to play, previous triple captaincy on him got nothing. Fixtures look great coming up but not delivering points for his price tag. Never scored at Anfield mentioned",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Darwin Nunez",
+        "team": "Liverpool",
+        "context": "Described as really good asset, consistently starting number nine which is rare for Liverpool. Fixtures look phenomenal from gameweek 27, could have double in gameweek 33",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Cody Gakpo",
+        "team": "Liverpool",
+        "context": "Pulled off good performance after doing nothing for five games previously",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "context": "Just scored hat-trick, good option especially on penalties, but concerns about playing every game and potential rotation. Not considered essential despite good fixtures",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Elliot Anderson",
+        "team": "Nottingham Forest",
+        "context": "Described as having four-point floor rather than ceiling, allows you to spend money elsewhere on more expensive explosive players",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Robert Sanchez",
+        "team": "Chelsea",
+        "context": "In current team but not confident with him, described as 'kind of annoyed by him every week'",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Levi Colwill",
+        "team": "Chelsea",
+        "context": "Gets defcon nearly every single week, described as 'absolute warrior' for defcons",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Matheus Cunha",
+        "team": "Wolverhampton",
+        "context": "On bench for double gameweek, happy to roll the dice with just him from Wolves",
+        "sentiment": "neutral"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "action": "buy",
+        "reason": "Triple Arsenal defense recommended for double gameweek, safest way into Arsenal defense with goal threat and defcon potential"
+      },
+      {
+        "player": "Darwin Nunez",
+        "team": "Liverpool",
+        "action": "buy",
+        "reason": "Fixtures look phenomenal from gameweek 27, potential double in gameweek 33, rare consistently starting Liverpool number nine"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "action": "hold",
+        "reason": "Good option with penalties and decent fixtures until gameweek 28, but not worth breaking up team structure to get him"
+      },
+      {
+        "player": "Erling Haaland",
+        "team": "Manchester City",
+        "action": "hold",
+        "reason": "Fixtures look great coming up but not delivering points for his price tag, considering how long to stick with him"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Bukayo Saka",
+        "team": "Arsenal",
+        "status": "injured",
+        "details": "Picked up injury last game, was on the bench"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "status": "doubtful",
+        "details": "Spoke about not feeling his best and having to play every game not knowing if he'll wake up sore, could miss Leeds game due to short turnaround"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Discussing him as triple captain option, mentioned he's picking up bonus points and defcons, has goal threat, playing in two amazing away fixtures which could increase defcon appeal\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\", \n            \"context\": \"Hit defcon this gameweek, mentioned as solid option who chips in 4-5 points each time with defcons and gets assists. Hit defcon 6 out of 7 away games\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Morgan Rogers\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Was captained and delivered with a goal, 11 points including defcon. Described as great asset and differential captaincy choice\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Popular captain choice who delivered well this gameweek, described as 'bit of a must' now under new management. United look a different team\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Rasmus Hojlund\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Described as good option now that United assets are back in the mix under new management\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Still yet to play, previous triple captaincy on him got nothing. Fixtures look great coming up but not delivering points for his price tag. Never scored at Anfield mentioned\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Darwin Nunez\",\n            \"team\": \"Liverpool\",\n            \"context\": \"Described as really good asset, consistently starting number nine which is rare for Liverpool. Fixtures look phenomenal from gameweek 27, could have double in gameweek 33\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Cody Gakpo\",\n            \"team\": \"Liverpool\",\n            \"context\": \"Pulled off good performance after doing nothing for five games previously\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Just scored hat-trick, good option especially on penalties, but concerns about playing every game and potential rotation. Not considered essential despite good fixtures\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Elliot Anderson\",\n            \"team\": \"Nottingham Forest\",\n            \"context\": \"Described as having four-point floor rather than ceiling, allows you to spend money elsewhere on more expensive explosive players\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Robert Sanchez\",\n            \"team\": \"Chelsea\",\n            \"context\": \"In current team but not confident with him, described as 'kind of annoyed by him every week'\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Levi Colwill\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Gets defcon nearly every single week, described as 'absolute warrior' for defcons\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Matheus Cunha\",\n            \"team\": \"Wolverhampton\",\n            \"context\": \"On bench for double gameweek, happy to roll the dice with just him from Wolves\",\n            \"sentiment\": \"neutral\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"action\": \"buy\",\n            \"reason\": \"Triple Arsenal defense recommended for double gameweek, safest way into Arsenal defense with goal threat and defcon potential\"\n        },\n        {\n            \"player\": \"Darwin Nunez\",\n            \"team\": \"Liverpool\", \n            \"action\": \"buy\",\n            \"reason\": \"Fixtures look phenomenal from gameweek 27, potential double in gameweek 33, rare consistently starting Liverpool number nine\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"action\": \"hold\",\n            \"reason\": \"Good option with penalties and decent fixtures until gameweek 28, but not worth breaking up team structure to get him\"\n        },\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"action\": \"hold\",\n            \"reason\": \"Fixtures look great coming up but not delivering points for his price tag, considering how long to stick with him\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Bukayo Saka\",\n            \"team\": \"Arsenal\",\n            \"status\": \"injured\",\n            \"details\": \"Picked up injury last game, was on the bench\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\", \n            \"status\": \"doubtful\",\n            \"details\": \"Spoke about not feeling his best and having to play every game not knowing if he'll wake up sore, could miss Leeds game due to short turnaround\"\n        }\n    ],\n    \"differentials\": [\n        {\n            \"player\": \"William Saliba\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Good cover for Timber, outscored Gabriel this gameweek, gets defcons and slightly cheaper\"\n        },\n        {\n            \"player\": \"Morgan Rogers\",\n            \"team\": \"Aston Villa\",\n            \"reason\": \"Used as differential captaincy choice, part of one of the best attacks in the league\"\n        }\n    ],\n    \"captain_picks\": [\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\", \n            \"reason\": \"Triple captaincy option for double gameweek, defensive captain with two amazing away fixtures, Arsenal defense looks formidable, good for defcons and has goal threat\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"reason\": \"Was popular captain choice this gameweek and delivered well, United look much better under new management\"\n        }\n    ]\n}"
+  },
+  "l-UFbddvBXo": {
+    "video_id": "l-UFbddvBXo",
+    "analyzed_at": "2026-02-15T07:43:43.923810",
+    "player_mentions": [
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "context": "Mentioned as the player being brought in to replace Saka, described as 'boring' but right choice for triple Arsenal setup",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Bukayo Saka",
+        "team": "Arsenal",
+        "context": "Being sold due to poor form, mentioned as 'another Saka' when comparing to Palmer's current struggles",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Bruno Fernandes",
+        "team": "Manchester United",
+        "context": "Described as favorite captain choice for the gameweek, clear number one option",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Gabriel",
+        "team": "Arsenal",
+        "context": "Mentioned as second favorite captain after Bruno, part of second tier of captain options",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Jarrod Bowen",
+        "team": "West Ham",
+        "context": "Mentioned as part of second tier captain options alongside Gabriel and Ecat",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "context": "Described as not convincing, compared form to Saka's struggles, mentioned his recent assists were not impressive",
+        "sentiment": "negative"
+      },
+      {
+        "player": "Jo\u00e3o Pedro",
+        "team": "Brighton",
+        "context": "Being brought in by over 700k managers but analyst doesn't see the vision, thinks Wolves fixture is overhyped",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Erling Haaland",
+        "team": "Manchester City",
+        "context": "Don't sell him but don't captain him either, Pep's comments don't suggest any real concerns",
+        "sentiment": "neutral"
+      },
+      {
+        "player": "Ollie Watkins",
+        "team": "Aston Villa",
+        "context": "Going to be in the squad, looking positive for availability",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Jurrien Timber",
+        "team": "Arsenal",
+        "context": "Some doubt about starting due to load management but likely to play, no injury issues",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Ivan Toney",
+        "team": "Brentford",
+        "context": "People keep selling him but analyst expects regret, penalty taker for decent Brentford side",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Morgan Rogers",
+        "team": "Aston Villa",
+        "context": "Being sold by many but analyst doesn't understand why given good fixtures coming up",
+        "sentiment": "positive"
+      },
+      {
+        "player": "Anthony Gordon",
+        "team": "Newcastle",
+        "context": "Has a hamstring issue, injured",
+        "sentiment": "negative"
+      }
+    ],
+    "recommendations": [
+      {
+        "player": "Declan Rice",
+        "team": "Arsenal",
+        "action": "buy",
+        "reason": "Good pick for triple Arsenal setup ahead of double gameweek 26"
+      },
+      {
+        "player": "Bukayo Saka",
+        "team": "Arsenal",
+        "action": "sell",
+        "reason": "Poor form and being transferred out for Rice"
+      },
+      {
+        "player": "Cole Palmer",
+        "team": "Chelsea",
+        "action": "avoid",
+        "reason": "Not convinced by his minutes or performances, form has not been there"
+      },
+      {
+        "player": "Jo\u00e3o Pedro",
+        "team": "Brighton",
+        "action": "hold",
+        "reason": "Okay pick but not worth breaking team for, Wolves fixture is overhyped"
+      },
+      {
+        "player": "Erling Haaland",
+        "team": "Manchester City",
+        "action": "hold",
+        "reason": "Don't sell but also don't captain, no worse than other forward options"
+      },
+      {
+        "player": "Ivan Toney",
+        "team": "Brentford",
+        "action": "buy",
+        "reason": "Expects selling regret, penalty taker with good fixtures coming"
+      },
+      {
+        "player": "Morgan Rogers",
+        "team": "Aston Villa",
+        "action": "hold",
+        "reason": "Good fixtures coming up, doesn't understand why people are selling"
+      }
+    ],
+    "injury_news": [
+      {
+        "player": "Anthony Gordon",
+        "team": "Newcastle",
+        "status": "injured",
+        "details": "Has a hamstring issue"
+      },
+      {
+        "player": "Ollie Watkins",
+        "team": "Aston Villa",
+        "status": "returning",
+        "details": "Going to be in the squad, looking positive for availability"
+      },
+      {
+        "player": "Jurrien Timber",
+        "team": "Arsenal",
+        "status": "fit",
+        "details": "Out of training for load management but no injury issues, should be fine to play"
+      }
+    ],
+    "raw_analysis": "{\n    \"player_mentions\": [\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Mentioned as the player being brought in to replace Saka, described as 'boring' but right choice for triple Arsenal setup\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Bukayo Saka\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Being sold due to poor form, mentioned as 'another Saka' when comparing to Palmer's current struggles\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"context\": \"Described as favorite captain choice for the gameweek, clear number one option\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Mentioned as second favorite captain after Bruno, part of second tier of captain options\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Jarrod Bowen\",\n            \"team\": \"West Ham\",\n            \"context\": \"Mentioned as part of second tier captain options alongside Gabriel and Ecat\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"context\": \"Described as not convincing, compared form to Saka's struggles, mentioned his recent assists were not impressive\",\n            \"sentiment\": \"negative\"\n        },\n        {\n            \"player\": \"Jo\u00e3o Pedro\",\n            \"team\": \"Brighton\",\n            \"context\": \"Being brought in by over 700k managers but analyst doesn't see the vision, thinks Wolves fixture is overhyped\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"context\": \"Don't sell him but don't captain him either, Pep's comments don't suggest any real concerns\",\n            \"sentiment\": \"neutral\"\n        },\n        {\n            \"player\": \"Ollie Watkins\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Going to be in the squad, looking positive for availability\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Jurrien Timber\",\n            \"team\": \"Arsenal\",\n            \"context\": \"Some doubt about starting due to load management but likely to play, no injury issues\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Ivan Toney\",\n            \"team\": \"Brentford\",\n            \"context\": \"People keep selling him but analyst expects regret, penalty taker for decent Brentford side\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Morgan Rogers\",\n            \"team\": \"Aston Villa\",\n            \"context\": \"Being sold by many but analyst doesn't understand why given good fixtures coming up\",\n            \"sentiment\": \"positive\"\n        },\n        {\n            \"player\": \"Anthony Gordon\",\n            \"team\": \"Newcastle\",\n            \"context\": \"Has a hamstring issue, injured\",\n            \"sentiment\": \"negative\"\n        }\n    ],\n    \"recommendations\": [\n        {\n            \"player\": \"Declan Rice\",\n            \"team\": \"Arsenal\",\n            \"action\": \"buy\",\n            \"reason\": \"Good pick for triple Arsenal setup ahead of double gameweek 26\"\n        },\n        {\n            \"player\": \"Bukayo Saka\",\n            \"team\": \"Arsenal\",\n            \"action\": \"sell\",\n            \"reason\": \"Poor form and being transferred out for Rice\"\n        },\n        {\n            \"player\": \"Cole Palmer\",\n            \"team\": \"Chelsea\",\n            \"action\": \"avoid\",\n            \"reason\": \"Not convinced by his minutes or performances, form has not been there\"\n        },\n        {\n            \"player\": \"Jo\u00e3o Pedro\",\n            \"team\": \"Brighton\",\n            \"action\": \"hold\",\n            \"reason\": \"Okay pick but not worth breaking team for, Wolves fixture is overhyped\"\n        },\n        {\n            \"player\": \"Erling Haaland\",\n            \"team\": \"Manchester City\",\n            \"action\": \"hold\",\n            \"reason\": \"Don't sell but also don't captain, no worse than other forward options\"\n        },\n        {\n            \"player\": \"Ivan Toney\",\n            \"team\": \"Brentford\",\n            \"action\": \"buy\",\n            \"reason\": \"Expects selling regret, penalty taker with good fixtures coming\"\n        },\n        {\n            \"player\": \"Morgan Rogers\",\n            \"team\": \"Aston Villa\",\n            \"action\": \"hold\",\n            \"reason\": \"Good fixtures coming up, doesn't understand why people are selling\"\n        }\n    ],\n    \"injury_news\": [\n        {\n            \"player\": \"Anthony Gordon\",\n            \"team\": \"Newcastle\",\n            \"status\": \"injured\",\n            \"details\": \"Has a hamstring issue\"\n        },\n        {\n            \"player\": \"Ollie Watkins\",\n            \"team\": \"Aston Villa\",\n            \"status\": \"returning\",\n            \"details\": \"Going to be in the squad, looking positive for availability\"\n        },\n        {\n            \"player\": \"Jurrien Timber\",\n            \"team\": \"Arsenal\",\n            \"status\": \"fit\",\n            \"details\": \"Out of training for load management but no injury issues, should be fine to play\"\n        }\n    ],\n    \"differentials\": [\n        {\n            \"player\": \"Elliot Anderson\",\n            \"team\": \"Nottingham Forest\",\n            \"reason\": \"Could get defensive contributions and clean sheets against Everton, potential for 11-pointer\"\n        }\n    ],\n    \"captain_picks\": [\n        {\n            \"player\": \"Bruno Fernandes\",\n            \"team\": \"Manchester United\",\n            \"reason\": \"Described as favorite captain choice for the gameweek\"\n        },\n        {\n            \"player\": \"Gabriel\",\n            \"team\": \"Arsenal\",\n            \"reason\": \"Second favorite captain option after Bruno\"\n        },\n        {\n            \"player\": \"Jarrod Bowen\",\n            \"team\": \"West Ham\",\n            \"reason\": \"Part of second tier captain options, penalty taker in form against Burnley\"\n        }\n    ]\n}"
+  }
+}
