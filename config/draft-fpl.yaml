@@ -16,12 +16,6 @@ channels:
   - id: fpl_draftzone
     name: FPL Draftzone
     youtube_channel_id: UC1iLU8Nb1Rb-43Ld6zqCgGw
-  - id: ff_scout
-    name: Fantasy Football Scout
-    youtube_channel_id: UCKxYKQ8pgJ7V8wwh4hLsSXQ
-  - id: fpl_mate
-    name: FPL Mate
-    youtube_channel_id: UCweDAlFm2LnVcOqaFU4_AGA
 
 analysis_prompt: |
   You are an expert Fantasy Premier League (FPL) analyst. Analyze the following podcast transcript and extract key information relevant to FPL Draft managers.

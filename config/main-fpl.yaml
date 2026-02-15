@@ -21,7 +21,12 @@ channels:
   - id: fpl_wire
     name: The FPL Wire
     youtube_channel_id: UCtIPFexB6PLKNNl0XH3SKKw
-  # Note: FPL General doesn't have own YouTube channel - content is on Fantasy Football Scout
+  - id: ff_scout
+    name: Fantasy Football Scout
+    youtube_channel_id: UCKxYKQ8pgJ7V8wwh4hLsSXQ
+  - id: fpl_mate
+    name: FPL Mate
+    youtube_channel_id: UCweDAlFm2LnVcOqaFU4_AGA
 
 analysis_prompt: |
   You are an FPL Draft analyst extracting insights from mainstream FPL content.
