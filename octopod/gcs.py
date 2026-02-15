@@ -1,10 +1,11 @@
-"""Google Cloud Storage upload functionality for OctoPod."""
+"""Google Cloud Storage functionality for OctoPod."""
 
 import json
 import os
 from datetime import datetime
+from pathlib import Path
 
-from .config import get_gcs_config
+from .config import get_gcs_config, DATA_DIR
 
 
 def upload_summary_to_gcs(gameweek: int, summary: str, video_ids: list[str]) -> str | None:
@@ -81,3 +82,79 @@ def is_gcs_configured() -> bool:
     credentials_json = os.environ.get("GCS_CREDENTIALS")
 
     return bool(bucket_name and credentials_json)
+
+
+def _get_gcs_client():
+    """Get authenticated GCS client."""
+    from google.cloud import storage
+    from google.oauth2 import service_account
+
+    credentials_json = os.environ.get("GCS_CREDENTIALS")
+    if not credentials_json:
+        return None
+
+    credentials_dict = json.loads(credentials_json)
+    credentials = service_account.Credentials.from_service_account_info(
+        credentials_dict
+    )
+    return storage.Client(credentials=credentials)
+
+
+def sync_data_from_gcs() -> bool:
+    """Download data files from GCS to local."""
+    if not is_gcs_configured():
+        return False
+
+    try:
+        gcs_config = get_gcs_config()
+        bucket_name = gcs_config.get("bucket", "")
+        path_prefix = gcs_config.get("path_prefix", "octopod/summaries")
+        data_prefix = path_prefix.rsplit("/", 1)[0] + "/data"
+
+        client = _get_gcs_client()
+        if not client:
+            return False
+
+        bucket = client.bucket(bucket_name)
+
+        # Download videos.json and analyses.json
+        for filename in ["videos.json", "analyses.json"]:
+            blob = bucket.blob(f"{data_prefix}/{filename}")
+            local_path = DATA_DIR / filename
+            if blob.exists():
+                blob.download_to_filename(str(local_path))
+
+        return True
+
+    except Exception:
+        return False
+
+
+def sync_data_to_gcs() -> bool:
+    """Upload data files from local to GCS."""
+    if not is_gcs_configured():
+        return False
+
+    try:
+        gcs_config = get_gcs_config()
+        bucket_name = gcs_config.get("bucket", "")
+        path_prefix = gcs_config.get("path_prefix", "octopod/summaries")
+        data_prefix = path_prefix.rsplit("/", 1)[0] + "/data"
+
+        client = _get_gcs_client()
+        if not client:
+            return False
+
+        bucket = client.bucket(bucket_name)
+
+        # Upload videos.json and analyses.json
+        for filename in ["videos.json", "analyses.json"]:
+            local_path = DATA_DIR / filename
+            if local_path.exists():
+                blob = bucket.blob(f"{data_prefix}/{filename}")
+                blob.upload_from_filename(str(local_path))
+
+        return True
+
+    except Exception:
+        return False
