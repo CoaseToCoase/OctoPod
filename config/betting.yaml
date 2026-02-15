@@ -13,6 +13,15 @@ channels:
   - id: pinnacle
     name: Pinnacle
     youtube_channel_id: UC54Q5nMtE9LMcC_9HtqUy-g
+  - id: racing_post
+    name: Racing Post
+    youtube_channel_id: UCJ1nVq7lHZMVaWz1FLrK3kA
+  - id: matchbook
+    name: Team Matchbook
+    youtube_channel_id: UCSwpo8Ue2_FkJ4AbMolLymA
+  - id: cricket_betting
+    name: Cricket Betting Podcast
+    youtube_channel_id: UC-mYfoMYSM7qVclvqYmBpnA
 
 analysis_prompt: |
   You are a sports betting analyst extracting insights from betting-focused content.
