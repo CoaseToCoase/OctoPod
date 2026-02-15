@@ -222,6 +222,45 @@ def get_recent_analyses(days: int = 7) -> list[dict[str, Any]]:
     return results
 
 
+def get_gameweek_analyses(since: datetime, until: datetime | None = None) -> list[dict[str, Any]]:
+    """Get analyses for videos published between gameweek deadlines."""
+    from datetime import timezone
+
+    videos = _load_json(VIDEOS_FILE)
+    analyses = _load_json(ANALYSES_FILE)
+    channels = {ch["id"]: ch["name"] for ch in get_channels()}
+
+    # Ensure timezone aware
+    if since.tzinfo is None:
+        since = since.replace(tzinfo=timezone.utc)
+    if until is None:
+        until = datetime.now(timezone.utc)
+    elif until.tzinfo is None:
+        until = until.replace(tzinfo=timezone.utc)
+
+    results = []
+
+    for video_id, analysis in analyses.items():
+        video = videos.get(video_id, {})
+        published_at = _str_to_datetime(video.get("published_at"))
+
+        if published_at and since <= published_at <= until:
+            result = {
+                **analysis,
+                "title": video.get("title", "Unknown"),
+                "published_at": published_at,
+                "channel_name": channels.get(video.get("channel_id", ""), "Unknown"),
+            }
+            results.append(result)
+
+    # Sort by published_at descending
+    results.sort(
+        key=lambda r: r.get("published_at") or datetime.min,
+        reverse=True
+    )
+    return results
+
+
 def save_weekly_summary(
     gameweek: int,
     summary: str,

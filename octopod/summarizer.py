@@ -1,20 +1,36 @@
 """Weekly summary generation for OctoPod."""
 
 import json
+from datetime import datetime
 
 import anthropic
 
 from .config import ANTHROPIC_API_KEY, ANTHROPIC_MODEL, get_summary_prompt
-from .data import get_recent_analyses, save_weekly_summary
+from .data import get_recent_analyses, get_gameweek_analyses, save_weekly_summary
+from .fpl import get_previous_gameweek_deadline, get_current_gameweek_deadline
 from .gcs import upload_summary_to_gcs, is_gcs_configured
 
 
-def generate_weekly_summary(gameweek: int, days: int = 7) -> str | None:
-    """Generate a weekly summary from recent analyses."""
+def generate_weekly_summary(gameweek: int, since: datetime | None = None) -> str | None:
+    """Generate a weekly summary from analyses since the previous gameweek deadline.
+
+    Args:
+        gameweek: The current gameweek number
+        since: Start date for analyses (defaults to previous GW deadline)
+    """
     if not ANTHROPIC_API_KEY:
         raise ValueError("ANTHROPIC_API_KEY environment variable not set")
 
-    analyses = get_recent_analyses(days=days)
+    # Use gameweek deadline if not specified
+    if since is None:
+        since = get_previous_gameweek_deadline()
+
+    # Get analyses for this gameweek period
+    if since:
+        analyses = get_gameweek_analyses(since=since)
+    else:
+        # Fallback to 7 days if we can't get deadline
+        analyses = get_recent_analyses(days=7)
 
     if not analyses:
         return None
@@ -72,9 +88,16 @@ def generate_weekly_summary(gameweek: int, days: int = 7) -> str | None:
     return summary
 
 
-def get_analysis_stats(days: int = 7) -> dict:
-    """Get statistics about recent analyses."""
-    analyses = get_recent_analyses(days=days)
+def get_analysis_stats(since: datetime | None = None) -> dict:
+    """Get statistics about analyses since the previous gameweek deadline."""
+    # Use gameweek deadline if not specified
+    if since is None:
+        since = get_previous_gameweek_deadline()
+
+    if since:
+        analyses = get_gameweek_analyses(since=since)
+    else:
+        analyses = get_recent_analyses(days=7)
 
     if not analyses:
         return {

@@ -127,23 +127,31 @@ def analyze():
 
 @app.command()
 def summary(
-    gameweek: int = typer.Option(..., "--gameweek", "-g", help="Gameweek number"),
-    days: int = typer.Option(7, "--days", "-d", help="Number of days to look back")
+    gameweek: int = typer.Option(None, "--gameweek", "-g", help="Gameweek number (auto-detected if not provided)")
 ):
-    """Generate a weekly gameweek summary."""
+    """Generate a gameweek summary from analyses since the previous GW deadline."""
     ensure_db()
 
-    stats = get_analysis_stats(days=days)
+    # Auto-detect gameweek
+    if gameweek is None:
+        gw = get_current_gameweek()
+        if gw:
+            gameweek = gw["id"]
+        else:
+            console.print("[red]Could not detect gameweek. Please provide --gameweek option.[/red]")
+            return
+
+    stats = get_analysis_stats()
 
     if stats["total_videos"] == 0:
-        console.print(f"[yellow]No analyzed videos found in the past {days} days.[/yellow]")
+        console.print("[yellow]No analyzed videos found since previous gameweek deadline.[/yellow]")
         console.print("[dim]Run 'octopod fetch', 'octopod transcripts', and 'octopod analyze' first.[/dim]")
         return
 
-    console.print(f"[cyan]Generating summary from {stats['total_videos']} videos across {len(stats['channels'])} channels...[/cyan]")
+    console.print(f"[cyan]Generating GW{gameweek} summary from {stats['total_videos']} videos across {len(stats['channels'])} channels...[/cyan]")
 
     with console.status("[bold green]Generating summary with Claude..."):
-        summary_text = generate_weekly_summary(gameweek=gameweek, days=days)
+        summary_text = generate_weekly_summary(gameweek=gameweek)
 
     if summary_text:
         console.print()
@@ -159,7 +167,6 @@ def summary(
 @app.command()
 def run(
     gameweek: int = typer.Option(None, "--gameweek", "-gw", help="Gameweek number (auto-detected if not provided)"),
-    days: int = typer.Option(7, "--days", "-d", help="Number of days to look back for summary"),
     since: datetime = typer.Option(None, "--since", "-s", help="Only fetch videos published after this date (YYYY-MM-DD)"),
     current_gw: bool = typer.Option(True, "--current-gw/--all", help="Only fetch videos since previous gameweek deadline (default: true)")
 ):
@@ -222,14 +229,14 @@ def run(
 
     # Generate summary
     console.print("\n[bold cyan]Step 4/4: Generating summary...[/bold cyan]")
-    stats = get_analysis_stats(days=days)
+    stats = get_analysis_stats()
 
     if stats["total_videos"] == 0:
-        console.print("[yellow]No analyzed videos found. Cannot generate summary.[/yellow]")
+        console.print("[yellow]No analyzed videos found since previous gameweek deadline.[/yellow]")
         return
 
     with console.status("[bold green]Generating summary with Claude..."):
-        summary_text = generate_weekly_summary(gameweek=gameweek, days=days)
+        summary_text = generate_weekly_summary(gameweek=gameweek)
 
     if summary_text:
         console.print()
