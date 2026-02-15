@@ -12,9 +12,9 @@ from .schedule import get_schedule_range, get_period_identifier
 from .gcs import upload_summary_to_gcs, is_gcs_configured
 
 
-# Sonnet 4 pricing per million tokens
-INPUT_COST_PER_M = 3.0
-OUTPUT_COST_PER_M = 15.0
+# Haiku 3.5 pricing per million tokens
+INPUT_COST_PER_M = 0.80
+OUTPUT_COST_PER_M = 4.0
 
 
 @dataclass
