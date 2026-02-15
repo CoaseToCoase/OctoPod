@@ -8,10 +8,9 @@ from rich.table import Table
 from rich.panel import Panel
 from rich.markdown import Markdown
 
-from .database import (
+from .data import (
     init_db,
     get_all_channels,
-    add_channel,
     get_all_videos,
     get_videos_without_transcripts,
     get_videos_without_analysis,
@@ -308,25 +307,22 @@ def add_channel_cmd(
     name: str = typer.Argument(..., help="Channel display name"),
     youtube_id: str = typer.Argument(..., help="YouTube channel ID")
 ):
-    """Add a new channel."""
-    ensure_db()
-
-    # Generate an ID from the name
-    channel_id = name.lower().replace(" ", "_").replace("-", "_")
-
-    try:
-        add_channel(channel_id, name, youtube_id)
-        console.print(f"[green]Added channel: {name} ({youtube_id})[/green]")
-    except Exception as e:
-        console.print(f"[red]Failed to add channel: {e}[/red]")
+    """Add a new channel (prints instructions - channels are managed in config.yaml)."""
+    console.print("[yellow]Channels are now managed in config.yaml[/yellow]")
+    console.print("\nTo add a channel, edit config.yaml and add an entry like:")
+    console.print(f"""
+[cyan]  - id: {name.lower().replace(" ", "_").replace("-", "_")}
+    name: {name}
+    youtube_channel_id: {youtube_id}[/cyan]
+""")
 
 
 @app.command()
 def init():
-    """Initialize the database."""
+    """Initialize the data files."""
     init_db()
-    console.print("[green]Database initialized successfully.[/green]")
-    console.print(f"[dim]Database location: {get_all_channels and 'data/octopod.db'}[/dim]")
+    console.print("[green]Data files initialized successfully.[/green]")
+    console.print("[dim]Data location: data/videos.json, data/analyses.json, data/summaries/[/dim]")
 
 
 if __name__ == "__main__":

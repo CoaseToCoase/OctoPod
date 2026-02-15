@@ -31,8 +31,8 @@ env/
 *.swp
 *.swo
 
-# Data files (contains local database)
-data/
+# Database files (legacy)
+data/*.db
 
 # Environment variables
 .env

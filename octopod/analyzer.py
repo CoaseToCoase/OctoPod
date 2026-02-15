@@ -5,72 +5,8 @@ from dataclasses import dataclass
 
 import anthropic
 
-from .config import ANTHROPIC_API_KEY, ANTHROPIC_MODEL
-from .database import get_videos_without_analysis, save_analysis
-
-
-ANALYSIS_PROMPT = """You are an expert Fantasy Premier League (FPL) analyst. Analyze the following podcast transcript and extract key information relevant to FPL Draft managers.
-
-Focus on extracting:
-1. **Player Mentions**: Any players mentioned with context about their form, fixtures, or potential
-2. **Recommendations**: Buy/sell/hold/avoid recommendations for specific players
-3. **Injury News**: Any injury updates, return timelines, or fitness concerns
-4. **Differential Picks**: Players mentioned as differentials or under-the-radar options
-5. **Captain Suggestions**: Any captaincy recommendations
-
-Return your analysis as a JSON object with this exact structure:
-{{
-    "player_mentions": [
-        {{
-            "player": "Player Name",
-            "team": "Team Name",
-            "context": "What was said about them",
-            "sentiment": "positive|negative|neutral"
-        }}
-    ],
-    "recommendations": [
-        {{
-            "player": "Player Name",
-            "team": "Team Name",
-            "action": "buy|sell|hold|avoid",
-            "reason": "Why this recommendation was made"
-        }}
-    ],
-    "injury_news": [
-        {{
-            "player": "Player Name",
-            "team": "Team Name",
-            "status": "injured|doubtful|returning|fit",
-            "details": "Injury details or return timeline"
-        }}
-    ],
-    "differentials": [
-        {{
-            "player": "Player Name",
-            "team": "Team Name",
-            "reason": "Why they're a good differential"
-        }}
-    ],
-    "captain_picks": [
-        {{
-            "player": "Player Name",
-            "team": "Team Name",
-            "reason": "Why they're a good captain choice"
-        }}
-    ]
-}}
-
-Important:
-- Only include information that is explicitly mentioned in the transcript
-- If a category has no relevant mentions, return an empty array for that category
-- Be specific about what was actually said, don't make assumptions
-- Include the team name when it's mentioned or can be reasonably inferred
-
-Transcript from "{title}" by {channel}:
-
-{transcript}
-
-Return ONLY the JSON object, no additional text."""
+from .config import ANTHROPIC_API_KEY, ANTHROPIC_MODEL, get_analysis_prompt
+from .data import get_videos_without_analysis, save_analysis
 
 
 @dataclass
@@ -106,7 +42,9 @@ def analyze_transcript(
     if len(transcript) > max_transcript_length:
         transcript = transcript[:max_transcript_length] + "... [truncated]"
 
-    prompt = ANALYSIS_PROMPT.format(
+    # Get prompt from config
+    prompt_template = get_analysis_prompt()
+    prompt = prompt_template.format(
         title=title,
         channel=channel_name,
         transcript=transcript

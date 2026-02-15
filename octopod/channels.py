@@ -9,7 +9,7 @@ import feedparser
 from dateutil import parser as date_parser
 
 from .config import get_channel_rss_url
-from .database import get_all_channels, upsert_video
+from .data import get_all_channels, upsert_video
 
 
 def _create_ssl_context():

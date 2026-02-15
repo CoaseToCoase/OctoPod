@@ -9,7 +9,7 @@ from youtube_transcript_api._errors import (
     VideoUnavailable,
 )
 
-from .database import get_videos_without_transcripts, update_video_transcript
+from .data import get_videos_without_transcripts, update_video_transcript
 
 
 @dataclass
