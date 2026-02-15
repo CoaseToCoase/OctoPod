@@ -138,6 +138,8 @@ def analyze():
     failed_count = len(results["failed"])
 
     console.print(f"[green]Successfully analyzed: {success_count}[/green]")
+    if results["total_cost"] > 0:
+        console.print(f"[dim]Tokens: {results['total_input_tokens']:,} in / {results['total_output_tokens']:,} out | Cost: ${results['total_cost']:.4f}[/dim]")
 
     if failed_count > 0:
         console.print(f"[red]Failed: {failed_count}[/red]")
@@ -170,7 +172,7 @@ def summary(
     console.print(f"[cyan]Generating {period} summary from {stats['total_videos']} videos across {len(stats['channels'])} channels...[/cyan]")
 
     with console.status("[bold green]Generating summary with Claude..."):
-        summary_text = generate_summary(period=period, since=since)
+        summary_text, usage = generate_summary(period=period, since=since)
 
     if summary_text:
         console.print()
@@ -179,6 +181,7 @@ def summary(
             title=f"[bold]{period.upper()} Summary[/bold]",
             border_style="green"
         ))
+        console.print(f"[dim]Tokens: {usage.input_tokens:,} in / {usage.output_tokens:,} out | Cost: ${usage.cost:.4f}[/dim]")
     else:
         console.print("[red]Failed to generate summary.[/red]")
 
@@ -235,15 +238,18 @@ def run(
     # Analyze
     console.print("\n[bold cyan]Step 3/4: Analyzing transcripts...[/bold cyan]")
     videos_need_analysis = get_videos_without_analysis()
+    total_cost = 0.0
 
     if videos_need_analysis:
         with console.status("[bold green]Analyzing transcripts with Claude..."):
             analysis_results = analyze_and_store_all()
         console.print(f"[green]Analyzed {len(analysis_results['success'])} videos.[/green]")
+        total_cost += analysis_results["total_cost"]
         if analysis_results["failed"]:
             console.print(f"[yellow]Failed to analyze {len(analysis_results['failed'])} videos.[/yellow]")
     else:
         console.print("[dim]No new analysis needed.[/dim]")
+        analysis_results = {"total_cost": 0}
 
     # Generate summary
     console.print("\n[bold cyan]Step 4/4: Generating summary...[/bold cyan]")
@@ -254,7 +260,7 @@ def run(
         return
 
     with console.status("[bold green]Generating summary with Claude..."):
-        summary_text = generate_summary(period=period, since=filter_date)
+        summary_text, summary_usage = generate_summary(period=period, since=filter_date)
 
     if summary_text:
         console.print()
@@ -263,6 +269,8 @@ def run(
             title=f"[bold]{period.upper()} Summary[/bold]",
             border_style="green"
         ))
+        total_cost += summary_usage.cost
+        console.print(f"\n[bold]Total API cost: ${total_cost:.4f}[/bold]")
     else:
         console.print("[red]Failed to generate summary.[/red]")
 

@@ -2,6 +2,7 @@
 
 import json
 from datetime import datetime
+from dataclasses import dataclass
 
 import anthropic
 
@@ -11,13 +12,31 @@ from .schedule import get_schedule_range, get_period_identifier
 from .gcs import upload_summary_to_gcs, is_gcs_configured
 
 
-def generate_summary(period: str | None = None, since: datetime | None = None) -> str | None:
+# Sonnet 4 pricing per million tokens
+INPUT_COST_PER_M = 3.0
+OUTPUT_COST_PER_M = 15.0
+
+
+@dataclass
+class SummaryUsage:
+    """Token usage for summary generation."""
+    input_tokens: int = 0
+    output_tokens: int = 0
+    cost: float = 0.0
+
+
+def generate_summary(period: str | None = None, since: datetime | None = None) -> tuple[str | None, SummaryUsage]:
     """Generate a summary from analyses for the specified period.
 
     Args:
         period: Period identifier (e.g., "gw26", "2024-w05"). Auto-detected if not provided.
         since: Start date for analyses. Uses schedule config if not provided.
+
+    Returns:
+        Tuple of (summary_text, usage_info)
     """
+    usage = SummaryUsage()
+
     if not ANTHROPIC_API_KEY:
         raise ValueError("ANTHROPIC_API_KEY environment variable not set")
 
@@ -39,7 +58,7 @@ def generate_summary(period: str | None = None, since: datetime | None = None) -
         analyses = get_recent_analyses(days=7)
 
     if not analyses:
-        return None
+        return None, usage
 
     # Prepare the analysis data for the prompt
     channels_seen = set()
@@ -83,6 +102,9 @@ def generate_summary(period: str | None = None, since: datetime | None = None) -
     )
 
     summary = message.content[0].text
+    usage.input_tokens = message.usage.input_tokens
+    usage.output_tokens = message.usage.output_tokens
+    usage.cost = (usage.input_tokens * INPUT_COST_PER_M / 1_000_000) + (usage.output_tokens * OUTPUT_COST_PER_M / 1_000_000)
 
     # Get video IDs for storage
     video_ids = [a["video_id"] for a in analyses]
@@ -94,7 +116,7 @@ def generate_summary(period: str | None = None, since: datetime | None = None) -
     if is_gcs_configured():
         upload_summary_to_gcs(period, summary, video_ids)
 
-    return summary
+    return summary, usage
 
 
 def get_analysis_stats(since: datetime | None = None) -> dict:

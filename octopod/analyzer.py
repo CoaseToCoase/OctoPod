@@ -9,6 +9,16 @@ from .config import ANTHROPIC_API_KEY, ANTHROPIC_MODEL, get_analysis_prompt
 from .data import get_videos_without_analysis, save_analysis
 
 
+# Sonnet 4 pricing per million tokens
+INPUT_COST_PER_M = 3.0
+OUTPUT_COST_PER_M = 15.0
+
+
+def calculate_cost(input_tokens: int, output_tokens: int) -> float:
+    """Calculate cost in USD for token usage."""
+    return (input_tokens * INPUT_COST_PER_M / 1_000_000) + (output_tokens * OUTPUT_COST_PER_M / 1_000_000)
+
+
 @dataclass
 class AnalysisResult:
     """Result of analyzing a video transcript."""
@@ -19,6 +29,8 @@ class AnalysisResult:
     injury_news: list[dict] | None = None
     raw_analysis: str | None = None
     error: str | None = None
+    input_tokens: int = 0
+    output_tokens: int = 0
 
 
 def analyze_transcript(
@@ -60,6 +72,8 @@ def analyze_transcript(
         )
 
         response_text = message.content[0].text
+        input_tokens = message.usage.input_tokens
+        output_tokens = message.usage.output_tokens
 
         # Parse the JSON response
         # Handle potential markdown code blocks
@@ -76,7 +90,9 @@ def analyze_transcript(
             player_mentions=analysis.get("player_mentions", []),
             recommendations=analysis.get("recommendations", []),
             injury_news=analysis.get("injury_news", []),
-            raw_analysis=response_text
+            raw_analysis=response_text,
+            input_tokens=input_tokens,
+            output_tokens=output_tokens
         )
 
     except json.JSONDecodeError as e:
@@ -100,12 +116,15 @@ def analyze_transcript(
         )
 
 
-def analyze_and_store_all() -> dict[str, list[AnalysisResult]]:
+def analyze_and_store_all() -> dict:
     """Analyze all videos with transcripts that haven't been analyzed yet."""
     videos = get_videos_without_analysis()
-    results: dict[str, list[AnalysisResult]] = {
+    results: dict = {
         "success": [],
-        "failed": []
+        "failed": [],
+        "total_input_tokens": 0,
+        "total_output_tokens": 0,
+        "total_cost": 0.0
     }
 
     for video in videos:
@@ -125,7 +144,14 @@ def analyze_and_store_all() -> dict[str, list[AnalysisResult]]:
                 raw_analysis=result.raw_analysis or ""
             )
             results["success"].append(result)
+            results["total_input_tokens"] += result.input_tokens
+            results["total_output_tokens"] += result.output_tokens
         else:
             results["failed"].append(result)
+
+    results["total_cost"] = calculate_cost(
+        results["total_input_tokens"],
+        results["total_output_tokens"]
+    )
 
     return results
