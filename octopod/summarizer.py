@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 import anthropic
 
-from .config import ANTHROPIC_API_KEY, ANTHROPIC_MODEL, get_summary_prompt, get_schedule_config
+from .config import ANTHROPIC_API_KEY, get_summary_prompt, get_schedule_config, get_model
 from .data import get_recent_analyses, get_gameweek_analyses, save_summary
 from .schedule import get_schedule_range, get_period_identifier
 from .gcs import upload_summary_to_gcs, is_gcs_configured
@@ -94,7 +94,7 @@ def generate_summary(period: str | None = None, since: datetime | None = None) -
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
     message = client.messages.create(
-        model=ANTHROPIC_MODEL,
+        model=get_model(),
         max_tokens=4096,
         messages=[
             {"role": "user", "content": prompt}
