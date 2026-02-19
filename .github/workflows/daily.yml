@@ -41,10 +41,50 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GCS_CREDENTIALS: ${{ secrets.GCS_CREDENTIALS }}
 
-      - name: Commit data changes
+      - name: Clean up data files (keep GitHub lean)
+        run: |
+          # After uploading to GCS, remove transcripts and analyses from local data
+          # Keep only video metadata to track what's been processed
+          python -c "
+          import json
+          from pathlib import Path
+
+          categories = ['FPL_Draft', 'FPL_Main', 'Betting', 'Politics']
+          for category in categories:
+              data_dir = Path(f'data/{category}')
+              if not data_dir.exists():
+                  continue
+
+              # Clean videos.json - remove transcripts
+              videos_file = data_dir / 'videos.json'
+              if videos_file.exists():
+                  with open(videos_file) as f:
+                      videos = json.load(f)
+                  for video in videos:
+                      video['transcript'] = None
+                  with open(videos_file, 'w') as f:
+                      json.dump(videos, f, indent=2)
+
+              # Clean analyses.json - keep only metadata
+              analyses_file = data_dir / 'analyses.json'
+              if analyses_file.exists():
+                  with open(analyses_file) as f:
+                      analyses = json.load(f)
+                  # Keep only video_id and analyzed_at timestamp
+                  cleaned = [
+                      {'video_id': a['video_id'], 'analyzed_at': a.get('analyzed_at')}
+                      for a in analyses
+                  ]
+                  with open(analyses_file, 'w') as f:
+                      json.dump(cleaned, f, indent=2)
+
+          print('✓ Cleaned up data files - full data preserved in GCS')
+          "
+
+      - name: Commit cleaned data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --staged --quiet || git commit -m "Update data $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "Clean up data after GCS upload $(date -u +%Y-%m-%d)"
           git push
