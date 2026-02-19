@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 import anthropic
 
-from .config import ANTHROPIC_API_KEY, ANTHROPIC_MODEL, get_analysis_prompt, get_category
+from .config import ANTHROPIC_API_KEY, get_analysis_prompt, get_category, get_model
 from .data import get_videos_without_analysis, save_analysis
 from .gcs import upload_analysis_to_gcs
 
@@ -65,7 +65,7 @@ def analyze_transcript(
 
     try:
         message = client.messages.create(
-            model=ANTHROPIC_MODEL,
+            model=get_model(),
             max_tokens=4096,
             messages=[
                 {"role": "user", "content": prompt}
