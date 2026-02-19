@@ -1,21 +1,21 @@
 {
   "FPL Draft": {
-    "type": "cron",
+    "type": "daily",
     "value": "0 6 * * *",
     "description": "Daily at 6 AM UTC"
   },
   "FPL Main": {
-    "type": "cron",
+    "type": "daily",
     "value": "0 6 * * *",
     "description": "Daily at 6 AM UTC"
   },
   "Betting": {
-    "type": "cron",
+    "type": "daily",
     "value": "0 6 * * *",
     "description": "Daily at 6 AM UTC"
   },
   "Politics": {
-    "type": "cron",
+    "type": "daily",
     "value": "0 6 * * *",
     "description": "Daily at 6 AM UTC"
   }
