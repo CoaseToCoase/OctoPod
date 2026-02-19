@@ -132,6 +132,62 @@ def sync_data_from_gcs() -> bool:
         return False
 
 
+def upload_analysis_to_gcs(video_id: str, video_title: str, channel_name: str, analysis_data: dict, category: str) -> str | None:
+    """Upload individual video analysis to GCS.
+
+    Args:
+        video_id: YouTube video ID
+        video_title: Video title
+        channel_name: Channel name
+        analysis_data: Analysis result dictionary
+        category: Category name (e.g., "FPL Draft")
+
+    Returns:
+        The GCS path if successful, None otherwise
+    """
+    if not is_gcs_configured():
+        return None
+
+    try:
+        gcs_config = get_gcs_config()
+        bucket_name = gcs_config.get("bucket", "")
+        path_prefix = gcs_config.get("path_prefix", "octopod")
+
+        client = _get_gcs_client()
+        if not client:
+            return None
+
+        bucket = client.bucket(bucket_name)
+
+        # Create report data
+        report = {
+            "video_id": video_id,
+            "title": video_title,
+            "channel": channel_name,
+            "category": category,
+            "analyzed_at": datetime.now().isoformat(),
+            "analysis": analysis_data
+        }
+
+        # File path: reports/{category}/{date}_{video_id}.json
+        date_str = datetime.now().strftime("%Y-%m-%d")
+        safe_category = category.replace(" ", "_")
+        json_path = f"{path_prefix}/{safe_category}/{date_str}_{video_id}.json"
+
+        # Upload to GCS
+        blob = bucket.blob(json_path)
+        blob.upload_from_string(
+            json.dumps(report, indent=2),
+            content_type="application/json"
+        )
+
+        return f"gs://{bucket_name}/{json_path}"
+
+    except Exception as e:
+        print(f"Error uploading to GCS: {e}")
+        return None
+
+
 def sync_data_to_gcs() -> bool:
     """Upload data files from local to GCS for the current profile."""
     if not is_gcs_configured():

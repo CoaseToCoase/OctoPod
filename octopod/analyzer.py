@@ -5,8 +5,9 @@ from dataclasses import dataclass
 
 import anthropic
 
-from .config import ANTHROPIC_API_KEY, ANTHROPIC_MODEL, get_analysis_prompt
+from .config import ANTHROPIC_API_KEY, ANTHROPIC_MODEL, get_analysis_prompt, get_category
 from .data import get_videos_without_analysis, save_analysis
+from .gcs import upload_analysis_to_gcs
 
 
 # Haiku 4.5 pricing per million tokens (as of Feb 2026)
@@ -143,6 +144,24 @@ def analyze_and_store_all() -> dict:
                 injury_news=result.injury_news or [],
                 raw_analysis=result.raw_analysis or ""
             )
+
+            # Upload to GCS
+            analysis_data = {
+                "player_mentions": result.player_mentions or [],
+                "recommendations": result.recommendations or [],
+                "injury_news": result.injury_news or [],
+                "raw_analysis": result.raw_analysis or ""
+            }
+            gcs_path = upload_analysis_to_gcs(
+                video_id=video["id"],
+                video_title=video["title"],
+                channel_name=video["channel_name"],
+                analysis_data=analysis_data,
+                category=get_category()
+            )
+            if gcs_path:
+                print(f"Uploaded to {gcs_path}")
+
             results["success"].append(result)
             results["total_input_tokens"] += result.input_tokens
             results["total_output_tokens"] += result.output_tokens
