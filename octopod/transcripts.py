@@ -14,7 +14,7 @@ from youtube_transcript_api._errors import (
 from .data import get_videos_without_transcripts, update_video_transcript
 
 # Cloud Function URL for fetching transcripts (bypasses IP blocking)
-CLOUD_FUNCTION_URL = "https://fetchtranscript-3xxujnj2va-uc.a.run.app"
+CLOUD_FUNCTION_URL = "https://us-central1-octopod-b965f.cloudfunctions.net/fetchTranscript"
 
 
 @dataclass
