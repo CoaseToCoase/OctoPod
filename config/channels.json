@@ -1,20 +1,40 @@
 {
   "FPL Draft": [
     {
+      "url": "https://www.youtube.com/channel/UC1fzfDlBWbawMMbwOczk58Q",
       "id": "UC1fzfDlBWbawMMbwOczk58Q",
       "name": "Draft FC",
-      "url": "https://www.youtube.com/@DraftFC",
       "category": "FPL Draft"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UC1iLU8Nb1Rb-43Ld6zqCgGw",
+      "category": "FPL Draft",
+      "name": "The FPL Draft Zone",
+      "id": "UC1iLU8Nb1Rb-43Ld6zqCgGw"
     }
   ],
   "FPL Main": [
     {
-      "id": "UCKxYKQ8pgJ7V8wwh4hLsSXQ",
-      "name": "FF Scout",
-      "url": "https://www.youtube.com/@FFScout_",
-      "category": "FPL Main"
+      "id": "UCweDAlFm2LnVcOqaFU4_AGA",
+      "category": "FPL Main",
+      "url": "https://www.youtube.com/channel/UCweDAlFm2LnVcOqaFU4_AGA",
+      "name": "FPL Mate"
     }
   ],
-  "Betting": [],
-  "Politics": []
+  "Betting": [
+    {
+      "url": "https://www.youtube.com/channel/UCSwpo8Ue2_FkJ4AbMolLymA",
+      "name": "Matchbook",
+      "category": "Betting",
+      "id": "UCSwpo8Ue2_FkJ4AbMolLymA"
+    }
+  ],
+  "Politics": [
+    {
+      "name": "The Rest Is Politics",
+      "url": "https://www.youtube.com/channel/UCsufaClk5if2RGqABb-09Uw",
+      "category": "Politics",
+      "id": "UCsufaClk5if2RGqABb-09Uw"
+    }
+  ]
 }
