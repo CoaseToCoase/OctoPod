@@ -1,5 +1,7 @@
 """YouTube transcript fetching for OctoPod."""
 
+import os
+import requests
 from dataclasses import dataclass
 
 from youtube_transcript_api import YouTubeTranscriptApi
@@ -11,6 +13,9 @@ from youtube_transcript_api._errors import (
 
 from .data import get_videos_without_transcripts, update_video_transcript
 
+# Cloud Function URL for fetching transcripts (bypasses IP blocking)
+CLOUD_FUNCTION_URL = "https://fetchtranscript-3xxujnj2va-uc.a.run.app"
+
 
 @dataclass
 class TranscriptResult:
@@ -21,8 +26,48 @@ class TranscriptResult:
     error: str | None = None
 
 
+def fetch_transcript_via_cloud_function(video_id: str) -> TranscriptResult:
+    """Fetch transcript via Cloud Function (bypasses YouTube IP blocking)."""
+    try:
+        response = requests.post(
+            CLOUD_FUNCTION_URL,
+            json={"data": {"videoId": video_id}},
+            timeout=30
+        )
+        response.raise_for_status()
+
+        data = response.json()
+        if "result" in data and "text" in data["result"]:
+            return TranscriptResult(
+                video_id=video_id,
+                success=True,
+                transcript=data["result"]["text"]
+            )
+        else:
+            return TranscriptResult(
+                video_id=video_id,
+                success=False,
+                error="Invalid response from Cloud Function"
+            )
+    except Exception as e:
+        return TranscriptResult(
+            video_id=video_id,
+            success=False,
+            error=f"Cloud Function error: {str(e)}"
+        )
+
+
 def fetch_transcript(video_id: str) -> TranscriptResult:
-    """Fetch transcript for a single video."""
+    """Fetch transcript for a single video.
+
+    Tries Cloud Function first (bypasses IP blocking), falls back to direct API.
+    """
+    # Try Cloud Function first (more reliable from GitHub Actions)
+    result = fetch_transcript_via_cloud_function(video_id)
+    if result.success:
+        return result
+
+    # Fallback to direct API
     try:
         api = YouTubeTranscriptApi()
 
