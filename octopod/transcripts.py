@@ -37,18 +37,28 @@ def fetch_transcript_via_cloud_function(video_id: str) -> TranscriptResult:
         response.raise_for_status()
 
         data = response.json()
-        if "result" in data and "text" in data["result"]:
-            return TranscriptResult(
-                video_id=video_id,
-                success=True,
-                transcript=data["result"]["text"]
-            )
-        else:
+
+        # Check for error response
+        if "error" in data:
             return TranscriptResult(
                 video_id=video_id,
                 success=False,
-                error="Invalid response from Cloud Function"
+                error=f"Cloud Function error: {data['error'].get('message', 'Unknown error')}"
             )
+
+        # Check for successful response
+        if "text" in data:
+            return TranscriptResult(
+                video_id=video_id,
+                success=True,
+                transcript=data["text"]
+            )
+
+        return TranscriptResult(
+            video_id=video_id,
+            success=False,
+            error=f"Unexpected response format: {data}"
+        )
     except Exception as e:
         return TranscriptResult(
             video_id=video_id,
