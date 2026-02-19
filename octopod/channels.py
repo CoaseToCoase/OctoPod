@@ -85,9 +85,11 @@ def fetch_all_channels() -> dict[str, list[VideoEntry]]:
     all_videos: dict[str, list[VideoEntry]] = {}
 
     for channel in channels:
+        # Use 'id' as YouTube channel ID (frontend format)
+        youtube_id = channel.get("id") or channel.get("youtube_channel_id")
         videos = fetch_channel_videos(
-            channel["youtube_channel_id"],
-            channel["id"]
+            youtube_id,
+            youtube_id  # Use same ID for both
         )
         all_videos[channel["name"]] = videos
 
@@ -105,9 +107,11 @@ def fetch_and_store_videos(since: datetime | None = None) -> dict[str, int]:
     results: dict[str, int] = {}
 
     for channel in channels:
+        # Use 'id' as YouTube channel ID (frontend format)
+        youtube_id = channel.get("id") or channel.get("youtube_channel_id")
         videos = fetch_channel_videos(
-            channel["youtube_channel_id"],
-            channel["id"]
+            youtube_id,
+            youtube_id  # Use same ID for both
         )
 
         # Filter by date if specified
