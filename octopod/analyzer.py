@@ -9,9 +9,9 @@ from .config import ANTHROPIC_API_KEY, ANTHROPIC_MODEL, get_analysis_prompt
 from .data import get_videos_without_analysis, save_analysis
 
 
-# Haiku 3.5 pricing per million tokens
-INPUT_COST_PER_M = 0.80
-OUTPUT_COST_PER_M = 4.0
+# Haiku 4.5 pricing per million tokens (as of Feb 2026)
+INPUT_COST_PER_M = 0.40  # Updated for Haiku 4.5
+OUTPUT_COST_PER_M = 2.0  # Updated for Haiku 4.5
 
 
 def calculate_cost(input_tokens: int, output_tokens: int) -> float:

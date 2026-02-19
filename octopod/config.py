@@ -17,7 +17,7 @@ DATA_DIR = PROJECT_ROOT / "data"
 
 # Anthropic API configuration
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
-ANTHROPIC_MODEL = "claude-3-5-haiku-20241022"
+ANTHROPIC_MODEL = "claude-haiku-4-5-20251001"  # Claude Haiku 4.5
 
 # YouTube RSS feed URL template
 YOUTUBE_RSS_TEMPLATE = "https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
