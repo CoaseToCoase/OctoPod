@@ -26,10 +26,19 @@ jobs:
       - name: Install dependencies
         run: pip install -e .
 
-      - name: Run OctoPod pipeline
-        run: octopod run
+      - name: Run OctoPod pipeline for all categories
+        run: |
+          # Run for each category defined in config
+          for category in "FPL Draft" "FPL Main" "Betting" "Politics"; do
+            echo "========================================="
+            echo "Processing category: $category"
+            echo "========================================="
+            octopod --profile "$category" run || echo "Failed to process $category"
+          done
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GCS_CREDENTIALS: ${{ secrets.GCS_CREDENTIALS }}
 
       - name: Commit data changes
