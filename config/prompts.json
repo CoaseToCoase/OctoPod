@@ -1,0 +1,6 @@
+{
+  "FPL Draft": "You are an expert FPL Draft Assistant. Analyze the following video transcripts and provide waiver wire recommendations.\n\n{{VIDEO_LIST}}",
+  "FPL Main": "You are an expert FPL Analyst. Analyze the following video transcripts for transfer targets and captaincy picks.\n\n{{VIDEO_LIST}}",
+  "Betting": "You are an expert Sports Betting Analyst. Analyze the following videos for betting tips.\n\n{{VIDEO_LIST}}",
+  "Politics": "You are a political analyst. Analyze the following videos for political commentary.\n\n{{VIDEO_LIST}}"
+}

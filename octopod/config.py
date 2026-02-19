@@ -1,10 +1,10 @@
 """Configuration loader for OctoPod."""
 
+import json
 import os
 from pathlib import Path
 from typing import Any
 
-import yaml
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -15,76 +15,86 @@ PROJECT_ROOT = Path(__file__).parent.parent
 CONFIG_DIR = PROJECT_ROOT / "config"
 DATA_DIR = PROJECT_ROOT / "data"
 
-# Anthropic API configuration
+# API configuration
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
-ANTHROPIC_MODEL = "claude-haiku-4-5-20251001"  # Claude Haiku 4.5
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 # YouTube RSS feed URL template
 YOUTUBE_RSS_TEMPLATE = "https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
 
-# Current profile (can be set via set_profile())
-_current_profile: str = "draft-fpl"
+# Current category (replaces "profile" concept)
+_current_category: str = "FPL Draft"
 _config_cache: dict[str, Any] | None = None
 
 
-def list_profiles() -> list[str]:
-    """List all available profile names."""
-    if not CONFIG_DIR.exists():
+def list_categories() -> list[str]:
+    """List all available categories from channels.json."""
+    channels_file = CONFIG_DIR / "channels.json"
+    if not channels_file.exists():
         return []
-    return [f.stem for f in CONFIG_DIR.glob("*.yaml")]
+
+    with open(channels_file) as f:
+        channels = json.load(f)
+    return list(channels.keys())
 
 
-def set_profile(profile: str) -> None:
-    """Set the current profile."""
-    global _current_profile, _config_cache
+def set_category(category: str) -> None:
+    """Set the current category."""
+    global _current_category, _config_cache
 
-    config_path = CONFIG_DIR / f"{profile}.yaml"
-    if not config_path.exists():
-        available = list_profiles()
-        raise FileNotFoundError(
-            f"Profile '{profile}' not found. Available: {', '.join(available)}"
+    available = list_categories()
+    if category not in available and available:
+        raise ValueError(
+            f"Category '{category}' not found. Available: {', '.join(available)}"
         )
 
-    _current_profile = profile
-    _config_cache = None  # Clear cache when profile changes
+    _current_category = category
+    _config_cache = None  # Clear cache when category changes
 
 
-def get_profile() -> str:
-    """Get the current profile name."""
-    return _current_profile
+def get_category() -> str:
+    """Get the current category name."""
+    return _current_category
 
 
-def get_profile_data_dir() -> Path:
-    """Get the data directory for the current profile."""
-    return DATA_DIR / _current_profile
+def get_category_data_dir() -> Path:
+    """Get the data directory for the current category."""
+    # Convert category name to filesystem-safe format
+    safe_name = _current_category.replace(" ", "_").lower()
+    return DATA_DIR / safe_name
 
 
-def load_config() -> dict[str, Any]:
-    """Load configuration for the current profile."""
+def load_all_configs() -> dict[str, Any]:
+    """Load all JSON config files."""
     global _config_cache
     if _config_cache is not None:
         return _config_cache
 
-    config_path = CONFIG_DIR / f"{_current_profile}.yaml"
+    configs = {}
+    config_files = {
+        'channels': CONFIG_DIR / 'channels.json',
+        'prompts': CONFIG_DIR / 'prompts.json',
+        'models': CONFIG_DIR / 'models.json',
+        'schedules': CONFIG_DIR / 'schedules.json'
+    }
 
-    if not config_path.exists():
-        # Fallback to old config.yaml location for backwards compatibility
-        old_config = PROJECT_ROOT / "config.yaml"
-        if old_config.exists():
-            config_path = old_config
+    for name, path in config_files.items():
+        if path.exists():
+            with open(path) as f:
+                configs[name] = json.load(f)
         else:
-            raise FileNotFoundError(f"Config file not found: {config_path}")
+            configs[name] = {}
 
-    with open(config_path) as f:
-        _config_cache = yaml.safe_load(f)
-
+    _config_cache = configs
     return _config_cache
 
 
 def get_channels() -> list[dict[str, str]]:
-    """Get channel configurations from config."""
-    config = load_config()
-    return config.get("channels", [])
+    """Get channel configurations for current category."""
+    configs = load_all_configs()
+    channels = configs.get('channels', {}).get(_current_category, [])
+    return channels
 
 
 def get_channels_dict() -> dict[str, dict[str, str]]:
@@ -93,46 +103,75 @@ def get_channels_dict() -> dict[str, dict[str, str]]:
     return {
         ch["id"]: {
             "name": ch["name"],
-            "youtube_channel_id": ch["youtube_channel_id"],
+            "url": ch.get("url", ""),
         }
         for ch in channels
     }
 
 
 def get_analysis_prompt() -> str:
-    """Get the analysis prompt from config."""
-    config = load_config()
-    return config.get("analysis_prompt", "")
+    """Get the analysis prompt for current category."""
+    configs = load_all_configs()
+    return configs.get('prompts', {}).get(_current_category, "")
 
 
 def get_summary_prompt() -> str:
-    """Get the summary prompt from config."""
-    config = load_config()
-    return config.get("summary_prompt", "")
+    """Get the summary prompt (uses analysis prompt for now)."""
+    # Could add a separate summary_prompts.json later
+    return get_analysis_prompt()
+
+
+def get_model() -> str:
+    """Get the AI model to use for current category."""
+    configs = load_all_configs()
+    return configs.get('models', {}).get(_current_category, "claude-haiku-4-5-20251001")
 
 
 def get_gcs_config() -> dict[str, str]:
-    """Get GCS configuration from config."""
-    config = load_config()
-    return config.get("gcs", {"bucket": "", "path_prefix": ""})
+    """Get GCS configuration."""
+    # GCS bucket is consistent across categories
+    safe_category = _current_category.replace(" ", "_")
+    return {
+        "bucket": "octosuitedatahub",
+        "path_prefix": f"octopod/reports/{safe_category}"
+    }
 
 
 def get_schedule_config() -> dict[str, Any]:
-    """Get schedule configuration from config.
+    """Get schedule configuration for current category.
 
     Returns config like:
-        {"type": "fpl_gameweek"}
-        {"type": "rolling_days", "days": 7}
-        {"type": "weekly", "start_day": "monday"}
-        {"type": "daily"}
+        {"type": "gameweek", "value": "24", "description": "..."}
+        {"type": "cron", "value": "0 9 * * FRI", "description": "..."}
     """
-    config = load_config()
-    return config.get("schedule", {"type": "rolling_days", "days": 7})
+    configs = load_all_configs()
+    return configs.get('schedules', {}).get(_current_category, {"type": "cron", "value": "0 0 * * *"})
 
 
 def get_channel_rss_url(channel_id: str) -> str:
     """Get the RSS feed URL for a YouTube channel."""
     return YOUTUBE_RSS_TEMPLATE.format(channel_id=channel_id)
+
+
+# Backward compatibility aliases
+def get_profile() -> str:
+    """Alias for get_category() for backwards compatibility."""
+    return get_category()
+
+
+def set_profile(profile: str) -> None:
+    """Alias for set_category() for backwards compatibility."""
+    set_category(profile)
+
+
+def get_profile_data_dir() -> Path:
+    """Alias for get_category_data_dir() for backwards compatibility."""
+    return get_category_data_dir()
+
+
+def list_profiles() -> list[str]:
+    """Alias for list_categories() for backwards compatibility."""
+    return list_categories()
 
 
 # For backwards compatibility
