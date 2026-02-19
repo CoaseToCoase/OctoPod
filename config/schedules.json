@@ -1,22 +1,22 @@
 {
   "FPL Draft": {
-    "type": "gameweek",
-    "value": "24",
-    "description": "24 hours before FPL deadline"
+    "type": "cron",
+    "value": "0 6 * * *",
+    "description": "Daily at 6 AM UTC"
   },
   "FPL Main": {
-    "type": "gameweek",
-    "value": "12",
-    "description": "12 hours before FPL deadline"
+    "type": "cron",
+    "value": "0 6 * * *",
+    "description": "Daily at 6 AM UTC"
   },
   "Betting": {
     "type": "cron",
-    "value": "0 9 * * FRI",
-    "description": "Fridays at 9 AM"
+    "value": "0 6 * * *",
+    "description": "Daily at 6 AM UTC"
   },
   "Politics": {
     "type": "cron",
-    "value": "0 8 * * MON",
-    "description": "Mondays at 8 AM"
+    "value": "0 6 * * *",
+    "description": "Daily at 6 AM UTC"
   }
 }
