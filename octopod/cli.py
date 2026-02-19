@@ -232,6 +232,8 @@ def run(
         console.print(f"[green]Fetched {len(transcript_results['success'])} transcripts.[/green]")
         if transcript_results["failed"]:
             console.print(f"[yellow]Failed to fetch {len(transcript_results['failed'])} transcripts.[/yellow]")
+            for result in transcript_results["failed"]:
+                console.print(f"  [dim]- {result.video_id}: {result.error}[/dim]")
     else:
         console.print("[dim]No new transcripts needed.[/dim]")
 
