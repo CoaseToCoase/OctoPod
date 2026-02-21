@@ -1,42 +1,42 @@
 {
   "FPL Draft": [
     {
-      "url": "https://www.youtube.com/channel/UC1fzfDlBWbawMMbwOczk58Q",
       "id": "UC1fzfDlBWbawMMbwOczk58Q",
+      "category": "FPL Draft",
       "name": "Draft FC",
+      "url": "https://www.youtube.com/channel/UC1fzfDlBWbawMMbwOczk58Q"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UC1iLU8Nb1Rb-43Ld6zqCgGw",
+      "name": "FPL Draft Zone",
+      "id": "UC1iLU8Nb1Rb-43Ld6zqCgGw",
       "category": "FPL Draft"
     },
     {
-      "name": "FPL Draft Zone",
-      "category": "FPL Draft",
-      "url": "https://www.youtube.com/channel/UC1iLU8Nb1Rb-43Ld6zqCgGw",
-      "id": "UC1iLU8Nb1Rb-43Ld6zqCgGw"
-    },
-    {
       "id": "UCm6sLxW8u9Bk9Vbqde_PsIw",
-      "url": "https://www.youtube.com/channel/UCm6sLxW8u9Bk9Vbqde_PsIw",
       "category": "FPL Draft",
+      "url": "https://www.youtube.com/channel/UCm6sLxW8u9Bk9Vbqde_PsIw",
       "name": "FPL EWG"
     }
   ],
   "FPL Main": [
     {
-      "url": "https://www.youtube.com/channel/UCVLnEmwu-Ajei-wvk9SA8rw",
+      "category": "FPL Main",
       "id": "UCVLnEmwu-Ajei-wvk9SA8rw",
       "name": "FPL Fran",
-      "category": "FPL Main"
+      "url": "https://www.youtube.com/channel/UCVLnEmwu-Ajei-wvk9SA8rw"
     },
     {
+      "category": "FPL Main",
       "id": "UCweDAlFm2LnVcOqaFU4_AGA",
       "name": "FPL Mate",
-      "url": "https://www.youtube.com/channel/UCweDAlFm2LnVcOqaFU4_AGA",
-      "category": "FPL Main"
+      "url": "https://www.youtube.com/channel/UCweDAlFm2LnVcOqaFU4_AGA"
     },
     {
-      "id": "UCKxYKQ8pgJ7V8wwh4hLsSXQ",
-      "name": "Fantasy Football Scout - FPL Tips",
       "url": "https://www.youtube.com/channel/UCKxYKQ8pgJ7V8wwh4hLsSXQ",
-      "category": "FPL Main"
+      "name": "Fantasy Football Scout - FPL Tips",
+      "category": "FPL Main",
+      "id": "UCKxYKQ8pgJ7V8wwh4hLsSXQ"
     }
   ],
   "Betting": [],
